@@ -67,4 +67,24 @@
 
     </section>
 
+        <section id="menu">
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="{{ asset('images/menu1.jpg') }}" alt="Menu 1">
+                <div class="menu-text">Item 1</div>
+            </div>
+            <div class="menu-item">
+                <img src="{{ asset('images/menu2.png') }}" alt="Menu 2">
+                <div class="menu-text">Item 2</div>
+            </div>
+            <div class="menu-item">
+                <img src="{{ asset('images/menu3.png') }}" alt="Menu 3">
+                <div class="menu-text">Item 3</div>
+            </div>
+            <div class="menu-item">
+                <img src="{{ asset('images/menu4.png') }}" alt="Menu 4">
+                <div class="menu-text">Item 4</div>
+            </div>
+        </div>
+    </section>
 </html>
