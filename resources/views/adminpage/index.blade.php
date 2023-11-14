@@ -3,7 +3,7 @@
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bootstrap 5 Side Bar Navigation</title>
+        <title>Admin Dashboard</title>
         <!-- bootstrap 5 css -->
         <link
           rel="stylesheet"
@@ -17,102 +17,30 @@
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
         />
-        <style>
-          li {
-            list-style: none;
-            margin: 20px 0 20px 0;
-          }
-
-          a {
-            text-decoration: none;
-          }
-
-          .sidebar {
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            margin-left: -300px;
-            transition: 0.4s;
-          }
-
-          .active-main-content {
-            margin-left: 250px;
-          }
-
-          .active-sidebar {
-            margin-left: 0;
-          }
-
-          #main-content {
-            transition: 0.4s;
-          }
-        </style>
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
       </head>
 
-      <body>
-        <div>
-          <div class="sidebar p-4 bg-primary" id="sidebar">
-            <h4 class="mb-5 text-white">SuperVideo</h4>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-house mr-2"></i>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-fire mr-2"></i>
-                Populer
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-newspaper mr-2"></i>
-                News
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-bicycle mr-2"></i>
-                Sports
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-boombox mr-2"></i>
-                Music
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-film mr-2"></i>
-                Film
-              </a>
-            </li>
-            <li>
-              <a class="text-white" href="#">
-                <i class="bi bi-bookmark mr-2"></i>
-                Bookmark
-              </a>
-            </li>
-          </div>
-        </div>
-        <div class="p-4" id="main-content">
-          <button class="btn btn-primary" id="button-toggle">
-            <i class="bi bi-list"></i>
-          </button>
-          <div class="card mt-5">
-            <div class="card-body">
-              <h4>Lorem Ipsum</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                animi maxime at minima. Totam vero omnis ducimus commodi placeat
-                accusamus, repudiandae nemo, harum magni aperiam esse voluptates.
-                Non, sapiente vero?
-              </p>
-            </div>
-          </div>
-        </div>
-        <script src="{{ asset('js/sidebar.js') }}"></script>
+      <body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt="profile"> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">KopiPopi</span> </a>
+                <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
+            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div class="height-100 bg-light">
+        <h4>Main Components</h4>
+    </div>
+    <script src="{{ asset('js/sidebar.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
     </html>
