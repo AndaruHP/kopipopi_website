@@ -2,7 +2,7 @@
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
-    --first-color: #4723d9;
+    --first-color: #aa0000;
     --first-color-light: #afa5d9;
     --white-color: #f7f6fb;
     --body-font: "Nunito", sans-serif;
@@ -150,4 +150,13 @@ a {
     .body-pd {
         padding-left: calc(var(--nav-width) + 188px);
     }
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 75px;
+}
+
+.content {
+    margin-top: 5rem;
 }
