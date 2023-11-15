@@ -114,7 +114,7 @@ height: 800px;
 
 #menu {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 75px;
 }
 
 .menu-grid {
@@ -173,4 +173,108 @@ height: 800px;
 .carousel-caption p {
   font-size: 16px;
   margin: 0;
+}
+
+
+#menu {
+  background-color: #F7F7F7;
+  page
+}
+
+.menu #menu-flters {
+  margin: 0 auto 0 auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.menu #menu-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 22px 10px 22px;
+  font-size: 32px;
+  font-weight: 50;
+  line-height: 1;
+  color: #000000;
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  border: 0.75px solid #000000;
+  gap: 8px;
+  margin-right: 25px;
+  background-color: #FFFFFF;
+  -webkit-text-stroke: 0.5px #fff; /* Add stroke (for webkit-based browsers like Chrome, Safari) */
+  text-shadow: -0.5px -0.5px 0 #fff,  
+               0.5px -0.5px 0 #fff,
+               -0.5px 0.5px 0 #fff,
+               0.5px 0.5px 0 #fff; /* Create a shadow to simulate the stroke (for other browsers) */
+}
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
+  color: #fe0002;
+}
+
+.menu #menu-flters li:last-child {
+  margin-right: 0;
+}
+
+
+
+.menu .menu-img {
+  width: 7rem;
+  border-radius: 80%;
+  float: left;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu .menu-content {
+  margin-left: 85px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu .menu-content::after {
+  content: "......................................................................" "...................................................................." "....................................................................";
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: -4px;
+  z-index: 1;
+  color: #bab3a6 !important;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.menu .menu-content a {
+  padding-right: 10px;
+  background: #020202 !important;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  color: rgb(0, 0, 0) !important;
+  transition: 0.3s;
+}
+
+.menu .menu-content a:hover {
+  color: #fe0002 !important;
+}
+
+.menu .menu-content span {
+  background: #1a1814;
+  position: relative;
+  z-index: 3;
+  padding: 0 10px;
+  font-weight: 600;
+  color: #cda45e;
+}
+
+.menu .menu-ingredients {
+  margin-left: 120px;
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
 }

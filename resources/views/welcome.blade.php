@@ -21,27 +21,7 @@
         </style>
     </head>
 
-
-    <section id="navbar">
-        <div class="navbar">
-            <div class="navbar-content">
-                <img src="{{ asset('images/logo.png')}}" />
-            </div>
-            <div class="navbar-content">
-                Home
-            </div>
-            <div class="navbar-content">
-                Menu
-            </div>
-            <div class="navbar-content">
-                Gallery
-            </div>
-            <div class="navbar-content">
-                Location
-            </div>
-        </div>
-    </section>
-
+    @include('navbar')
 
 
     <section id="hero">
