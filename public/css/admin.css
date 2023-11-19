@@ -160,3 +160,23 @@ a {
 .content {
     margin-top: 5rem;
 }
+
+.totalmenu {
+    background: #f3be8d;
+    border-radius: 10px;
+}
+
+.totalcategory {
+    background: #98e4ae;
+    border-radius: 10px;
+}
+
+.totalreview {
+    background: #61b7e8;
+    border-radius: 10px;
+}
+
+.totalevent {
+    background: #f58989;
+    border-radius: 10px;
+}

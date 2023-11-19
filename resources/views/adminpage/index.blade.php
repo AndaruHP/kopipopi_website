@@ -38,73 +38,70 @@
         </div>
       <!--Container Main start-->
       <div class="height-100 bg-light content">
-          <h4>Main Components</h4>
           <div class="row mb-3">
             <div class="col-6 col-md-6 col-lg-3 p-4">
-              <div class="row">
-                <div class="card col-6 col-sm-6 col-md-6 b-0">
-                  <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
+              <div class="row totalmenu">
+                <div class="col-6 col-sm-6 col-md-6 b-0">
+                  <img class="img-fluid" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
                 </div>
-                <div class="card col-6 col-sm-6 col-md-6 b-0">
-                    <div class="card-body">
-                      <h3 class="card-title">Total Menu</h3>
-                      <h1 class="card-text">69</h1>
+                <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="a">
+                      <h3 class="title">Total Menu</h3>
+                      <h1 class="text">69</h1>
                     </div>                
                 </div>
               </div>
             </div>
 
-            <div class=" col-6 col-md-6 col-lg-3 p-4">
-              <div class="row">
-                <div class="card col-6 col-sm-6 col-md-6">
-                  <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
+            <div class="col-6 col-md-6 col-lg-3 p-4">
+              <div class="row totalcategory">
+                <div class="col-6 col-sm-6 col-md-6 b-0">
+                  <img class="img-fluid" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
                 </div>
-                <div class="card col-6 col-sm-6 col-md-6">
-                    <div class="card-body">
-                      <h3 class="card-title">Total Category</h3>
-                      <h1 class="card-text">120</h1>
+                <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="a">
+                      <h3 class="title">Total Category</h3>
+                      <h1 class="text">69</h1>
                     </div>                
                 </div>
               </div>
             </div>
             
-            <div class=" col-6 col-md-6 col-lg-3 p-4">
-              <div class="row">
-                <div class="card col-6 col-sm-6 col-md-6">
-                  <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
+            <div class="col-6 col-md-6 col-lg-3 p-4">
+              <div class="row totalreview">
+                <div class="col-6 col-sm-6 col-md-6 b-0">
+                  <img class="img-fluid" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
                 </div>
-                <div class="card col-6 col-sm-6 col-md-6">
-                    <div class="card-body">
-                      <h3 class="card-title">Total Review</h3>
-                      <h1 class="card-text">69</h1>
+                <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="a">
+                      <h3 class="title">Total Review</h3>
+                      <h1 class="text">69</h1>
                     </div>                
                 </div>
               </div>
             </div>
             
-            <div class=" col-6 col-md-6 col-lg-3 p-4">
-              <div class="row">
-                <div class="card col-6 col-sm-6 col-md-6">
-                  <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
+            <div class="col-6 col-md-6 col-lg-3 p-4">
+              <div class="row totalevent">
+                <div class="col-6 col-sm-6 col-md-6 b-0">
+                  <img class="img-fluid" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
                 </div>
-                <div class="card col-6 col-sm-6 col-md-6">
-                    <div class="card-body">
-                      <h3 class="card-title">Event</h3>
-                      <h1 class="card-text">10</h1>
+                <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="a">
+                      <h3 class="title">Event</h3>
+                      <h1 class="text">69</h1>
                     </div>                
                 </div>
               </div>
             </div>
-            
-            
-            
+
 
           </div>
 
-          <div class="row">
-            <div class="card col-12 col-sm-12 col-md-6">
+          <div class="row pr-1">
+            <div class=" col-12 col-sm-12 col-md-6">
               <div class="row">
-                <div class="card col-9 col-sm-9 col-md-9">
+                <div class=" col-9 col-sm-9 col-md-9 mx-0 pr-0">
                   <div class="card text-dark">
                     <div class="card-body">
                       <h4 class="mb-0">Recent comments</h4>
