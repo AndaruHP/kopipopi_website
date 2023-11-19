@@ -39,13 +39,13 @@
       <!--Container Main start-->
       <div class="height-100 bg-light content">
           <h4>Main Components</h4>
-          <div class="row">
-            <div class="card col-6 col-sm-6 col-md-3">
+          <div class="row mb-3">
+            <div class="col-6 col-md-6 col-lg-3 p-4">
               <div class="row">
-                <div class="card col-6 col-sm-6 col-md-6">
+                <div class="card col-6 col-sm-6 col-md-6 b-0">
                   <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
                 </div>
-                <div class="card col-6 col-sm-6 col-md-6">
+                <div class="card col-6 col-sm-6 col-md-6 b-0">
                     <div class="card-body">
                       <h3 class="card-title">Total Menu</h3>
                       <h1 class="card-text">69</h1>
@@ -54,7 +54,7 @@
               </div>
             </div>
 
-            <div class="card col-6 col-sm-6 col-md-3">
+            <div class=" col-6 col-md-6 col-lg-3 p-4">
               <div class="row">
                 <div class="card col-6 col-sm-6 col-md-6">
                   <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
@@ -68,7 +68,7 @@
               </div>
             </div>
             
-            <div class="card col-6 col-sm-6 col-md-3">
+            <div class=" col-6 col-md-6 col-lg-3 p-4">
               <div class="row">
                 <div class="card col-6 col-sm-6 col-md-6">
                   <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
@@ -82,7 +82,7 @@
               </div>
             </div>
             
-            <div class="card col-6 col-sm-6 col-md-3">
+            <div class=" col-6 col-md-6 col-lg-3 p-4">
               <div class="row">
                 <div class="card col-6 col-sm-6 col-md-6">
                   <img class="card-img-left" src="{{ asset('images/fork.png')}}" alt="Card image cap" /> 
@@ -103,13 +103,165 @@
 
           <div class="row">
             <div class="card col-12 col-sm-12 col-md-6">
-              <div class="card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+              <div class="row">
+                <div class="card col-9 col-sm-9 col-md-9">
+                  <div class="card text-dark">
+                    <div class="card-body">
+                      <h4 class="mb-0">Recent comments</h4>
+                      <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
+
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60"
+                          height="60" />
+                        <div>
+                          <h6 class="fw-bold mb-1">Maggie Marsh</h6>
+                          <div class="d-flex align-items-center mb-3">
+                            <p class="mb-0">
+                              March 07, 2021
+                              <span class="badge bg-primary">Pending</span>
+                            </p>
+                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
+                          </div>
+                          <p class="mb-0">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="my-0" />
+
+                    <div class="card-body p-4">
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60"
+                          height="60" />
+                        <div>
+                          <h6 class="fw-bold mb-1">Lara Stewart</h6>
+                          <div class="d-flex align-items-center mb-3">
+                            <p class="mb-0">
+                              March 15, 2021
+                              <span class="badge bg-success">Approved</span>
+                            </p>
+                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
+                            <a href="#!" class="text-success"><i class="fas fa-redo-alt ms-2"></i></a>
+                            <a href="#!" class="link-danger"><i class="fas fa-heart ms-2"></i></a>
+                          </div>
+                          <p class="mb-0">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It
+                            has roots in a piece of classical Latin literature from 45 BC, making it
+                            over 2000 years old. Richard McClintock, a Latin professor at
+                            Hampden-Sydney College in Virginia, looked up one of the more obscure
+                            Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                            the cites.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="my-0" style="height: 1px;" />
+
+                    <div class="card-body p-4">
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp" alt="avatar" width="60"
+                          height="60" />
+                        <div>
+                          <h6 class="fw-bold mb-1">Alexa Bennett</h6>
+                          <div class="d-flex align-items-center mb-3">
+                            <p class="mb-0">
+                              March 24, 2021
+                              <span class="badge bg-danger">Rejected</span>
+                            </p>
+                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
+                          </div>
+                          <p class="mb-0">
+                            There are many variations of passages of Lorem Ipsum available, but the
+                            majority have suffered alteration in some form, by injected humour, or
+                            randomised words which don't look even slightly believable. If you are
+                            going to use a passage of Lorem Ipsum, you need to be sure.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="my-0" />
+
+                    <div class="card-body p-4">
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(24).webp" alt="avatar" width="60"
+                          height="60" />
+                        <div>
+                          <h6 class="fw-bold mb-1">Betty Walker</h6>
+                          <div class="d-flex align-items-center mb-3">
+                            <p class="mb-0">
+                              March 30, 2021
+                              <span class="badge bg-primary">Pending</span>
+                            </p>
+                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
+                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
+                          </div>
+                          <p class="mb-0">
+                            It uses a dictionary of over 200 Latin words, combined with a handful of
+                            model sentence structures, to generate Lorem Ipsum which looks
+                            reasonable. The generated Lorem Ipsum is therefore always free from
+                            repetition, injected humour, or non-characteristic words etc.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card col-3 col-sm-3 col-md-3 pt-3">
+                  <div class="row">
+                    <i class="bi bi-share-fill">Share</i>
+                    <i class="bi bi-reply-fill">Replies</i>
+                    <i class="bi bi-download"> Download </i>
+                    <i class="bi bi-trash">Delete</i>
+                  </div>   
+                  <div class="row mt-3">
+                    <div class="5">
+                      <input type="checkbox" id="rating" name="rating5" value="rating5">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="4">
+                      <input type="checkbox" id="rating" name="rating4" value="rating4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="3">
+                      <input type="checkbox" id="rating" name="rating3" value="rating3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="2">
+                      <input type="checkbox" id="rating" name="rating2" value="rating2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="1">
+                      <input type="checkbox" id="rating" name="rating1" value="rating1">
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="card col-12 col-sm-12 col-md-6">
