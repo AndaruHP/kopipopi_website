@@ -33,3 +33,11 @@ Route::get('welcome', function () {
 Route::get('/admin/menu', function () {
     return view('adminpage.menu');
 });
+
+Route::get('/admin/menu/add', function () {
+    return view('adminpage.addmenu');
+});
+
+Route::get('/admin/menu/edit', function () {
+    return view('adminpage.editmenu');
+});

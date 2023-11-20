@@ -1,0 +1,144 @@
+.box {
+    width: 100%;
+    height: 35px; /* Ganti tinggi sesuai keinginan Anda */
+    background-color: #fff; /* Ganti warna sesuai keinginan Anda */
+    border: 1px solid #aaa; /* Ganti gaya border sesuai keinginan Anda */
+    margin-bottom: 10px; /* Ganti margin sesuai keinginan Anda */
+}
+
+.form {
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.dd-button {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 10px 30px 1px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%; /* Set width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.dd-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+.dd-button:hover {
+    background-color: #eeeeee;
+}
+
+.dd-input {
+    display: none;
+}
+
+.dd-menu {
+    position: absolute;
+    top: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    list-style-type: none;
+    width: 100%; /* Set width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.dd-input + .dd-menu {
+    display: none;
+}
+
+.dd-input:checked + .dd-menu {
+    display: block;
+    z-index: 999; /* Set z-index higher */
+    position: absolute; /* Change to absolute */
+}
+
+.dd-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dd-menu li:hover {
+    background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+    display: block;
+    margin: -10px -20px;
+    padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+    padding: 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.custom-button {
+    display: block; /* Change from inline-block to block */
+    margin: auto; /* Center horizontally */
+    margin-top: 10px; /* Add top margin if needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #AA0000E5;
+    color: #AA0000E5;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.custom-button p{
+    display: block;
+    position: relative;
+    transition: color 0.3s ease-out;
+}
+
+.custom-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F58989;
+    z-index: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+.custom-button:hover p {
+    color: #fff;
+}
+
+.custom-button:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
