@@ -19,16 +19,16 @@ Route::get('/', function () {
 });
 
 Route::controller(AdminController::class)->group(function () {
-    Route::get('/admin','test')->name('adminpage.index');
+    Route::get('/admin', 'test')->name('adminpage.index');
 });
 
 Route::get('/menu', function () {
     return view('menu');
 });
 
-Route::get('welcome', function () {
-    return view('welcome');
-});
+// Route::get('welcome', function () {
+//     return view('welcome');
+// });
 
 Route::get('/admin/menu', function () {
     return view('adminpage.menu');
