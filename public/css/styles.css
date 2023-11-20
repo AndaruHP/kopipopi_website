@@ -13,7 +13,7 @@
   padding-right: 75px;
   padding-left: 75px;
   background-color: white;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1000; 
 }
 
 
@@ -41,7 +41,7 @@
 
 
 #navbar .navbar-content a:hover {
-  color: inherit; /* Maintain the same color on hover */
+  color: inherit; 
 }
 
 @media screen and (max-width: 768px) {
@@ -50,6 +50,8 @@
     align-items: stretch;
     padding: 20px;
     height: auto;
+    position: static; 
+    z-index: 0;
   }
 
   .navbar-content {
@@ -222,7 +224,7 @@
 
 #menu {
   text-align: center;
-  padding-top: 75px;
+  padding-top: 150px;
 }
 
 .menu-grid {
@@ -260,6 +262,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  #menu {
+    padding-top: 30px;
+  }
   .menu-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -310,9 +315,7 @@
 }
 
 
-#menu {
-  background-color: #F7F7F7;
-}
+
 
 .menu #menu-flters {
   margin: 0 auto 0 auto;

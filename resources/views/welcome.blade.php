@@ -144,6 +144,36 @@
 });
 
     </script>
+
+<script>
+        $(document).ready(function() {
+            // Initialize Isotope
+            $('.menu-container').isotope({
+                itemSelector: '.menu-item',
+                layoutMode: 'fitRows'
+            });
+
+            // Filter items on button click
+            $('#menu-flters li').on('click', function() {
+                $('#menu-flters li').removeClass('filter-active');
+                $(this).addClass('filter-active');
+                var selector = $(this).data('filter');
+                $('.menu-container').isotope({
+                    filter: selector
+                });
+            });
+        });
+
+        function scrollToSection(sectionId) {
+            var targetSection = document.querySelector(sectionId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
     
 
     </html>
