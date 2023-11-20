@@ -217,18 +217,18 @@
                 <div class="boxrating p-2" >
                   <div class="share">
                     <h5>Share </h5>
-                    <img src="img/share.png" alt="" class="shares">
+                    <img src="{{ asset('images/share.png')}}" alt="" class="shares">
                   </div>
                   <div class="replies">
                     <h5>Replies </h5>
-                    <img src="img/replies.png" alt="" class="shares">
+                    <img src="{{ asset('images/replies.png')}}" alt="" class="shares">
                   </div>
                   <div class="download gambar">
-                      <img src="./img/download.png" alt="" class="shares">
+                      <img src="{{ asset('images/download.png')}}" alt="" class="shares">
                       <h5>Download</h5>
                   </div>
                   <div class="delete gambar">
-                      <img src="./img/trash.png" alt="" class="shares">
+                      <img src="{{ asset('images/trash.png')}}" alt="" class="shares">
                       <h5>Delete</h5>
                   </div>
                   <div class="row mt-3">
@@ -280,37 +280,37 @@
               <div class="row">
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
@@ -326,37 +326,37 @@
               <div class="row">
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6">
                   <div class="gambar ps-1">
-                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <img src="{{ asset('images/menu2.png')}}" alt="profile" style="max-width: 100px; height: auto; border-radius: 10px;" />
                       <div class="nama">
-                        <h5>Wilson Losiento</h5>
-                        <p>17 Agustus 1945</p>
+                        <h5>Kopi Enak</h5>
+                        <p>Rp.40,000</p>
                       </div>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
                   <div class="carousel-item active">
                     <div class="card">
                       <div class="img-wrapper">
-                        <img src="{{ asset('images/event1.png')}}"  alt="...">
+                        <img src="{{ asset('images/menu2.png')}}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -398,16 +398,7 @@
                   <div class="carousel-item">
                     <div class="card">
                       <div class="img-wrapper">
-                        <img src="{{ asset('images/event1.png')}}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-          
-                        <img src="{{ asset('images/event1.png')}}"  alt="...">
+                        <img src="{{ asset('images/menu3.png')}}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -425,7 +416,16 @@
                     <div class="card">
                       <div class="img-wrapper">
           
-                        <img src="{{ asset('images/event1.png')}}"  alt="...">
+                        <img src="{{ asset('images/menu2.png')}}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+          
+                        <img src="{{ asset('images/menu4.png')}}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
