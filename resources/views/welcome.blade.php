@@ -25,13 +25,14 @@
 
 
     <section id="hero">
-        <div class="hero-image">
-            <img src="{{ asset('images/hero.jpg') }}" alt="Hero Image" />
-        </div>
-        <div class="hero-content">
-            Kopipopi
-        </div>
-    </section>
+  <div class="hero-image" id="parallax">
+    <img src="{{ asset('images/hero.jpg') }}" alt="Hero Image" />
+  </div>
+  <div class="hero-content">
+    Kopipopi
+  </div>
+</section>
+
 
     <section id="explain">
         <div class="explain-image">
@@ -135,5 +136,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+  const scrolled = window.scrollY;
+  const parallax = document.getElementById('parallax');
+  parallax.style.transform = `translateY(${scrolled * 0.9}px)`; // Adjust the factor to control the parallax effect
+});
+
+    </script>
+    
 
     </html>
