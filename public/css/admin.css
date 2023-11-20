@@ -239,3 +239,60 @@ a {
 .addmenu {
     border-radius: 10px;
 }
+.img-wrapper {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.img-wrapper h1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0%;
+    color: white;
+    background-color: #a8a3a3;
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+@media (min-width: 576px) {
+    .carousel-inner {
+        display: flex;
+    }
+    .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+    }
+    .img-wrapper {
+        height: 17vw;
+    }
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #000000;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
