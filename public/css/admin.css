@@ -180,3 +180,62 @@ a {
     background: #f58989;
     border-radius: 10px;
 }
+
+.gambar {
+    display: flex; /* Menggunakan display flex untuk mengatur tata letak flexbox */
+    align-items: center; /* Mengatur item ke pusat secara vertikal */
+}
+
+.nama {
+    margin-left: 10px; /* Menambahkan margin kiri agar terdapat jarak antara gambar dan teks */
+}
+
+.share {
+    display: flex; /* Menggunakan display flex untuk mengatur tata letak flexbox */
+    align-items: center; /* Mengatur item ke pusat secara vertikal */
+}
+
+.shares {
+    width: 20px;
+}
+
+.replies {
+    display: flex; /* Menggunakan display flex untuk mengatur tata letak flexbox */
+    align-items: center; /* Mengatur item ke pusat secara vertikal */
+}
+
+.reviewrating {
+    background: #f7f7f7;
+}
+
+.judul {
+    background: #d9d9d9;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments {
+    background: white;
+    border-radius: 10px;
+}
+
+.boxrating {
+    height: 100%;
+    background: #d9d9d9;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.komentar {
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.addmenu {
+    border-radius: 10px;
+}

@@ -27,7 +27,7 @@
 <body id="body-pd">
         <header class="header" id="header">
             <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>             
-            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt="profile"> </div>
+            <div class="header_img"> <img src="{{ asset('images/profile.png')}}" alt="profile"> </div>
         </header>
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
@@ -98,191 +98,279 @@
 
           </div>
 
-          <div class="row pr-1">
-            <div class=" col-12 col-sm-12 col-md-6">
-              <div class="row">
-                <div class=" col-9 col-sm-9 col-md-9 mx-0 pr-0">
-                  <div class="card text-dark">
-                    <div class="card-body">
-                      <h4 class="mb-0">Recent comments</h4>
-                      <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
+          <body class="bg-light-subtle">
+    <div class="box px-3">
+      <div class="row ">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+          <div class="row reviewrating">
+            <div class="col-9 col-sm-9 col-md-9 me-0 pe-0 ps-0">
+              <div class="review p-3">
+                <div class="rating gambar d-flex justify-content-between">
+                  <h3 class="judul">Review & Rating</h3>
+                  <div class="view">
+                    <a href="#">View All Review</a>
+                  </div>
+                </div>
+                <div class="komentar">
 
-                      <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60"
-                          height="60" />
-                        <div>
-                          <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-                          <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0">
-                              March 07, 2021
-                              <span class="badge bg-primary">Pending</span>
-                            </p>
-                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-                          </div>
-                          <p class="mb-0">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever
-                            since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it.
-                          </p>
+                  <div class="comments">
+                    <div class="profile rounded-top d-flex justify-content-between">
+                      <div class="gambar ps-1">
+                        <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                        <div class="nama">
+                          <h5>Wilson Losiento</h5>
+                          <p>17 Agustus 1945</p>
                         </div>
+                      </div>
+                      <div class="bintang">
+                        <?php
+                        for ($i = 0; $i < 5; $i++) {
+                        ?>
+                          <i class="bi bi-star-fill text-warning"></i>
+                        <?php
+                        }
+                        ?>
+                        <img src="./img/comment.png" alt="">
                       </div>
                     </div>
-
-                    <hr class="my-0" />
-
-                    <div class="card-body p-4">
-                      <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60"
-                          height="60" />
-                        <div>
-                          <h6 class="fw-bold mb-1">Lara Stewart</h6>
-                          <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0">
-                              March 15, 2021
-                              <span class="badge bg-success">Approved</span>
-                            </p>
-                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                            <a href="#!" class="text-success"><i class="fas fa-redo-alt ms-2"></i></a>
-                            <a href="#!" class="link-danger"><i class="fas fa-heart ms-2"></i></a>
-                          </div>
-                          <p class="mb-0">
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It
-                            has roots in a piece of classical Latin literature from 45 BC, making it
-                            over 2000 years old. Richard McClintock, a Latin professor at
-                            Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                            the cites.
-                          </p>
+                    <div class="comment ps-2">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a
+                        type specimen book. It has survived not only five
+                        centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="comments">
+                    <div class="profile rounded-top d-flex justify-content-between">
+                      <div class="gambar ps-1">
+                        <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                        <div class="nama">
+                          <h5>Wilson Losiento</h5>
+                          <p>17 Agustus 1945</p>
                         </div>
+                      </div>
+                      <div class="bintang">
+                        <?php
+                        for ($i = 0; $i < 5; $i++) {
+                        ?>
+                          <i class="bi bi-star-fill text-warning"></i>
+                        <?php
+                        }
+                        ?>
+                        <img src="./img/comment.png" alt="">
                       </div>
                     </div>
-
-                    <hr class="my-0" style="height: 1px;" />
-
-                    <div class="card-body p-4">
-                      <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp" alt="avatar" width="60"
-                          height="60" />
-                        <div>
-                          <h6 class="fw-bold mb-1">Alexa Bennett</h6>
-                          <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0">
-                              March 24, 2021
-                              <span class="badge bg-danger">Rejected</span>
-                            </p>
-                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-                          </div>
-                          <p class="mb-0">
-                            There are many variations of passages of Lorem Ipsum available, but the
-                            majority have suffered alteration in some form, by injected humour, or
-                            randomised words which don't look even slightly believable. If you are
-                            going to use a passage of Lorem Ipsum, you need to be sure.
-                          </p>
+                    <div class="comment ps-2">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a
+                        type specimen book. It has survived not only five
+                        centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="comments">
+                    <div class="profile rounded-top d-flex justify-content-between">
+                      <div class="gambar ps-1">
+                        <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                        <div class="nama">
+                          <h5>Wilson Losiento</h5>
+                          <p>17 Agustus 1945</p>
                         </div>
+                      </div>
+                      <div class="bintang">
+                        <?php
+                        for ($i = 0; $i < 5; $i++) {
+                        ?>
+                          <i class="bi bi-star-fill text-warning"></i>
+                        <?php
+                        }
+                        ?>
+                        <img src="./img/comment.png" alt="">
                       </div>
                     </div>
-
-                    <hr class="my-0" />
-
-                    <div class="card-body p-4">
-                      <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(24).webp" alt="avatar" width="60"
-                          height="60" />
-                        <div>
-                          <h6 class="fw-bold mb-1">Betty Walker</h6>
-                          <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0">
-                              March 30, 2021
-                              <span class="badge bg-primary">Pending</span>
-                            </p>
-                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-                            <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-                          </div>
-                          <p class="mb-0">
-                            It uses a dictionary of over 200 Latin words, combined with a handful of
-                            model sentence structures, to generate Lorem Ipsum which looks
-                            reasonable. The generated Lorem Ipsum is therefore always free from
-                            repetition, injected humour, or non-characteristic words etc.
-                          </p>
-                        </div>
-                      </div>
+                    <div class="comment ps-2">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a
+                        type specimen book. It has survived not only five
+                        centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div class="card col-3 col-sm-3 col-md-3 pt-3">
-                  <div class="row">
-                    <i class="bi bi-share-fill">Share</i>
-                    <i class="bi bi-reply-fill">Replies</i>
-                    <i class="bi bi-download"> Download </i>
-                    <i class="bi bi-trash">Delete</i>
-                  </div>   
+                
+                
+              </div>
+            </div>
+            <div class="col-3 col-sm-3 col-md-3 ms-0 ps-0">
+              <div class="py-2 tabelkanan" style="height: 100%;">
+                <div class="boxrating p-2" >
+                  <div class="share">
+                    <h5>Share </h5>
+                    <img src="img/share.png" alt="" class="shares">
+                  </div>
+                  <div class="replies">
+                    <h5>Replies </h5>
+                    <img src="img/replies.png" alt="" class="shares">
+                  </div>
+                  <div class="download gambar">
+                      <img src="./img/download.png" alt="" class="shares">
+                      <h5>Download</h5>
+                  </div>
+                  <div class="delete gambar">
+                      <img src="./img/trash.png" alt="" class="shares">
+                      <h5>Delete</h5>
+                  </div>
                   <div class="row mt-3">
                     <div class="5">
                       <input type="checkbox" id="rating" name="rating5" value="rating5">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="4">
                       <input type="checkbox" id="rating" name="rating4" value="rating4">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="3">
                       <input type="checkbox" id="rating" name="rating3" value="rating3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="2">
                       <input type="checkbox" id="rating" name="rating2" value="rating2">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="1">
                       <input type="checkbox" id="rating" name="rating1" value="rating1">
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card col-12 col-sm-12 col-md-6">
-              <div class="card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 px-4 pt-2">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-warning mb-3 p-2 addmenu">
+              <div class="rating gambar d-flex justify-content-between">
+                <h3 class="judul">Recent Added Menu</h3>
+                <div class="view">
+                  <a href="#">View All Menu</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-warning p-2 addmenu">
+              <div class="rating gambar d-flex justify-content-between">
+                <h3 class="judul">Recent Added Menu</h3>
+                <div class="view">
+                  <a href="#">View All Menu</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <div class="gambar ps-1">
+                      <img src="{{ asset('images/profile.png')}}" alt="profile" />
+                      <div class="nama">
+                        <h5>Wilson Losiento</h5>
+                        <p>17 Agustus 1945</p>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-
-        <div class="row">
-          <div class="card col-12 col-sm-12 col-md-12">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-          </div>
         </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 
 
       </div>
