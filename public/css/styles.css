@@ -31,6 +31,36 @@
 }
 
 
+.collapsed-navbar.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    height: auto;
+  }
+
+  .navbar-content {
+    font-size: 24px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    text-align: center;
+    border: none;
+  }
+
+  .navbar-content img {
+    height: 64px;
+    margin-bottom: 10px;
+  }
+
+}
+
 #hero {
   position: relative;
   height: 800px; 
@@ -60,6 +90,23 @@ height: 800px;
    font-weight: 400;
    letter-spacing: 11.84px;
    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    height: auto;
+  }
+
+  .hero-image img {
+    height: 400px;
+    object-fit: cover;
+    filter: none;
+  }
+
+  .hero-content {
+    font-size: 48px;
+    letter-spacing: 6px;
+  }
 }
 
 
@@ -110,6 +157,46 @@ height: 800px;
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 768px) {
+  #explain {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    padding-top: 50px;
+  }
+
+  .explain-image {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+
+  .explain-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .explain-title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .explain-content {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .explain-title h2 {
+    font-size: 42px;
+    letter-spacing: 1px;
+  }
+}
+
+
+
 /* public/css/styles.css */
 
 #menu {
@@ -151,6 +238,32 @@ height: 800px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 100%;
+  }
+
+  .menu-item {
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu-item img {
+    height: auto;
+  }
+
+  .menu-text {
+    position: static;
+    transform: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-shadow: none;
+    text-align: center;
+  }
+}
+
 
 .carousel-caption {
   display: flex;
@@ -178,7 +291,6 @@ height: 800px;
 
 #menu {
   background-color: #F7F7F7;
-  page
 }
 
 .menu #menu-flters {
@@ -218,6 +330,33 @@ height: 800px;
 
 .menu #menu-flters li:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu #menu-flters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .menu #menu-flters li {
+    font-size: 20px;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 0.5px solid #000000;
+    text-shadow: none;
+    -webkit-text-stroke: none;
+  }
+
+  .menu #menu-flters li:last-child {
+    margin-right: 0;
+  }
 }
 
 
