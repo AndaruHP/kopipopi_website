@@ -47,8 +47,8 @@
     <div class="height-100 bg-light content">
         <a href="">
             < back</a>
-            <br>
-            <br>
+                <br>
+                <br>
                 <h1 class="text-align-start">Add New Menu</h1>
                 <hr>
                 <br>

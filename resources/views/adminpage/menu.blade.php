@@ -133,12 +133,12 @@
                                 <td data-sticky="right">
                                     <div class="row pb-1">
                                         <div class="col-12">
-                                        <button class="button blue-button">
-                                            <div class="icon">
-                                                <img src="{{ asset('images/trashcan.svg') }}" alt="">
-                                            </div>
-                                            <span>Edit</span>
-                                        </button>
+                                            <button class="button blue-button">
+                                                <div class="icon">
+                                                    <img src="{{ asset('images/trashcan.svg') }}" alt="">
+                                                </div>
+                                                <span>Edit</span>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="row pt-1">
@@ -181,12 +181,12 @@
                                 <td data-sticky="right">
                                     <div class="row pb-1">
                                         <div class="col-12">
-                                        <button class="button blue-button">
-                                            <div class="icon">
-                                                <img src="{{ asset('images/trashcan.svg') }}" alt="">
-                                            </div>
-                                            <span>Edit</span>
-                                        </button>
+                                            <button class="button blue-button">
+                                                <div class="icon">
+                                                    <img src="{{ asset('images/trashcan.svg') }}" alt="">
+                                                </div>
+                                                <span>Edit</span>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="row pt-1">
@@ -229,12 +229,12 @@
                                 <td data-sticky="right">
                                     <div class="row pb-1">
                                         <div class="col-12">
-                                        <button class="button blue-button">
-                                            <div class="icon">
-                                                <img src="{{ asset('images/trashcan.svg') }}" alt="">
-                                            </div>
-                                            <span>Edit</span>
-                                        </button>
+                                            <button class="button blue-button">
+                                                <div class="icon">
+                                                    <img src="{{ asset('images/trashcan.svg') }}" alt="">
+                                                </div>
+                                                <span>Edit</span>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="row pt-1">
