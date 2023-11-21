@@ -41,3 +41,7 @@ Route::get('/admin/menu/add', function () {
 Route::get('/admin/menu/edit', function () {
     return view('adminpage.editmenu');
 });
+
+Route::get('/login', function () {
+    return view('login.login');
+});
