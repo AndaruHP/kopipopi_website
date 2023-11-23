@@ -228,23 +228,45 @@
                         <div class="col-3 col-sm-3 col-md-3 ms-0 ps-0">
                             <div class="py-2 tabelkanan" style="height: 100%;">
                                 <div class="boxrating p-2">
-                                    <div class="share">
-                                        <h5>Share </h5>
-                                        <img src="{{ asset('images/share.png') }}" alt="" class="shares">
+                                    <div class="share mb-2">
+                                       <button class="sharebutton warnashare">
+                                            <div class="svg-wrapper-1">
+                                                <div class="svg-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span>Send</span>
+                                        </button>
                                     </div>
-                                    <div class="replies">
-                                        <h5>Replies </h5>
-                                        <img src="{{ asset('images/replies.png') }}" alt="" class="shares">
+                                    <div class="replies mb-2">
+                                        <button class="sharebutton warnareplies">
+                                            <div class="svg-wrapper-1">
+                                                <div class="svg-wrapper">
+                                                <img src="{{ asset('images/share.png') }}" alt="">
+                                                </div>
+                                            </div>
+                                            <span>Replies</span>
+                                        </button>
                                     </div>
-                                    <div class="download gambar">
-                                        <img src="{{ asset('images/download.png') }}" alt="" class="shares">
-                                        <h5>Download</h5>
+                                    <div class="download gambar mb-2">
+                                        <button class="bookmarkBtn">
+                                            <span class="IconContainer"> 
+                                                <svg viewBox="0 0 384 512" height="0.9em" class="icon"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path></svg>
+                                            </span>
+                                            <p class="texts">Save</p>
+                                        </button>
                                     </div>
                                     <div class="delete gambar">
-                                        <img src="{{ asset('images/trash.png') }}" alt="" class="shares">
-                                        <h5>Delete</h5>
+                                        <button class="noselect"><span class="text">Delete</span><span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                                            </path></svg></span></button>
                                     </div>
                                     <div class="row mt-3">
+                                        <h5>Rating</h5>
                                         <div class="5">
                                             <input type="checkbox" id="rating" name="rating5" value="rating5">
                                             <i class="bi bi-star-fill text-warning"></i>
@@ -283,7 +305,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 px-4 pt-2">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-warning mb-3 p-2 addmenu">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 p-2 addmenu">
                             <div class="rating gambar d-flex justify-content-between">
                                 <h3 class="judul">Recent Added Menu</h3>
                                 <div class="view">
@@ -291,8 +313,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -301,8 +323,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -311,8 +333,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -321,8 +343,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -331,18 +353,20 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-warning p-2 addmenu">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 p-2 addmenu">
                             <div class="rating gambar d-flex justify-content-between">
-                                <h3 class="judul">Recent Added Menu</h3>
+                                <h4 class="judul">Recent Added Category</h4>
                                 <div class="view">
-                                    <a href="#">View All Menu</a>
+                                    <a href="#">View All Category</a>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -351,8 +375,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -361,8 +385,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -371,8 +395,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-md-6">
-                                    <div class="gambar ps-1">
+                                <div class="col-12 col-sm-12 col-md-6 ">
+                                    <div class="gambar ps-1 menubang mb-2">
                                         <img src="{{ asset('images/menu2.png') }}" alt="profile"
                                             style="max-width: 100px; height: auto; border-radius: 10px;" />
                                         <div class="nama">
@@ -381,8 +405,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                
                             </div>
                         </div>
+                        
+                        
                     </div>
                 </div>
             </div>
