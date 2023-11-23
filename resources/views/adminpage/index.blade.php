@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
-    <!-- bootstrap 5 css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-WzN9qVZfSI/5MwFGb/7Kl6bQy7ZFLXn7vwZxDMEQx7p6jPvc1oRegQh8SSt5iKFZ5dFucxFr4G5ubRnXtfrNsQ=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-WzN9qVZfSI/5MwFGb/7Kl6bQy7ZFLXn7vwZxDMEQx7p6jPvc1oRegQh8SSt5iKFZ5dFucxFr4G5ubRnXtfrNsQ=="
-        crossorigin="anonymous" />
-
+    <title>Document</title>
 </head>
-
-<body id="body-pd">
+<body>
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <div class="header_img"> <img src="{{ asset('images/profile.png') }}" alt="profile"> </div>
@@ -43,7 +49,7 @@
         </nav>
     </div>
     <!--Container Main start-->
-    <div class="bg-light content">
+    <div class="content">
         <div class="row mb-3">
             <div class="col-6 col-md-6 col-lg-3 p-4">
                 <div class="row totalmenu">
@@ -384,88 +390,83 @@
         </div>
 
         <div class="promo bg-light mt-2 p-2">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12">
-                    <div class="rating gambar d-flex justify-content-between">
-                        <h3 class="judul">Event Card</h3>
-                        <div class="view">
-                            <a href="#">View All Event</a>
-                        </div>
-                    </div>
-                    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="card">
-                                    <div class="img-wrapper">
-                                        <img src="{{ asset('images/menu2.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper">
-                                        <img src="{{ asset('images/event1.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper">
-                                        <img src="{{ asset('images/menu3.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper">
-
-                                        <img src="{{ asset('images/event1.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper">
-
-                                        <img src="{{ asset('images/menu2.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper">
-
-                                        <img src="{{ asset('images/menu4.png') }}" alt="...">
-                                        <h1>Event Promo 11.11</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12">
+              <div class="rating gambar d-flex justify-content-between">
+                <h3 class="judul">Event Card</h3>
+                <div class="view">
+                  <a href="#">View All Event</a>
                 </div>
+              </div>
+              <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img src="{{ asset('images/fork.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+          
+                        <img src="{{ asset('images/menu3.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+          
+                        <img src="{{ asset('images/menu4.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+          
+                        <img src="{{ asset('images/fork.png') }}"  alt="...">
+                        <h1 >Event Promo 11.11</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-
     </div>
-    <script src="{{ asset('js/sidebar.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="{{ asset('js/sidebar.js') }}"></script>
 </body>
-
 </html>
