@@ -39,11 +39,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // buat carousel event
 const multipleItemCarousel = document.querySelector("#carouselExampleControls");
 
-if (window.matchMedia("(min-width: 576px)".matches)) {
-    // const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-    //   interval: 3000
-    // }) jadinya sering error
-
+if (window.matchMedia("(min-width: 576px)").matches) {
     var carouselWidth = $(".carousel-inner")[0].scrollWidth;
     var cardWidth = $(".carousel-item").width();
     var scrollPosition = 0;

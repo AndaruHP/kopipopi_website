@@ -11,6 +11,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
       rel="stylesheet"
@@ -18,18 +20,19 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-WzN9qVZfSI/5MwFGb/7Kl6bQy7ZFLXn7vwZxDMEQx7p6jPvc1oRegQh8SSt5iKFZ5dFucxFr4G5ubRnXtfrNsQ=="
+      integrity="iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
     <title>Document</title>
 </head>
-<body>
+<body id="body-pd">
     <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_toggle"> 
+            <i class='bx bx-menu' id="header-toggle"></i>
+         </div>
         <div class="header_img"> <img src="{{ asset('images/profile.png') }}" alt="profile"> </div>
     </header>
-
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i><img
@@ -49,14 +52,14 @@
         </nav>
     </div>
     <!--Container Main start-->
-    <div class="content">
+    <div class=" content">
         <div class="row mb-3">
             <div class="col-6 col-md-6 col-lg-3 p-4">
                 <div class="row totalmenu">
                     <div class="col-6 col-sm-6 col-md-6 b-0">
                         <img class="img-fluid" src="{{ asset('images/fork.png') }}" alt="Card image cap" />
                     </div>
-                    <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="col-sm-6 col-md-6 b-0">
                         <div class="a">
                             <h3 class="title">Total Menu</h3>
                             <h1 class="text">69</h1>
@@ -70,7 +73,7 @@
                     <div class="col-6 col-sm-6 col-md-6 b-0">
                         <img class="img-fluid" src="{{ asset('images/fork.png') }}" alt="Card image cap" />
                     </div>
-                    <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="col-sm-6 col-md-6 b-0">
                         <div class="a">
                             <h3 class="title">Total Category</h3>
                             <h1 class="text">69</h1>
@@ -84,7 +87,7 @@
                     <div class="col-6 col-sm-6 col-md-6 b-0">
                         <img class="img-fluid" src="{{ asset('images/fork.png') }}" alt="Card image cap" />
                     </div>
-                    <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="col-sm-6 col-md-6 b-0">
                         <div class="a">
                             <h3 class="title">Total Review</h3>
                             <h1 class="text">69</h1>
@@ -98,7 +101,7 @@
                     <div class="col-6 col-sm-6 col-md-6 b-0">
                         <img class="img-fluid" src="{{ asset('images/fork.png') }}" alt="Card image cap" />
                     </div>
-                    <div class=" col-6 col-sm-6 col-md-6 b-0">
+                    <div class="col-sm-6 col-md-6 b-0">
                         <div class="a">
                             <h3 class="title">Event</h3>
                             <h1 class="text">69</h1>
@@ -114,13 +117,19 @@
             <div class="row ">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="row reviewrating">
-                        <div class="col-9 col-sm-9 col-md-9 me-0 pe-0 ps-0">
+                        <div class="col-12 col-sm-12 col-md-9 me-0 pe-0 ps-0">
                             <div class="review p-3">
-                                <div class="rating gambar d-flex justify-content-between">
-                                    <h3 class="judul">Review & Rating</h3>
-                                    <div class="view">
-                                        <a href="#">View All Review</a>
-                                    </div>
+                                <div class="rating gambar d-flex justify-content-between row row-cols-2">
+                                     
+                                        <div class="col-12 col-sm-12 col-md-6">
+                                            <h3 class="judul">Review & Rating</h3>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6">
+                                            <div class="d-flex justify-content-md-end">
+                                                <a href="#">View All Review</a>
+                                            </div>
+                                        </div>
+                                    
                                 </div>
                                 <div class="komentar">
 
@@ -141,8 +150,40 @@
                                                 <?php
                         }
                         ?>
-                                                <img src="./img/comment.png" alt="">
+                                                <img src="{{ asset('images/comment.png') }}" alt="">
                                             </div>
+                                        </div>
+                                        <div class="comment ps-2">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s, when an unknown
+                                                printer took a galley of type and scrambled it to make a
+                                                type specimen book. It has survived not only five
+                                                centuries, but also the leap into electronic typesetting,
+                                                remaining essentially unchanged.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+                                        <div class="profile rounded-top d-flex justify-content-between">
+                                            <div class="gambar ps-1">
+                                                <img src="{{ asset('images/profile.png') }}" alt="profile" />
+                                                <div class="nama">
+                                                    <h5>Wilson Losiento</h5>
+                                                    <p>17 Agustus 1945</p>
+                                                </div>
+                                            </div>
+                                            <div class="bintang">
+                                                    <?php
+                            for ($i = 0; $i < 5; $i++) {
+                            ?>
+                                                    <i class="bi bi-star-fill text-warning"></i>
+                                                    <?php
+                            }
+                            ?>
+                                                    <img src="{{ asset('images/comment.png') }}" alt="">
+                                                </div>
                                         </div>
                                         <div class="comment ps-2">
                                             <p>
@@ -173,39 +214,7 @@
                                                 <?php
                         }
                         ?>
-                                                <img src="./img/comment.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="comment ps-2">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown
-                                                printer took a galley of type and scrambled it to make a
-                                                type specimen book. It has survived not only five
-                                                centuries, but also the leap into electronic typesetting,
-                                                remaining essentially unchanged.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="comments">
-                                        <div class="profile rounded-top d-flex justify-content-between">
-                                            <div class="gambar ps-1">
-                                                <img src="{{ asset('images/profile.png') }}" alt="profile" />
-                                                <div class="nama">
-                                                    <h5>Wilson Losiento</h5>
-                                                    <p>17 Agustus 1945</p>
-                                                </div>
-                                            </div>
-                                            <div class="bintang">
-                                                <?php
-                        for ($i = 0; $i < 5; $i++) {
-                        ?>
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <?php
-                        }
-                        ?>
-                                                <img src="./img/comment.png" alt="">
+                                                <img src="{{ asset('images/comment.png') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="comment ps-2">
@@ -225,7 +234,7 @@
 
                             </div>
                         </div>
-                        <div class="col-3 col-sm-3 col-md-3 ms-0 ps-0">
+                        <div class="row row-cols-12 row-cols-sm-12 row-cols-lg-12 row-cols-md-12 row-cols-lg-12 col-sm-12 col-md-3 ms-0 ps-0">
                             <div class="py-2 tabelkanan" style="height: 100%;">
                                 <div class="boxrating p-2">
                                     <div class="share mb-2">
@@ -431,7 +440,7 @@
                   <div class="carousel-item active">
                     <div class="card">
                       <div class="img-wrapper">
-                        <img src="{{ asset('images/fork.png') }}"  alt="...">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -447,7 +456,7 @@
                   <div class="carousel-item">
                     <div class="card">
                       <div class="img-wrapper">
-                        <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -456,7 +465,7 @@
                     <div class="card">
                       <div class="img-wrapper">
           
-                        <img src="{{ asset('images/menu3.png') }}"  alt="...">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -465,7 +474,7 @@
                     <div class="card">
                       <div class="img-wrapper">
           
-                        <img src="{{ asset('images/menu4.png') }}"  alt="...">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>
@@ -474,7 +483,7 @@
                     <div class="card">
                       <div class="img-wrapper">
           
-                        <img src="{{ asset('images/fork.png') }}"  alt="...">
+                        <img src="{{ asset('images/event1.png') }}"  alt="...">
                         <h1 >Event Promo 11.11</h1>
                       </div>
                     </div>

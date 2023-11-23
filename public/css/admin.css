@@ -182,8 +182,8 @@ a {
 }
 
 .gambar {
-    display: flex; /* Menggunakan display flex untuk mengatur tata letak flexbox */
-    align-items: center; /* Mengatur item ke pusat secara vertikal */
+    display: flex;
+    align-items: center;
 }
 
 .nama {
