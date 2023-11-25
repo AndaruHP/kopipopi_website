@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Bebas+Neue&display=swap');
+
+body {
+    color: white;
+}
+
+.footer-content {
+    background-color: #000000;
+    padding: 20px;
+}
+
+.footer-header {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text-header {
+    color: var(--white, #FFF);
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
+}
+
+.footer-text-header-2 {
+    color: var(--light-red, #FE0002);
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-around;
+    color: var(--white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.upper {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-container {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 10px; */
+    color: var(--white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-map{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.lower a {
+    text-decoration: none;
+    color: white;
+}
+
+.lower a:hover {
+    color: inherit;
+}
