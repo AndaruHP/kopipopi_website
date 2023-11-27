@@ -117,7 +117,7 @@
             <div class="row ">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="row reviewrating">
-                        <div class="col-12 col-sm-12 col-md-9 me-0 pe-0 ps-0">
+                        <div class="col-12 col-sm-12 col-md-12 me-0 pe-0 ps-0">
                             <div class="review p-3">
                                 <div class="rating gambar d-flex justify-content-between row row-cols-2">
                                      
@@ -234,7 +234,7 @@
 
                             </div>
                         </div>
-                        <div class="row row-cols-12 row-cols-sm-12 row-cols-lg-12 row-cols-md-12 row-cols-lg-12 col-sm-12 col-md-3 ms-0 ps-0">
+                        <!-- <div class="row row-cols-12 row-cols-sm-12 row-cols-lg-12 row-cols-md-12 row-cols-lg-12 col-sm-12 col-md-3 ms-0 ps-0">
                             <div class="py-2 tabelkanan" style="height: 100%;">
                                 <div class="boxrating p-2">
                                     <div class="share mb-2">
@@ -309,7 +309,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 px-4 pt-2">
