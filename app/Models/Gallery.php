@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class Gallery extends Model
 {
     use HasFactory, Sluggable;
 
@@ -21,7 +21,6 @@ class Banner extends Model
             ],
         ];
     }
-
     public function getRouteKeyName()
     {
         return 'slug';

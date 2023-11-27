@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Admin Login</title>
 </head>
 
@@ -45,33 +45,24 @@
                         </center>
                     </div>
 
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
-                    </div>
-                    <div class="input-group mb-1">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6"
-                            placeholder="Password">
-                    </div>
-                    <div class="input-group mb-5 d-flex justify-content-center">
-                        <div class="contact">
-                            <small><a href="#">Contact Developer</a></small>
+                    <form method="post" action="/login">
+                        @csrf
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                                value="{{ old('email') }}">
                         </div>
-                    </div>
-                    <div class="input-group mb-3 d-flex justify-content-center">
-                        <div class="text-center">
-                            <button class="btn btn-lg btn-primary w-10 fs-6" style="background-color: red;"> <a
-                                    href="/admin" style="text-decoration: none; color: inherit; ">Login</a></button>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Password">
                         </div>
-                    </div>
-
+                        <button type="submit" class="btn btn-primary mt-2">Login</button>
+                    </form>
                 </div>
-
             </div>
         </div>
-
     </div>
-    </div>
-
 </body>
 
 </html>
