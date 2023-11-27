@@ -121,10 +121,10 @@
                             <div class="review p-3">
                                 <div class="rating gambar d-flex justify-content-between row row-cols-2">
                                      
-                                        <div class="col-12 col-sm-12 col-md-6">
+                                        <div class="col-12 col-sm-9 col-md-6">
                                             <h3 class="judul">Review & Rating</h3>
                                         </div>
-                                        <div class="col-12 col-sm-12 col-md-6">
+                                        <div class="col-12 col-sm-3 col-md-6">
                                             <div class="d-flex justify-content-md-end">
                                                 <a href="#">View All Review</a>
                                             </div>
@@ -142,15 +142,11 @@
                                                     <p>17 Agustus 1945</p>
                                                 </div>
                                             </div>
-                                            <div class="bintang">
-                                                <?php
-                        for ($i = 0; $i < 5; $i++) {
-                        ?>
+                                            <div class="bintang gambar">
+                                         
                                                 <i class="bi bi-star-fill text-warning"></i>
-                                                <?php
-                        }
-                        ?>
-                                                <img src="{{ asset('images/comment.png') }}" alt="">
+                                                <p>5/5</p>
+                                                <!-- <img src="{{ asset('images/comment.png') }}" alt=""> -->
                                             </div>
                                         </div>
                                         <div class="comment ps-2">
@@ -174,16 +170,12 @@
                                                     <p>17 Agustus 1945</p>
                                                 </div>
                                             </div>
-                                            <div class="bintang">
-                                                    <?php
-                            for ($i = 0; $i < 5; $i++) {
-                            ?>
-                                                    <i class="bi bi-star-fill text-warning"></i>
-                                                    <?php
-                            }
-                            ?>
-                                                    <img src="{{ asset('images/comment.png') }}" alt="">
-                                                </div>
+                                            <div class="bintang gambar">
+                                         
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <p>5/5</p>
+                                                <!-- <img src="{{ asset('images/comment.png') }}" alt=""> -->
+                                            </div>
                                         </div>
                                         <div class="comment ps-2">
                                             <p>
@@ -206,15 +198,11 @@
                                                     <p>17 Agustus 1945</p>
                                                 </div>
                                             </div>
-                                            <div class="bintang">
-                                                <?php
-                        for ($i = 0; $i < 5; $i++) {
-                        ?>
+                                            <div class="bintang gambar">
+                                         
                                                 <i class="bi bi-star-fill text-warning"></i>
-                                                <?php
-                        }
-                        ?>
-                                                <img src="{{ asset('images/comment.png') }}" alt="">
+                                                <p>5/5</p>
+                                                <!-- <img src="{{ asset('images/comment.png') }}" alt=""> -->
                                             </div>
                                         </div>
                                         <div class="comment ps-2">
@@ -229,6 +217,63 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="comments">
+                                        <div class="profile rounded-top d-flex justify-content-between">
+                                            <div class="gambar ps-1">
+                                                <img src="{{ asset('images/profile.png') }}" alt="profile" />
+                                                <div class="nama">
+                                                    <h5>Wilson Losiento</h5>
+                                                    <p>17 Agustus 1945</p>
+                                                </div>
+                                            </div>
+                                            <div class="bintang gambar">
+                                         
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <p>5/5</p>
+                                                <!-- <img src="{{ asset('images/comment.png') }}" alt=""> -->
+                                            </div>
+                                        </div>
+                                        <div class="comment ps-2">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s, when an unknown
+                                                printer took a galley of type and scrambled it to make a
+                                                type specimen book. It has survived not only five
+                                                centuries, but also the leap into electronic typesetting,
+                                                remaining essentially unchanged.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+                                        <div class="profile rounded-top d-flex justify-content-between">
+                                            <div class="gambar ps-1">
+                                                <img src="{{ asset('images/profile.png') }}" alt="profile" />
+                                                <div class="nama">
+                                                    <h5>Wilson Losiento</h5>
+                                                    <p>17 Agustus 1945</p>
+                                                </div>
+                                            </div>
+                                            <div class="bintang gambar">
+                                         
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <p>5/5</p>
+                                                <!-- <img src="{{ asset('images/comment.png') }}" alt=""> -->
+                                            </div>
+                                        </div>
+                                        <div class="comment ps-2">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s, when an unknown
+                                                printer took a galley of type and scrambled it to make a
+                                                type specimen book. It has survived not only five
+                                                centuries, but also the leap into electronic typesetting,
+                                                remaining essentially unchanged.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
 
 
@@ -315,12 +360,18 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 px-4 pt-2">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 p-2 addmenu">
-                            <div class="rating gambar d-flex justify-content-between">
-                                <h3 class="judul">Recent Added Menu</h3>
-                                <div class="view">
-                                    <a href="#">View All Menu</a>
+                             <div class="rating gambar d-flex justify-content-between row row-cols-2">
+                                     
+                                        <div class="col-12 col-sm-9 col-md-6">
+                                            <h3 class="judul">Recent Added Menu</h3>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-6">
+                                            <div class="d-flex justify-content-md-end">
+                                                <a href="#">View All Menu</a>
+                                            </div>
+                                        </div>
+                                    
                                 </div>
-                            </div>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-6 ">
                                     <div class="gambar ps-1 menubang mb-2">
@@ -367,11 +418,17 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 p-2 addmenu">
-                            <div class="rating gambar d-flex justify-content-between">
-                                <h4 class="judul">Recent Added Category</h4>
-                                <div class="view">
-                                    <a href="#">View All Category</a>
+                            <div class="rating gambar d-flex justify-content-between row row-cols-2">
+                                
+                                <div class="col-12 col-sm-9 col-md-6">
+                                    <h4 class="judul">Recent Added Category</h4>
                                 </div>
+                                <div class="col-12 col-sm-3 col-md-6">
+                                    <div class="d-flex justify-content-md-end">
+                                        <a href="#">View All Category</a>
+                                    </div>
+                                </div>
+                            
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-6 ">
@@ -425,81 +482,83 @@
             </div>
 
         </div>
+        <div class="px-3">
 
-        <div class="promo bg-light mt-2 p-2">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-12">
-              <div class="rating gambar d-flex justify-content-between">
-                <h3 class="judul">Event Card</h3>
-                <div class="view">
-                  <a href="#">View All Event</a>
+            <div class="box promo bg-light mt-2 p-2">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12">
+                  <div class="rating gambar d-flex justify-content-between row row-cols-2">
+                        
+                        <div class="col-12 col-sm-9 col-md-6">
+                            <h3 class="judul">Event Card</h3>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6">
+                            <div class="d-flex justify-content-md-end">
+                                <a href="#">View All Event</a>
+                            </div>
+                        </div>
+                    
                 </div>
-              </div>
-              <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="card">
-                      <div class="img-wrapper">
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
+                  <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="card">
+                          <div class="img-wrapper">
+                            <img src="{{ asset('images/event1.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+                            <img src="{{ asset('images/event1.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+              
+                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+              
+                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+              
+                            <img src="{{ asset('images/event1.png') }}"  alt="...">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-          
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-          
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <div class="img-wrapper">
-          
-                        <img src="{{ asset('images/event1.png') }}"  alt="...">
-                        <h1 >Event Promo 11.11</h1>
-                      </div>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
             </div>
-          </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
