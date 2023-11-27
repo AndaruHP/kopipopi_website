@@ -31,26 +31,49 @@
         <div class="header_toggle"> 
             <i class='bx bx-menu' id="header-toggle"></i>
          </div>
-        <div class="header_img"> <img src="{{ asset('images/profile.png') }}" alt="profile"> </div>
+        <div class="header_img gambar"><p>John Doe</p></div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i><img
-                        src="{{ asset('images/logo.png') }}" class="img-fluid logo" /></a>
-                <div class="nav_list"> <a href="#" class="nav_link active"> <i
-                            class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a
-                        href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
-                            class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i
-                            class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span>
-                    </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span
-                            class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i
-                            class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a
-                        href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
-                            class="nav_name">Stats</span> </a> </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
-                    class="nav_name">SignOut</span> </a>
+            <div> 
+                <a href="#" class="nav_logo"> 
+                    <i class='bx bx-layer nav_logo-icon'></i>
+                    <img src="{{ asset('images/logo.png') }}" class="img-fluid logo" />
+                </a>
+                <div class="nav_list"> 
+                    <a href="#" class="nav_link active"> 
+                        <i class='bx bx-grid-alt nav_icon'></i> 
+                        <span class="nav_name">Dashboard</span> 
+                    </a> 
+                    <a href="#" class="nav_link"> 
+                        <i class='bx bx-user nav_icon'></i> 
+                        <span class="nav_name">Users</span> 
+                    </a> 
+                    <a href="#" class="nav_link"> 
+                        <i class='bx bx-message-square-detail nav_icon'></i> 
+                        <span class="nav_name">Messages</span>
+                    </a> 
+                    <a href="#" class="nav_link"> 
+                        <i class='bx bx-bookmark nav_icon'></i> 
+                        <span class="nav_name">Bookmark</span> 
+                    </a> 
+                    <a href="#" class="nav_link"> 
+                        <i class='bx bx-folder nav_icon'></i> 
+                        <span class="nav_name">Files</span> 
+                    </a> 
+                    <a href="#" class="nav_link"> 
+                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
+                        <span class="nav_name">Stats</span> 
+                    </a> 
+                </div>
+            </div> 
+            <a href="#" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> 
+                <span class="nav_name">SignOut</span> 
+            </a>
         </nav>
     </div>
+
     <!--Container Main start-->
     <div class=" content">
         <div class="row mb-3">
@@ -504,29 +527,21 @@
                       <div class="carousel-item active">
                         <div class="card">
                           <div class="img-wrapper">
-                            <img src="{{ asset('images/event1.png') }}"  alt="...">
+                            <img class="img-fluid" src="{{ asset('images/event1.png') }}"  alt="...">
                           </div>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <div class="card">
                           <div class="img-wrapper">
-                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                            <img class="img-fluid" src="{{ asset('images/menu2.png') }}"  alt="...">
                           </div>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <div class="card">
                           <div class="img-wrapper">
-                            <img src="{{ asset('images/event1.png') }}"  alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="card">
-                          <div class="img-wrapper">
-              
-                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                            <img class="img-fluid" src="{{ asset('images/event1.png') }}"  alt="...">
                           </div>
                         </div>
                       </div>
@@ -534,7 +549,7 @@
                         <div class="card">
                           <div class="img-wrapper">
               
-                            <img src="{{ asset('images/menu2.png') }}"  alt="...">
+                            <img class="img-fluid" src="{{ asset('images/menu2.png') }}"  alt="...">
                           </div>
                         </div>
                       </div>
@@ -542,7 +557,15 @@
                         <div class="card">
                           <div class="img-wrapper">
               
-                            <img src="{{ asset('images/event1.png') }}"  alt="...">
+                            <img class="img-fluid" src="{{ asset('images/menu2.png') }}"  alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                          <div class="img-wrapper">
+              
+                            <img class="img-fluid" src="{{ asset('images/event1.png') }}"  alt="...">
                           </div>
                         </div>
                       </div>
