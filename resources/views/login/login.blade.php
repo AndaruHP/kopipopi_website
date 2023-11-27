@@ -49,8 +49,16 @@
                         @csrf
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"
-                                value="{{ old('email') }}">
+                            <input type="email"
+                                class="form-control @error('email') is-invalid
+                                
+                            @enderror"
+                                id="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                            @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>

@@ -9,6 +9,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Photo</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -17,6 +18,14 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $banner->title }}</td>
+                        <td>
+                            @if ($banner->image)
+                                <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->name }}"
+                                    style="max-width: 400px;">
+                            @else
+                                No Image
+                            @endif
+                        </td>
                         <td>
                             <a href="" class="badge bg-info"><i class="bi bi-eye"></i></a>
                             <a href="/dashboard/banners/{{ $banner->slug }}/edit" class="badge bg-warning"><i
