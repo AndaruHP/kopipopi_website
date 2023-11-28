@@ -12,6 +12,14 @@
                     <a href="/menu">Menu</a>
                     <a href="#">Gallery</a>
                     <a href="#">Location</a>
+                    {{-- <a href="/login">Login</a> --}}
+                    @auth
+                        <a href="/review">Review</a>
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/logout">Logout</a>
+                    @else
+                        <a href="/login">Login</a>
+                    @endauth
                 </div>
             </div>
         </div>

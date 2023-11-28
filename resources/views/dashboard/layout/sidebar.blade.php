@@ -13,7 +13,7 @@
 <div class="l-navbar" id="nav-bar">
     <nav class="nav">
         <div>
-            <a href="#" class="nav_logo">
+            <a href="/" class="nav_logo">
                 <i class='bx bx-layer nav_logo-icon'></i>
                 <img src="{{ asset('images/logo.png') }}" class="img-fluid logo" />
             </a>

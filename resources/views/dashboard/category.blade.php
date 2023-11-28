@@ -2,6 +2,8 @@
 
 @section('container')
     <a href="/dashboard/categories/create" class="btn btn-primary">Add Category</a>
+    <a href="/dashboard/categories/subcategories" class="btn btn-primary">Subcategories</a>
+    {{-- <a href="/dashboard/subcategories/create" class="btn btn-primary">Add Subcategory</a> --}}
     <h1>All Categories</h1>
     <div class="row">
         <table class="table table-striped table-sm">

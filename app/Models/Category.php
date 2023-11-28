@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Menu;
+use App\Models\Subcategory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,6 +17,11 @@ class Category extends Model
     public function menus()
     {
         return $this->hasMany(Menu::class);
+    }
+
+    public function subcategories()
+    {
+        return $this->hasMany(Subcategory::class);
     }
 
     public function sluggable(): array

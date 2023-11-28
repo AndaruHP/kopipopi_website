@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardMenuController;
 use App\Http\Controllers\DashboardBannerController;
 use App\Http\Controllers\DashboardContactController;
 use App\Http\Controllers\DashboardCategoryController;
+use App\Http\Controllers\DashboardSubcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,8 @@ Route::get('/dashboard', function () {
 })->middleware('auth')->name('dashboard');
 Route::resource('/dashboard/menus', DashboardMenuController::class)->middleware('auth')->except(['show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('auth')->except(['show']);
+Route::resource('/dashboard/categories/subcategories', DashboardSubcategoryController::class)->middleware('auth')->except(['show']);
+// Route::get('/dashboard/categories', [DashboardSubcategoryController::class, 'index']);
 Route::resource('/dashboard/banners', DashboardBannerController::class)->middleware('auth')->except(['show']);
 Route::get('/review', [ReviewController::class, 'create'])->name('review.create');
 Route::post('/review', [ReviewController::class, 'store'])->name('review.store');

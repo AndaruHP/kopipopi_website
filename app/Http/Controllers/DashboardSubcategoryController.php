@@ -4,19 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Subcategory;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 
-class DashboardCategoryController extends Controller
+class DashboardSubcategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard.category', [
-            'categories' => Category::all(),
-            'subcategories' => Subcategory::all()
+        return view('dashboard.subcategory', [
+            'subcategories' => Subcategory::all(),
+            'categories' => Category::all()
         ]);
     }
 
@@ -25,7 +24,8 @@ class DashboardCategoryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.categories.create', [
+        return view('dashboard.subcategories.create', [
+            'subcategories' => Subcategory::all(),
             'categories' => Category::all()
         ]);
     }
@@ -37,9 +37,10 @@ class DashboardCategoryController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            'category_id' => 'required|exists:categories,id'
         ]);
-        Category::create($validatedData);
-        return redirect('/dashboard/categories');
+        Subcategory::create($validatedData);
+        return redirect('/dashboard/categories/subcategories');
     }
 
     /**
@@ -53,37 +54,34 @@ class DashboardCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Subcategory $subcategory)
     {
-        return view('dashboard.categories.edit', [
-            'category' => $category,
-            'categories' => Category::all()
+        return view('dashboard.subcategories.edit', [
+            'subcategory' => $subcategory,
+            'subcategories' => Subcategory::all(),
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Subcategory $subcategory)
     {
         $rule = [
             'name' => 'required|string|max:255',
+            'category_id' => 'required|exists:categories,id'
         ];
-
         $validatedData = $request->validate($rule);
-
-        Category::where('slug', $category->slug)
-            ->update($validatedData);
-
-        return redirect('/dashboard/categories');
+        $subcategory->update($validatedData);
+        return redirect('/dashboard/categories/subcategories');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Subcategory $subcategory)
     {
-        Category::destroy($category->id);
+        Subcategory::destroy($subcategory->id);
         return redirect('/dashboard/categories');
     }
 }
