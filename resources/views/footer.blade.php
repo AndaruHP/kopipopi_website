@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="footer-content">
+    <div class="footer-content" data-aos="fade-up" data-aos-offset="500" data-aos-duration="2000">
         <div class="footer-header">
             <span class="footer-text-header">NEED SOME COFFEE?
                 <span class="footer-text-header-2">FIND US</span></span>

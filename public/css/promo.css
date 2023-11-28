@@ -1,0 +1,51 @@
+#promo {
+    padding: 75px 250px 75px 250px;
+}
+
+.grid-container {   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+  }
+  
+
+  .header {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .grid-title {
+    margin-bottom: 15px;
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
+  }
+  
+  .grid-title2 {
+    color: var(--light-red, #FE0002);
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
+  }
+
+  .grid-title-space {
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
+    color: white;
+  }
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
