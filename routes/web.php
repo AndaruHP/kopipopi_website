@@ -24,6 +24,11 @@ use App\Http\Controllers\DashboardCategoryController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/menu', function () {
+    return view('menu');
+});
+
 // ROute::get('/tes', function () {
 //     return view('dashboard.layout.ed');
 // });

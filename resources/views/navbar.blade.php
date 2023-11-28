@@ -2,20 +2,18 @@
     <div class="navbar">
         <div class="navbar-content">
             <a href="/">
-                <img src="{{ asset('images/logo.png') }}" />
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" />
             </a>
         </div>
-        <div class="navbar-content">
-            Home
-        </div>
-        <a href="/menu" class="navbar-content">
-            Menu
-        </a>
-        <div class="navbar-content">
-            Gallery
-        </div>
-        <div class="navbar-content">
-            Location
+        <div class="dropdown">
+            <div class="navbar-content">
+                <div class="dropbtn">Others &#9662;</div>
+                <div class="dropdown-content">
+                    <a href="/menu">Menu</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

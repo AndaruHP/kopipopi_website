@@ -1,0 +1,40 @@
+.review-section {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black; /* Set the background color of the section */
+    color: white; /* Set the text color */
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.review-box {
+    width: 23%; /* Adjust the width based on your layout */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: white; /* Set the background color of the review boxes */
+    color: black; /* Set the text color inside the review boxes */
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+/* Hide overflow content in boxes */
+.review-box div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Styling for pagination buttons */
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
