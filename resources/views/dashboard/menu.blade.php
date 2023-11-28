@@ -10,6 +10,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Category</th>
+                    <!-- <th scope="col">Image</th> -->
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -18,6 +19,8 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $menu->name }}</td>
+                        <!-- <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}"
+                                   style="max-width: 400px;"> -->
                         <td>{{ $menu->category->name }}</td>
                         <td>
                             <a href="" class="badge bg-info"><i class="bi bi-eye"></i></a>
