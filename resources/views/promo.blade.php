@@ -25,7 +25,7 @@
     <img src="{{ asset('images/menu2.png') }}" alt="Image 1">
 </div>
   <div class="grid-item"><img src="{{ asset('images/menu2.png') }}" alt="Image 2"></div>
-  <div class="grid-item"><img src="{{ asset('images/menu2.png') }}" alt="Image 3"></div>
+  <div class="grid-item"><img src="{{ asset('images/menu3.png') }}" alt="Image 3"></div>
   <div class="grid-item"><img src="{{ asset('images/menu2.png') }}" alt="Image 4"></div>
 </div>
 </section>

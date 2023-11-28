@@ -35,15 +35,9 @@
                 </div>
                 <br>
                 <p>
-                    Jl.Mawar No.5 RT.05 RW.03
-                </p>
-                <p>
-                    Kel.Curug Kec. Bojongsari
-                </p>
-                <p>
-                    Depok, Depok, Jawa Barat
-                </p>
-                <p>
+                    Jl.Mawar No.5 RT.05 RW.03 <br>
+                    Kel.Curug Kec. Bojongsari <br>
+                    Depok, Depok, Jawa Barat <br>
                     16517
                 </p>
             </div>

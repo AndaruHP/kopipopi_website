@@ -68,12 +68,15 @@ body {
     line-height: normal;
 }
 
-.footer-map{
+.footer-map {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 25px;
+    width: 100%;
+    text-align: center; 
 }
+
 
 .lower a {
     text-decoration: none;
@@ -82,4 +85,39 @@ body {
 
 .lower a:hover {
     color: inherit;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .footer-header {
+    }
+
+    .footer-contact {
+
+    }
+
+    .contact-container {
+        margin: 10px 0;
+    }
+
+    .footer-text-header,
+    .footer-text-header-2 {
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .footer-map {
+            max-width: 560%;
+            height: auto;
+            margin: 20px auto;
+    }
+
+    .contact-container {
+        font-size: 8px;
+    }
+
+    .upper {
+        font-size: 10px;
+    }
 }

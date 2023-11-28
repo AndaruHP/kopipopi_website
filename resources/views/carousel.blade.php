@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
+
 <section id="carousel" class="carousel mb-5" data-aos="fade-right" data-aos-offset="500" data-aos-duration="2000">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

@@ -36,24 +36,24 @@
 
 
 <section id="explain">
+<div class="explain-wrapper">
     <div class="explain-image">
         <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
     </div>
-    <div class="explain-title">
+    <div class="explain-content">
         <h2> KOPI </h2>
-        <div class="explain-content">
-            Kopi, sebuah minuman yang telah mengukir jejak panjang dalam sejarah manusia, bukan sekadar minuman
-            sehari-hari, melainkan sebuah seni yang menyatu dengan kehidupan.
-        </div>
-        <div class="explain-content">
+        
+            <p> Kopi, sebuah minuman yang telah mengukir jejak panjang dalam sejarah manusia, bukan sekadar minuman
+            sehari-hari, melainkan sebuah seni yang menyatu dengan kehidupan. </p>
+            <p>
             Ditanam, dipetik, disangrai, dan diseduh, setiap tahapan dalam proses kopi membawa cerita tersendiri,
-            menciptakan perjalanan unik dari biji ke cangkir yang menyejukkan.
-        </div>
-        <div class="explain-content">
+            menciptakan perjalanan unik dari biji ke cangkir yang menyejukkan. </p>
+            <p>
             Aromanya yang menggoda, rasa yang kuat, dan keberagaman variasi rasa dan metode penyeduhan menjadikan kopi
             sebagai ritual yang memikat indera dan menyatukan orang dari berbagai latar belakang, menghidupkan
-            percakapan, dan memperkaya pengalaman manusia.
+            percakapan, dan memperkaya pengalaman manusia. </p>
         </div>
+</div>
     </div>
 
 </section>
