@@ -37,11 +37,9 @@
         <div class="row" data-aos="fade-up">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
-                    <li data-filter=".filter-Appetizer">snacks & appetizer</li>
-                    <li data-filter=".filter-MainCourse">main course</li>
-                    <li data-filter=".filter-SideDish">coffee</li>
-                    <li data-filter=".filter-Beverages">drinks</li>
-                    <li data-filter=".filter-Dessert">tea/herb</li>
+                    @foreach ($categories as $category)
+                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                    @endforeach
                 </ul>
             </div>
 

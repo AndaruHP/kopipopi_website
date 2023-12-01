@@ -14,14 +14,17 @@ class DashboardContactController extends Controller
         return view(
             'dashboard.contact',
             [
-                'contacts' => $contact
+                'contacts' => $contact,
+                'active' => 'contact'
             ]
         );
     }
 
     public function create()
     {
-        return view('dashboard.contacts.create');
+        return view('dashboard.contacts.create', [
+            'active' => 'contact'
+        ]);
     }
 
     public function store(Request $request)
@@ -34,7 +37,7 @@ class DashboardContactController extends Controller
 
         Kontak::create($validatedData);
 
-        return redirect('/dashboard/contact');
+        return redirect('/dashboard/contact')->with('success', 'Contact created successfully');
     }
 
     public function destroy(Kontak $contact)

@@ -16,7 +16,8 @@ class DashboardCategoryController extends Controller
     {
         return view('dashboard.category', [
             'categories' => Category::all(),
-            'subcategories' => Subcategory::all()
+            'subcategories' => Subcategory::all(),
+            'active' => 'category'
         ]);
     }
 
@@ -26,7 +27,8 @@ class DashboardCategoryController extends Controller
     public function create()
     {
         return view('dashboard.categories.create', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'category'
         ]);
     }
 
@@ -39,7 +41,7 @@ class DashboardCategoryController extends Controller
             'name' => 'required|string|max:255',
         ]);
         Category::create($validatedData);
-        return redirect('/dashboard/categories');
+        return redirect('/dashboard/categories')->with('success', 'Category created successfully');
     }
 
     /**
@@ -57,7 +59,8 @@ class DashboardCategoryController extends Controller
     {
         return view('dashboard.categories.edit', [
             'category' => $category,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'category'
         ]);
     }
 
@@ -75,7 +78,7 @@ class DashboardCategoryController extends Controller
         Category::where('slug', $category->slug)
             ->update($validatedData);
 
-        return redirect('/dashboard/categories');
+        return redirect('/dashboard/categories')->with('success', 'Category updated successfully');
     }
 
     /**
@@ -84,6 +87,6 @@ class DashboardCategoryController extends Controller
     public function destroy(Category $category)
     {
         Category::destroy($category->id);
-        return redirect('/dashboard/categories');
+        return redirect('/dashboard/categories')->with('success', 'Category deleted successfully');
     }
 }

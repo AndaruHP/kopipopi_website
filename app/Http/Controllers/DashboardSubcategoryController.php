@@ -15,7 +15,8 @@ class DashboardSubcategoryController extends Controller
     {
         return view('dashboard.subcategory', [
             'subcategories' => Subcategory::all(),
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'category'
         ]);
     }
 
@@ -26,7 +27,9 @@ class DashboardSubcategoryController extends Controller
     {
         return view('dashboard.subcategories.create', [
             'subcategories' => Subcategory::all(),
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'category'
+
         ]);
     }
 
@@ -40,7 +43,7 @@ class DashboardSubcategoryController extends Controller
             'category_id' => 'required|exists:categories,id'
         ]);
         Subcategory::create($validatedData);
-        return redirect('/dashboard/categories/subcategories');
+        return redirect('/dashboard/categories/subcategories')->with('success', 'Subcategory created successfully');
     }
 
     /**
@@ -59,6 +62,8 @@ class DashboardSubcategoryController extends Controller
         return view('dashboard.subcategories.edit', [
             'subcategory' => $subcategory,
             'subcategories' => Subcategory::all(),
+            'active' => 'category'
+
         ]);
     }
 
@@ -73,7 +78,7 @@ class DashboardSubcategoryController extends Controller
         ];
         $validatedData = $request->validate($rule);
         $subcategory->update($validatedData);
-        return redirect('/dashboard/categories/subcategories');
+        return redirect('/dashboard/categories/subcategories')->with('success', 'Subcategory updated successfully');
     }
 
     /**
@@ -82,6 +87,6 @@ class DashboardSubcategoryController extends Controller
     public function destroy(Subcategory $subcategory)
     {
         Subcategory::destroy($subcategory->id);
-        return redirect('/dashboard/categories');
+        return redirect('/dashboard/categories')->with('success', 'Subcategory deleted successfully');
     }
 }

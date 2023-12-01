@@ -14,7 +14,8 @@ class DashboardBannerController extends Controller
     public function index()
     {
         return view('dashboard.banner', [
-            'banners' => Banner::all()
+            'banners' => Banner::all(),
+            'active' => 'banner'
         ]);
     }
 
@@ -24,7 +25,8 @@ class DashboardBannerController extends Controller
     public function create()
     {
         return view('dashboard.banners.create', [
-            'banners' => Banner::all()
+            'banners' => Banner::all(),
+            'active' => 'banner'
         ]);
     }
 
@@ -43,7 +45,7 @@ class DashboardBannerController extends Controller
         }
 
         Banner::create($validatedData);
-        return redirect('/dashboard/banners');
+        return redirect('/dashboard/banners')->with('success', 'Banner created successfully');
     }
 
     /**
@@ -61,7 +63,8 @@ class DashboardBannerController extends Controller
     {
         return view('dashboard.banners.edit', [
             'banner' => $banner,
-            'banners' => Banner::all()
+            'banners' => Banner::all(),
+            'active' => 'banner'
         ]);
     }
 
@@ -86,7 +89,7 @@ class DashboardBannerController extends Controller
         Banner::where('slug', $banner->slug)
             ->update($validatedData);
 
-        return redirect('/dashboard/banners');
+        return redirect('/dashboard/banners')->with('success', 'Banner updated successfully');
     }
 
     /**
@@ -98,6 +101,6 @@ class DashboardBannerController extends Controller
             Storage::delete($banner->image);
         }
         Banner::destroy($banner->id);
-        return redirect('/dashboard/banners')->with('success', 'Menu deleted successfully');
+        return redirect('/dashboard/banners')->with('success', 'Banner deleted successfully');
     }
 }

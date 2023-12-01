@@ -50,7 +50,10 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Rating::all();
-        return view('dashboard.review', ['reviews' => $reviews]);
+        return view('dashboard.review', [
+            'reviews' => $reviews,
+            'active' => 'review'
+        ]);
     }
 
     public function destroy(Rating $rating)

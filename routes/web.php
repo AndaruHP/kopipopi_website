@@ -1,5 +1,10 @@
 <?php
 
+use App\Models\Menu;
+use App\Models\Banner;
+use App\Models\Kontak;
+use App\Models\Rating;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReviewController;
@@ -23,11 +28,18 @@ use App\Http\Controllers\DashboardSubcategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'contact' => Kontak::first(),
+        'banners' => Banner::latest()->take(4)->get(),
+        'menus' => Menu::latest()->take(4)->get()
+    ]);
 });
 
 Route::get('/menu', function () {
-    return view('menu');
+    return view('menu', [
+        'menus' => Menu::all(),
+        'categories' => Category::all()
+    ]);
 });
 
 // ROute::get('/tes', function () {
@@ -39,11 +51,25 @@ Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->na
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
+    return view(
+        'dashboard.index',
+        [
+            'active' => 'dashboard',
+            'totalmenu' => Menu::count(),
+            'totalcategory' => Category::count(),
+            'totalreview' => Rating::count(),
+            'totalbanner' => Banner::count(),
+            'reviews' => Rating::all(),
+            'menus' => Menu::latest()->take(4)->get(),
+            'categories' => Category::latest()->take(4)->get(),
+            'banners' => Banner::all()
+
+        ]
+    );
 })->middleware('auth')->name('dashboard');
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware('auth')->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// })->middleware('auth')->name('dashboard');
 Route::resource('/dashboard/menus', DashboardMenuController::class)->middleware('auth')->except(['show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('auth')->except(['show']);
 Route::resource('/dashboard/categories/subcategories', DashboardSubcategoryController::class)->middleware('auth')->except(['show']);
@@ -53,8 +79,9 @@ Route::get('/review', [ReviewController::class, 'create'])->name('review.create'
 Route::post('/review', [ReviewController::class, 'store'])->name('review.store');
 Route::get('/dashboard/review', [ReviewController::class, 'index']);
 Route::delete('/dashboard/review/{rating}', [ReviewController::class, 'destroy']);
-Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact')->middleware('auth');
-Route::get('/dashboard/contact/create', [DashboardContactController::class, 'create'])->name('dashboard.contact.create');
-Route::post('/dashboard/contact', [DashboardContactController::class, 'store']);
-Route::delete('/dashboard/contact/{contact}', [DashboardContactController::class, 'destroy']);
-Route::resource('/dashboard/galleries', GalleryController::class)->middleware('auth');
+// Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact')->middleware('auth')->except(['show']);
+// Route::get('/dashboard/contact/create', [DashboardContactController::class, 'create'])->name('dashboard.contact.create');
+// Route::post('/dashboard/contact', [DashboardContactController::class, 'store']);
+// Route::delete('/dashboard/contact/{contact}', [DashboardContactController::class, 'destroy']);
+Route::resource('/dashboard/contact', DashboardContactController::class)->middleware('auth')->except(['show']);
+Route::resource('/dashboard/galleries', GalleryController::class)->middleware('auth')->except(['show']);

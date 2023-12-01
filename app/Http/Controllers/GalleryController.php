@@ -14,7 +14,9 @@ class GalleryController extends Controller
     public function index()
     {
         return view('dashboard.gallery', [
-            'galleries' => Gallery::all()
+            'galleries' => Gallery::all(),
+            'active' => 'gallery'
+
         ]);
     }
 
@@ -23,7 +25,9 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.galleries.create');
+        return view('dashboard.galleries.create', [
+            'active' => 'gallery'
+        ]);
     }
 
     /**
@@ -42,7 +46,7 @@ class GalleryController extends Controller
 
         Gallery::create($validatedData);
 
-        return redirect('/dashboard/galleries');
+        return redirect('/dashboard/galleries')->with('success', 'Gallery created successfully');
     }
 
     /**
@@ -59,7 +63,8 @@ class GalleryController extends Controller
     public function edit(Gallery $gallery)
     {
         return view('dashboard.galleries.edit', [
-            'galleries' => $gallery
+            'galleries' => $gallery,
+            'active' => 'gallery'
         ]);
     }
 
@@ -85,7 +90,7 @@ class GalleryController extends Controller
         Gallery::where('slug', $gallery->slug)
             ->update($validatedData);
 
-        return redirect('/dashboard/galleries');
+        return redirect('/dashboard/galleries')->with('success', 'Gallery updated successfully');
     }
 
     /**
@@ -98,6 +103,6 @@ class GalleryController extends Controller
         }
 
         Gallery::destroy($gallery->id);
-        return redirect('/dashboard/galleries');
+        return redirect('/dashboard/galleries')->with('success', 'Gallery deleted successfully');
     }
 }

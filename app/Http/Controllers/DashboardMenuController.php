@@ -15,7 +15,8 @@ class DashboardMenuController extends Controller
     public function index()
     {
         return view('dashboard.menu', [
-            'menus' => Menu::all()
+            'menus' => Menu::all(),
+            'active' => 'menu'
         ]);
     }
 
@@ -25,7 +26,8 @@ class DashboardMenuController extends Controller
     public function create()
     {
         return view('dashboard.posts.create', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'menu'
         ]);
     }
 
@@ -54,7 +56,7 @@ class DashboardMenuController extends Controller
         Menu::create($validatedData);
 
         // Redirect back with a success message
-        return redirect('/dashboard/menus');
+        return redirect('/dashboard/menus')->with('success', 'Menu created successfully');
 
         // dd($request->all());
     }
@@ -75,7 +77,8 @@ class DashboardMenuController extends Controller
         // edit itu untuk nampilin, kalo update untuk ubah
         return view('dashboard.posts.edit', [
             'menu' => $menu,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' => 'menu'
         ]);
     }
 
@@ -104,7 +107,7 @@ class DashboardMenuController extends Controller
         Menu::where('slug', $menu->slug)
             ->update($validatedData);
 
-        return redirect('/dashboard/menus');
+        return redirect('/dashboard/menus')->with('success', 'Menu updated successfully');
     }
 
     /**
