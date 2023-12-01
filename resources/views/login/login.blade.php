@@ -15,34 +15,19 @@
 
     <!----------------------- Main Container -------------------------->
 
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container d-flex min-vh-100">
 
         <!----------------------- Login Container -------------------------->
 
-        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div
+            class="border rounded-5 p-3 mx-auto my-auto bg-white shadow login-container d-flex flex-md-row flex-column-reverse">
 
             <!--------------------------- Left Box ----------------------------->
 
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-                style="background: white;">
-                <div class="featured-image mb-3">
-                    <img src="images/logo.png" class="img-fluid"
-                        style="width: 250px; bottom: -165px; position: relative;">
-                </div>
-                <small class="text-black text-wrap text-center"
-                    style="width: 17rem;font-family: 'Courier New', Courier, monospace; bottom: -165px; position: relative;">Ngopi
-                    Makan Nyanyi 👉 repeat</small>
-            </div>
-
-            <!-------------------- ------ Right Box ---------------------------->
-
-            <div class="col-md-6 right-box">
+            <div class="col-md-6 right-box col-12 p-3 mt-5 mt-md-0">
                 <div class="row align-items-center">
                     <div class="header-text mb-4">
-                        <center>
-                            <h2 class="bold-text">ADMIN</h2>
-                            <h2 class="bold-text">LOGIN</h2>
-                        </center>
+                        <h2 class="bold-text text-center">LOGIN</h2>
                     </div>
 
                     <form method="post" action="/login">
@@ -72,9 +57,22 @@
                     <p>Not have account yet?<a href="/register" class="text-decoration-none"> Register</a></p>
 
                 </div>
+
+            </div>
+
+            <!-------------------- ------ Right Box ---------------------------->
+            <div class="col-md-6 rounded-4 col-12  align-items-center d-flex flex-column justify-content-center left-box"
+                style="background: white;">
+                <img src="images/logo.png" class="" style="width: 250px; position: relative;">
+                <p class="text-black text-wrap text-center "
+                    style="width: 17rem;font-family: 'Courier New', Courier, monospace; position: relative;">Ngopi Makan
+                    Nyanyi 👉 repeat</p>
             </div>
         </div>
+
     </div>
+    </div>
+
 </body>
 
 </html>
