@@ -48,9 +48,9 @@
                 </a>
             </div>
         </div>
-        <form action="/logout" method="post">
+        <form action="/logout" method="post" class="nav_link" style="border: none; background: none; padding: 0;">
             @csrf
-            <button type="submit" class="nav_link">
+            <button type="submit" style="border: none; background: none; cursor: pointer;" class="text-light">
                 <i class='bx bx-log-out nav_icon'></i>
                 <span class="nav_name">SignOut</span>
             </button>
