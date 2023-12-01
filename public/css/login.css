@@ -4,6 +4,8 @@ body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to top, rgba(255, 0, 0, 1), rgb(88, 1, 1));
     background-repeat: no-repeat;
+    background-size: cover; /* Mengisi elemen body, tetapi bisa memotong latar belakang */
+    background-attachment: fixed; /* Membuat latar belakang tetap saat menggulir halaman */
 }
 
 /*------------ Login container ------------*/

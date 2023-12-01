@@ -1,116 +1,100 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Fonts -->
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
-    <!-- Styles -->
-    <style>
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Register</title>
 </head>
 
-@include('navbar')
+<body>
 
-<br>
-<br><br>
-<br><br>
+    <!----------------------- Main Container -------------------------->
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-4">
-            <div class="card mt-3">
-                <div class="card-body">
+    <div class="container d-flex min-vh-100">
+
+        <!----------------------- Login Container -------------------------->
+
+        <div
+            class="border rounded-5 p-3 mx-auto my-auto bg-white shadow login-container d-flex flex-md-row flex-column-reverse">
+
+            <!--------------------------- Left Box ----------------------------->
+
+            <div class="col-md-6 right-box col-12 p-3 mt-5 mt-md-0">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2 class="bold-text text-center">Register</h2>
+                    </div>
+
                     <form method="post" action="/register">
                         @csrf
                         <input type="hidden" name="role" value="1">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name"
-                                value="{{ old('name') }}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                id="name" name="name" placeholder="Name" value="{{ old('name') }}">
+                            @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" id="phone" name="phone"
-                                placeholder="08xxxxx" value="{{ old('phone') }}">
+                            <input type="text" class="form-control @error('phone') is-invalid @enderror"
+                                id="phone" name="phone" placeholder="08xxxxx" value="{{ old('phone') }}">
+                            @error('phone')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"
-                                value="{{ old('email') }}">
+                            <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                id="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                            @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password"
-                                placeholder="Password">
+                            <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                id="password" name="password" placeholder="Password">
+                            @error('password')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-primary mt-2">Register</button>
                     </form>
                     <p>Already have account?<a href="/login" class="text-decoration-none"> Login</a></p>
+
                 </div>
+
+            </div>
+
+            <!-------------------- ------ Right Box ---------------------------->
+            <div class="col-md-6 rounded-4 col-12  align-items-center d-flex flex-column justify-content-center left-box"
+                style="background: white;">
+                <a href="/"><img src="images/logo.png" class=""
+                        style="width: 250px; position: relative;"></a>
+                <p class="text-black text-wrap text-center "
+                    style="width: 17rem;font-family: 'Courier New', Courier, monospace; position: relative;">Ngopi Makan
+                    Nyanyi 👉 repeat</p>
             </div>
         </div>
+
     </div>
-</div>
+    </div>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    window.addEventListener('scroll', function() {
-        const scrolled = window.scrollY;
-        const parallax = document.getElementById('parallax');
-        parallax.style.transform =
-            `translateY(${scrolled * 0.9}px)`; // Adjust the factor to control the parallax effect
-    });
-</script>
+</body>
 
-<script>
-    $(document).ready(function() {
-        // Initialize Isotope
-        $('.menu-container').isotope({
-            itemSelector: '.menu-item',
-            layoutMode: 'fitRows'
-        });
-
-        // Filter items on button click
-        $('#menu-flters li').on('click', function() {
-            $('#menu-flters li').removeClass('filter-active');
-            $(this).addClass('filter-active');
-            var selector = $(this).data('filter');
-            $('.menu-container').isotope({
-                filter: selector
-            });
-        });
-    });
-
-    function scrollToSection(sectionId) {
-        var targetSection = document.querySelector(sectionId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
-</script>
-
-{{-- @include('footer') --}}
+</html>

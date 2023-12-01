@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/login.css">
-    <title>Admin Login</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             <div class="col-md-6 right-box col-12 p-3 mt-5 mt-md-0">
                 <div class="row align-items-center">
                     <div class="header-text mb-4">
-                        <h2 class="bold-text text-center">LOGIN</h2>
+                        <h2 class="bold-text text-center">Login</h2>
                     </div>
 
                     <form method="post" action="/login">
@@ -63,7 +63,8 @@
             <!-------------------- ------ Right Box ---------------------------->
             <div class="col-md-6 rounded-4 col-12  align-items-center d-flex flex-column justify-content-center left-box"
                 style="background: white;">
-                <img src="images/logo.png" class="" style="width: 250px; position: relative;">
+                <a href="/"><img src="images/logo.png" class=""
+                        style="width: 250px; position: relative;"></a>
                 <p class="text-black text-wrap text-center "
                     style="width: 17rem;font-family: 'Courier New', Courier, monospace; position: relative;">Ngopi Makan
                     Nyanyi 👉 repeat</p>
