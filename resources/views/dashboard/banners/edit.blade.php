@@ -1,10 +1,11 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="container">
+        <div class="content turun">
+    <div class="container boxx pt-3 ">
         <h2>Edit Banner</h2>
 
-        <div class="col-lg-8">
+        <div class="col-lg-12 custom-background">
             <form action="/dashboard/banners/{{ $banner->slug }}" method="post">
                 @method('put')
                 @csrf
@@ -31,5 +32,6 @@
                 <button type="submit" class="btn btn-primary">Edit</button>
             </form>
         </div>
+    </div>
     </div>
 @endsection

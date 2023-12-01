@@ -1,9 +1,11 @@
 @extends('dashboard.layout.main')
 
 @section('container')
+    <div class="content turun">
+    <div class="container boxx pt-3 ">
     <a href="/dashboard/categories/subcategories/create" class="btn btn-primary">Add Subcategory</a>
     {{-- <h1>All Categories</h1>
-    <div class="row">
+    <div class="row custom-background">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -34,7 +36,7 @@
         </table>
     </div> --}}
     <h1>All Subcategories</h1>
-    <div class="row">
+    <div class="row custom-background">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -63,5 +65,7 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    </div>
     </div>
 @endsection

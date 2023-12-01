@@ -1,9 +1,10 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="container">
+        <div class="content turun">
+    <div class="container boxx pt-3 ">
         <h2>New Banner</h2>
-        <div class="col-lg-8">
+        <div class="col-lg-12 custom-background">
             <form action="/dashboard/banners" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
@@ -26,6 +27,7 @@
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
         </div>
+    </div>
     </div>
     <script>
         function previewImage() {
