@@ -2,8 +2,10 @@
 @extends('dashboard.layout.main')
 
 @section('container')
+<div class="content turun">
+    <div class="container boxx pt-3 ">
     <h1>All Reviews</h1>
-    <table class="table">
+    <table class="table custom-background">
         <thead>
             <tr>
                 <th scope="col">#</th>

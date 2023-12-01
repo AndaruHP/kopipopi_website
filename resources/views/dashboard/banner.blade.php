@@ -1,9 +1,11 @@
 @extends('dashboard.layout.main')
 
 @section('container')
+<div class="content turun">
+    <div class="container boxx pt-3 ">
     <a href="/dashboard/banners/create" class="btn btn-primary">Add Banner</a>
     <h1>All Banners</h1>
-    <div class="row">
+    <div class="row custom-background">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -41,5 +43,7 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    </div>
     </div>
 @endsection

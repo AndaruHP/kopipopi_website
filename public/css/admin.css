@@ -25,6 +25,23 @@ body {
 a {
     text-decoration: none;
 }
+
+.boxx {
+    background-color: #f0f0f0;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.custom-background {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.turun {
+    padding-top: 5px;
+}
+
 .header {
     width: 100%;
     height: var(--header-height);

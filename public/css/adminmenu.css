@@ -1,6 +1,6 @@
 .rounded-button {
     border-radius: 10px;
-    background-color: #F58989; /* Warna latar belakang */
+    background-color: #f58989; /* Warna latar belakang */
     display: flex;
     align-items: center; /* Mengatur vertikal alignment ke center */
 }
@@ -12,24 +12,23 @@
     text-align: center; /* Mengatur teks menjadi di tengah secara horizontal */
 }
 
-
 a {
     text-decoration: none;
     color: #000000;
-  }
+}
 
-  a:hover {
-    color: #222222
-  }
+a:hover {
+    color: #222222;
+}
 
-  /* Dropdown */
+/* Dropdown */
 
-  .dropdown {
+.dropdown {
     display: inline-block;
     position: relative;
-  }
+}
 
-  .dd-button {
+.dd-button {
     display: inline-block;
     border: 1px solid gray;
     border-radius: 4px;
@@ -37,10 +36,10 @@ a {
     background-color: #ffffff;
     cursor: pointer;
     white-space: nowrap;
-  }
+}
 
-  .dd-button:after {
-    content: '';
+.dd-button:after {
+    content: "";
     position: absolute;
     top: 50%;
     right: 15px;
@@ -50,158 +49,157 @@ a {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid black;
-  }
+}
 
-  .dd-button:hover {
+.dd-button:hover {
     background-color: #eeeeee;
-  }
+}
 
-
-  .dd-input {
+.dd-input {
     display: none;
-  }
+}
 
-  .dd-menu {
+.dd-menu {
     position: absolute;
     top: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0;
     margin: 2px 0 0 0;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     list-style-type: none;
-  }
+}
 
-  .dd-input + .dd-menu {
+.dd-input + .dd-menu {
     display: none;
-  }
+}
 
-  .dd-input:checked + .dd-menu {
+.dd-input:checked + .dd-menu {
     display: block;
     z-index: 999; /* Atur z-index lebih tinggi */
     position: absolute; /* Ganti menjadi absolute */
-  }
+}
 
-  .dd-menu li {
+.dd-menu li {
     padding: 10px 20px;
     cursor: pointer;
     white-space: nowrap;
-  }
+}
 
-  .dd-menu li:hover {
+.dd-menu li:hover {
     background-color: #f6f6f6;
-  }
+}
 
-  .dd-menu li a {
+.dd-menu li a {
     display: block;
     margin: -10px -20px;
     padding: 10px 20px;
-  }
+}
 
-  .dd-menu li.divider{
+.dd-menu li.divider {
     padding: 0;
     border-bottom: 1px solid #cccccc;
-  }
+}
 
 .search {
     width: 80%;
     position: relative;
     display: flex;
-  }
+}
 
-  .searchTerm {
+.searchTerm {
     width: 100%;
-    border: 3px solid #F58989;
+    border: 3px solid #f58989;
     border-right: none;
     padding: 7px;
     height: 100%;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9DBFAF;
-  }
+    color: #9dbfaf;
+}
 
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
+.searchTerm:focus {
+    color: #00b4cc;
+}
 
-  .searchButton {
+.searchButton {
     /* height: 36px; */
-    border: 1px solid #F58989;
-    background: #F58989;
+    border: 1px solid #f58989;
+    background: #f58989;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
-  }
+}
 
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
+/*Resize the wrap to see the search bar change!*/
+.wrap {
     width: 100%;
-  }
+}
 
-  .table-container{
+.table-container {
     overflow: scroll;
     display: grid;
-  }
+}
 
-  table{
+table {
     border-collapse: collapse;
     color: #555;
-  }
+}
 
-  tr:has(th){
+tr:has(th) {
     position: sticky;
     top: 0;
     z-index: 3;
-  }
+}
 
-  tr > *{
+tr > * {
     padding: 1rem;
-  }
+}
 
-  tr:has(:not(th)):nth-child(even) td{
+tr:has(:not(th)):nth-child(even) td {
     background-color: #fff;
-  }
-  tr:has(:not(th)):nth-child(odd) td{
+}
+tr:has(:not(th)):nth-child(odd) td {
     background-color: #eee;
-  }
+}
 
-  td,th{
+td,
+th {
     position: relative;
     text-align: center;
-  }
+}
 
-  td:nth-child(odd)::before{
-    content: '';
+td:nth-child(odd)::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #0001;
     top: 0;
     left: 0;
-  }
+}
 
-  th{
+th {
     background-color: #aaa;
     color: #222;
-  }
+}
 
-  .img-table img {
+.img-table img {
     height: 10vh;
     /* Properti atau gaya lainnya untuk gambar */
 }
 
-
-  [data-sticky]{
+[data-sticky] {
     position: sticky;
     z-index: 2;
     color: #000;
-  }
+}
 
-  [data-sticky]::after{
-    content: '';
+[data-sticky]::after {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -209,17 +207,17 @@ a {
     height: 100%;
     background-color: #0004;
     z-index: -1;
-  }
+}
 
-  [data-sticky="left"]{
+[data-sticky="left"] {
     left: var(--_left);
-  }
+}
 
-  [data-sticky="right"]{
+[data-sticky="right"] {
     right: 0;
-  }
+}
 
-  /* Reset Select */
+/* Reset Select */
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -228,59 +226,59 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: #AA0000E5;
+    background: #aa0000e5;
     background-image: none;
-  }
-  /* Custom Select */
-  .select {
+}
+/* Custom Select */
+.select {
     position: relative;
     width: 100%;
     height: 100%;
     line-height: 3;
-    background: #AA0000E5;
+    background: #aa0000e5;
     overflow: hidden;
     border-radius: 50px;
     justify-content: center;
     display: flex;
     align-items: center;
-  }
-  select {
+}
+select {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0 0 0 .5em;
+    padding: 0 0 0 0.5em;
     color: #fff;
     cursor: pointer;
-  }
-  select::-ms-expand {
+}
+select::-ms-expand {
     display: none;
-  }
-  /* Arrow */
-  .select::after {
-    content: '\25BC';
+}
+/* Arrow */
+.select::after {
+    content: "\25BC";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     padding: 0 1em;
-    background: #F58989;
+    background: #f58989;
     pointer-events: none;
-  }
-  /* Transition */
-  .select:hover::after {
+}
+/* Transition */
+.select:hover::after {
     color: #fff;
-  }
-  .select::after {
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
-  }
+}
+.select::after {
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+}
 
-  .button {
+.button {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    background: #FE0002;
+    background: #fe0002;
     color: white;
     border: none;
     border-radius: 10px;
@@ -312,10 +310,9 @@ select {
 }
 
 .blue-button {
-    background: #61B7E8; /* Ganti warna sesuai keinginan Anda */
+    background: #61b7e8; /* Ganti warna sesuai keinginan Anda */
 }
 
 .blue-button:hover {
     background: #328da8;
 }
-

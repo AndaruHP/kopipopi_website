@@ -319,7 +319,7 @@
             </div>
 
         </div>
-        <div class="px-3">
+        <div class="pr-3 pl-1">
 
             <div class="box promo bg-light mt-2 p-2">
                 <div class="row">

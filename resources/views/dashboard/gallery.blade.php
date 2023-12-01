@@ -1,9 +1,11 @@
 @extends('dashboard.layout.main')
 
 @section('container')
+<div class="content turun">
+    <div class="container boxx pt-3 ">
     <a href="/dashboard/galleries/create" class="btn btn-primary">Add Photo</a>
     <h1>All Photos</h1>
-    <div class="row">
+    <div class="row custom-background">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -40,5 +42,7 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    </div>
     </div>
 @endsection
