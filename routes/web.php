@@ -29,7 +29,7 @@ use App\Http\Controllers\DashboardSubcategoryController;
 
 Route::get('/', function () {
     return view('welcome', [
-        'contact' => Kontak::latest()->take(1)->get(),
+        'contact' => Kontak::latest()->first(),
         'banners' => Banner::latest()->take(4)->get(),
         'menus' => Menu::latest()->take(4)->get()
     ]);

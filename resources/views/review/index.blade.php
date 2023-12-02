@@ -55,6 +55,8 @@
                 <label for="description" class="form-label">Deskripsi Review:</label>
                 <input type="hidden" name="description" id="description" value="{{ old('description') }}">
                 <trix-editor input="description"></trix-editor>
+                <div class="text-muted">Anda hanya bisa mengisi review sekali</div>
+
             </div>
 
             <button type="submit" class="btn btn-primary">Submit Review</button>
