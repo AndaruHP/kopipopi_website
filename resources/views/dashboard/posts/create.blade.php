@@ -1,7 +1,7 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="content turun">
+    <div class="content turun mb-3">
         <div class="container boxx pt-3 ">
             <h2>New Menu</h2>
             <div class="col-lg-12 custom-background">
@@ -39,6 +39,7 @@
                                     </option>
                                 @endforeach
                             </select>
+                            <div class="text-muted">Pilih pilihan lain untuk men-trigger sub category</div>
                         </div>
 
                         <div class="mb-3">

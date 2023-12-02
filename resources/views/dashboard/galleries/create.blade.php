@@ -1,7 +1,7 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="content turun">
+    <div class="content turun mb-3">
         <div class="container boxx pt-3 ">
             <h2>New Photo</h2>
             <div class="col-lg-12 custom-background">

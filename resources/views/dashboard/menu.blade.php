@@ -1,7 +1,7 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="content turun">
+    <div class="content turun mb-3">
         <div class="container boxx pt-3 ">
             <a href="/dashboard/menus/create" class="btn btn-primary">Add Menu</a>
             <h1>All Menus</h1>

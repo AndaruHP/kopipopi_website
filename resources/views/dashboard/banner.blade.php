@@ -1,7 +1,7 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class="content turun">
+    <div class="content turun mb-3">
         <div class="container boxx pt-3 ">
             @if (session()->has('success'))
                 <div class="alert alert-success alert-dismissible" role="alert">

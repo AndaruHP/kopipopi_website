@@ -39,34 +39,43 @@
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
                     @foreach ($categories as $category)
-                    <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
                     @endforeach
                 </ul>
             </div>
-
         </div>
 
-        <div class="menu-item">
-            <div class="menu-category">
-                Menu Title
-                <div class="menu-image">
-                    <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
-                </div>
-                <div class="menu-name">
-                    Menu Name
-                </div>
-                <div class="menu-description">
-                    <p>Menu Description</p>
-                </div>
-                <div class="menu-price">
-                    <p>100</p>
-                </div>
-
-
+        @foreach ($categories as $category)
+            <div class="menu-container">
+                @foreach ($category->subcategories as $subcategory)
+                    <div class="menu-item filter-{{ $category->slug }}">
+                        <div class="menu-category">
+                            <h3>{{ $subcategory->name }}</h3>
+                            @if ($subcategory->menus && $subcategory->menus->count() > 0)
+                                @foreach ($subcategory->menus as $menu)
+                                    <div class="menu-item">
+                                        <div class="menu-image">
+                                            <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
+                                        </div>
+                                        <div class="menu-name">
+                                            {{ $menu->name }}
+                                        </div>
+                                        <div class="menu-description">
+                                            <p>{{ $menu->description }}</p>
+                                        </div>
+                                        <div class="menu-price">
+                                            <p>{{ $menu->price }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
+                                <p>No menus available for this subcategory.</p>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
             </div>
-
-
-        </div>
+        @endforeach
 
 
 
@@ -82,7 +91,7 @@
 </script>
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Initialize Isotope
         $('.menu-container').isotope({
             itemSelector: '.menu-item',
@@ -90,7 +99,7 @@
         });
 
         // Filter items on button click
-        $('#menu-flters li').on('click', function () {
+        $('#menu-flters li').on('click', function() {
             $('#menu-flters li').removeClass('filter-active');
             $(this).addClass('filter-active');
             var selector = $(this).data('filter');
@@ -109,4 +118,28 @@
             });
         }
     }
+</script>
+<script>
+    $(document).ready(function() {
+        // Initialize Isotope
+        var $menuContainer = $('.menu-container');
+
+        // Initialize Isotope with all items
+        $menuContainer.isotope({
+            itemSelector: '.menu-item',
+            layoutMode: 'fitRows'
+        });
+
+        // Filter items on button click
+        $('#menu-flters li').on('click', function() {
+            $('#menu-flters li').removeClass('filter-active');
+            $(this).addClass('filter-active');
+            var selector = $(this).data('filter');
+
+            // Use Isotope's filter function to only show items with the selected category
+            $menuContainer.isotope({
+                filter: selector
+            });
+        });
+    });
 </script>

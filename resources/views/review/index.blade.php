@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Fonts -->
 
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,17 +31,18 @@
         trix-toolbar [data-trix-button-group="file-tools"] {
             display: none;
         }
+
         .rating-header {
             margin-top: -10px;
             margin-bottom: 10px;
         }
-        
+
         .description {
-            height: 100px; 
-            text-align: left; 
+            height: 100px;
+            text-align: left;
             vertical-align: top;
             border: none;
-            border-radius: 5px; 
+            border-radius: 5px;
         }
 
         .box {
@@ -58,32 +60,36 @@
         }
 
         .row {
-            width: 100%; /* Membuat lebar row menjadi 100% dari parent */
-            max-width: 400px; /* Optional: Sesuaikan dengan lebar maksimum yang diinginkan */
-            margin: 0 auto; /* Menengahkan row secara horizontal */
+            width: 100%;
+            /* Membuat lebar row menjadi 100% dari parent */
+            max-width: 400px;
+            /* Optional: Sesuaikan dengan lebar maksimum yang diinginkan */
+            margin: 0 auto;
+            /* Menengahkan row secara horizontal */
         }
 
         .btnrating:hover {
-            background-color: #f8d61e; /* Ganti warna latar hover sesuai keinginan Anda */
-            color: #333; /* Ganti warna teks hover sesuai keinginan Anda */
+            background-color: #f8d61e;
+            /* Ganti warna latar hover sesuai keinginan Anda */
+            color: #333;
+            /* Ganti warna teks hover sesuai keinginan Anda */
         }
 
         .submit-btn-container {
-            text-align: center; 
+            text-align: center;
         }
 
-        .warna{
+        .warna {
             background-color: #f0f0f0;
             border-radius: 12px;
         }
-        
+
         @media screen and (min-width: 768px) {
-            .warna{
+            .warna {
                 min-width: 400px;
             }
-        
-        }
 
+        }
     </style>
 
     <!-- Styles -->
@@ -119,69 +125,73 @@
 
 <div class="container box pt-5">
     <form action="{{ route('review.store') }}" method="post" class="px-1 py-3 warna">
+        @csrf
+
         <div class="form-group" id="rating-ability-wrapper">
-                <label class="control-label" for="rating">
+            <label class="control-label" for="rating">
                 <span class="field-label-header">LEAVE A REVIEW!</span><br>
                 <span class="field-label-info"></span>
                 <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
-                </label>
-                <h2 class="bold rating-header" style="">
+            </label>
+            <h2 class="bold rating-header" style="">
                 <span class="selected-rating">0</span><small> / 5</small>
-                </h2>
-                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </button>
+            </h2>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
         </div>
         <div class="row container">
-            <textarea type="description" id="desc" name="desc" class="col-12 description" placeholder="Input Your Comment"></textarea>
+            <textarea type="description" id="desc" name="desc" class="col-12 description"
+                placeholder="Input Your Comment"></textarea>
         </div>
         <div class="submit-btn-container mt-3">
-            <button type="submit" class="btn bg-secondary text-light    ">Submit Review</button>
-        </div>      
+            <button type="submit" class="btn bg-secondary text-light">Submit Review</button>
+        </div>
     </form>
 
-</div>    
+</div>
 
 
-<script> //buat star
-    	jQuery(document).ready(function($){
-	    
-	$(".btnrating").on('click',(function(e) {
-	
-	var previous_value = $("#selected_rating").val();
-	
-	var selected_value = $(this).attr("data-attr");
-	$("#selected_rating").val(selected_value);
-	
-	$(".selected-rating").empty();
-	$(".selected-rating").html(selected_value);
-	
-	for (i = 1; i <= selected_value; ++i) {
-	$("#rating-star-"+i).toggleClass('btn-warning');
-	$("#rating-star-"+i).toggleClass('btn-default');
-	}
-	
-	for (ix = 1; ix <= previous_value; ++ix) {
-	$("#rating-star-"+ix).toggleClass('btn-warning');
-	$("#rating-star-"+ix).toggleClass('btn-default');
-	}
-	
-	}));
-	
-		
-});
+<script>
+    //buat star
+    jQuery(document).ready(function($) {
+
+        $(".btnrating").on('click', (function(e) {
+
+            var previous_value = $("#selected_rating").val();
+
+            var selected_value = $(this).attr("data-attr");
+            $("#selected_rating").val(selected_value);
+
+            $(".selected-rating").empty();
+            $(".selected-rating").html(selected_value);
+
+            for (i = 1; i <= selected_value; ++i) {
+                $("#rating-star-" + i).toggleClass('btn-warning');
+                $("#rating-star-" + i).toggleClass('btn-default');
+            }
+
+            for (ix = 1; ix <= previous_value; ++ix) {
+                $("#rating-star-" + ix).toggleClass('btn-warning');
+                $("#rating-star-" + ix).toggleClass('btn-default');
+            }
+
+        }));
+
+
+    });
 </script>
 
 
