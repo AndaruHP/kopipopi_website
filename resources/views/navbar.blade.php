@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
 <section id="navbar">
     <div class="navbar">
         <div class="navbar-left">

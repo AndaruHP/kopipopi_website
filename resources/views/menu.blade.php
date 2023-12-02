@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
 
     <!-- Styles -->
     <style>
@@ -38,14 +39,40 @@
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
                     @foreach ($categories as $category)
-                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                    <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
                     @endforeach
                 </ul>
             </div>
 
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-category">
+                Menu Title
+                <div class="menu-image">
+                    <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
+                </div>
+                <div class="menu-name">
+                    Menu Name
+                </div>
+                <div class="menu-description">
+                    <p>Menu Description</p>
+                </div>
+                <div class="menu-price">
+                    <p>100</p>
+                </div>
+
+
+            </div>
 
 
         </div>
+
+
+
+    </div>
+
+
 
 </section>
 
@@ -55,7 +82,7 @@
 </script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Initialize Isotope
         $('.menu-container').isotope({
             itemSelector: '.menu-item',
@@ -63,7 +90,7 @@
         });
 
         // Filter items on button click
-        $('#menu-flters li').on('click', function() {
+        $('#menu-flters li').on('click', function () {
             $('#menu-flters li').removeClass('filter-active');
             $(this).addClass('filter-active');
             var selector = $(this).data('filter');

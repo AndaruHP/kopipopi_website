@@ -1,0 +1,161 @@
+.menu #menu-flters {
+    margin: 0 auto 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.menu #menu-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 22px 10px 22px;
+    font-size: 32px;
+    font-weight: 50;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    border: 0.75px solid #000000;
+    gap: 8px;
+    margin-right: 25px;
+    background-color: #ffffff;
+    -webkit-text-stroke: 0.5px #fff;
+    /* Add stroke (for webkit-based browsers like Chrome, Safari) */
+    text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
+        0.5px 0.5px 0 #fff;
+    /* Create a shadow to simulate the stroke (for other browsers) */
+}
+
+.section-title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    color: #000000;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.section-title p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 3px;
+
+}
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
+    color: #fe0002;
+}
+
+.menu #menu-flters li:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu #menu-flters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .menu #menu-flters li {
+        font-size: 20px;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+        margin-right: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 0.5px solid #000000;
+        text-shadow: none;
+        -webkit-text-stroke: none;
+    }
+
+    .menu #menu-flters li:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu .menu-item {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.menu .menu-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-image {
+    width: 424px;
+    height: 263px;
+    object-fit: cover;
+    transition: 0.2s;
+    display: block;
+    margin: auto;
+}
+
+
+.menu-category {
+    padding: 20px 20px 0 20px;
+    margin: 0;
+    color: #000000;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.menu-name {
+    margin: 0;
+    margin-top: 15px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.menu-description {
+    margin: 0;
+    margin-top: 10px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+
+.menu-price {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    background: #ffffff;
+    font-weight: bold;
+}
