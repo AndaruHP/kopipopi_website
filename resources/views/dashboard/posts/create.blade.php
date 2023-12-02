@@ -34,13 +34,18 @@
                             <label for="category_id" class="form-label">Kategori</label>
                             <select name="category_id" id="category_id" class="form-select">
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}"
-                                        {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                    <option value="{{ $category->id }}">
                                         {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>
+                        </div>
 
+                        <div class="mb-3">
+                            <label for="subcategory_id" class="form-label">Subkategori</label>
+                            <select name="subcategory_id" id="subcategory_id" class="form-select">
+                                <option value="">-- Select Subcategory --</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Gambar</label>
@@ -87,5 +92,32 @@
         document.addEventListener("trix-file-accept", event => {
             event.preventDefault()
         })
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Ketika pilihan kategori berubah
+            $('#category_id').on('change', function() {
+                var categoryId = $(this).val();
+
+                // Lakukan permintaan AJAX untuk mendapatkan subkategori berdasarkan kategori yang dipilih
+                $.ajax({
+                    url: '/get-subcategories/' + categoryId, // Sesuaikan dengan URL endpoint Anda
+                    method: 'GET',
+                    success: function(data) {
+                        // Hapus semua opsi subkategori sebelum menambahkan yang baru
+                        $('#subcategory_id').empty();
+
+                        // Tambahkan opsi subkategori baru
+                        $.each(data, function(key, value) {
+                            $('#subcategory_id').append('<option value="' + key + '">' +
+                                value + '</option>');
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
     </script>
 @endsection

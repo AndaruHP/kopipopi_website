@@ -63,7 +63,7 @@ class GalleryController extends Controller
     public function edit(Gallery $gallery)
     {
         return view('dashboard.galleries.edit', [
-            'galleries' => $gallery,
+            'gallery' => $gallery,
             'active' => 'gallery'
         ]);
     }
@@ -75,7 +75,7 @@ class GalleryController extends Controller
     {
         $rules = [
             'title' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ];
 
         $validatedData = $request->validate($rules);

@@ -19,7 +19,7 @@ class Menu extends Model
 
     public function subcategory()
     {
-        return $this->belongsTo(Subcategoryategory::class);
+        return $this->belongsTo(Subcategory::class);
     }
 
     public function sluggable(): array

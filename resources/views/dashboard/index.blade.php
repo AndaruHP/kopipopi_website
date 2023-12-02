@@ -1,7 +1,7 @@
 @extends('dashboard.layout.main')
 
 @section('container')
-    <div class=" content">
+    <div class=" content mb-3">
         <div class="row mb-3">
             <div class="col-6 col-md-6 col-lg-3 p-4">
                 <div class="row totalmenu">
@@ -86,7 +86,7 @@
                                                     <img src="{{ asset('images/profile.png') }}" alt="profile" />
                                                     <div class="nama">
                                                         <h5>{{ $review->user->name }}</h5>
-                                                        <p>{{ $review->created_at->format('H:i d F Y') }}</p>
+                                                        <p>{{ $review->created_at->format('d F Y') }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="bintang gambar">
@@ -195,16 +195,18 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            @if ($banners->count() > 3)
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            @endif
                         </div>
                     </div>
                 </div>

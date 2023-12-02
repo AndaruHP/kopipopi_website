@@ -40,6 +40,7 @@ class DashboardMenuController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
+            'subcategory_id' => 'required|exists:subcategories,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
             'body' => 'required|string',
             'price' => 'required|integer',
@@ -90,6 +91,7 @@ class DashboardMenuController extends Controller
         $rules = [
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
+            'subcategory_id' => 'required|exists:subcategories,id',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
             'body' => 'required|string',
             'price' => 'required|integer',

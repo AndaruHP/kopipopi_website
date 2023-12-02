@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('body');
             $table->integer('price');
             $table->foreignId('category_id');
+            $table->foreignId('subcategory_id')->on('subcategories')->onDelete('cascade');
             $table->timestamps();
+
+            // $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
         });
     }
 

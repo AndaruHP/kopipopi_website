@@ -29,7 +29,7 @@ use App\Http\Controllers\DashboardSubcategoryController;
 
 Route::get('/', function () {
     return view('welcome', [
-        'contact' => Kontak::first(),
+        'contact' => Kontak::latest()->take(1)->get(),
         'banners' => Banner::latest()->take(4)->get(),
         'menus' => Menu::latest()->take(4)->get()
     ]);
@@ -73,10 +73,11 @@ Route::get('/dashboard', function () {
 Route::resource('/dashboard/menus', DashboardMenuController::class)->middleware('auth')->except(['show']);
 Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('auth')->except(['show']);
 Route::resource('/dashboard/categories/subcategories', DashboardSubcategoryController::class)->middleware('auth')->except(['show']);
+Route::get('/get-subcategories/{categoryId}', [DashboardSubcategoryController::class, 'getSubcategories']);
 // Route::get('/dashboard/categories', [DashboardSubcategoryController::class, 'index']);
 Route::resource('/dashboard/banners', DashboardBannerController::class)->middleware('auth')->except(['show']);
-Route::get('/review', [ReviewController::class, 'create'])->name('review.create');
-Route::post('/review', [ReviewController::class, 'store'])->name('review.store');
+Route::get('/review', [ReviewController::class, 'create'])->name('review.create')->middleware('auth');
+Route::post('/review', [ReviewController::class, 'store'])->name('review.store')->middleware('auth');
 Route::get('/dashboard/review', [ReviewController::class, 'index']);
 Route::delete('/dashboard/review/{rating}', [ReviewController::class, 'destroy']);
 // Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact')->middleware('auth')->except(['show']);

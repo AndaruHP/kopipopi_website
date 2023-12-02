@@ -35,7 +35,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="" class="badge bg-info"><i class="bi bi-eye"></i></a>
+                                    {{-- <a href="" class="badge bg-info"><i class="bi bi-eye"></i></a> --}}
                                     <a href="/dashboard/banners/{{ $banner->slug }}/edit" class="badge bg-warning"><i
                                             class="bi bi-pencil-square"></i></a>
                                     <form action="/dashboard/banners/{{ $banner->slug }}" method="post" class="d-inline">

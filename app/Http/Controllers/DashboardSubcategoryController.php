@@ -57,11 +57,12 @@ class DashboardSubcategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Subcategory $subcategory)
+    public function edit(Category $category, Subcategory $subcategory)
     {
         return view('dashboard.subcategories.edit', [
+            'category' => $category,
             'subcategory' => $subcategory,
-            'subcategories' => Subcategory::all(),
+            'categories' => Category::all(),
             'active' => 'category'
 
         ]);
@@ -87,6 +88,13 @@ class DashboardSubcategoryController extends Controller
     public function destroy(Subcategory $subcategory)
     {
         Subcategory::destroy($subcategory->id);
-        return redirect('/dashboard/categories')->with('success', 'Subcategory deleted successfully');
+        return redirect('/dashboard/categories/subcategories')->with('success', 'Subcategory deleted successfully');
+    }
+
+    public function getSubcategories($categoryId)
+    {
+        $subcategories = Subcategory::where('category_id', $categoryId)->pluck('name', 'id');
+
+        return response()->json($subcategories);
     }
 }

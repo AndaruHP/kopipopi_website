@@ -54,10 +54,17 @@
                     <span>Reservation</span>
                 </div>
                 <div class="lower"><br>
-                    <a href="https://wa.me/{{ $contact->phone }}" target="_blank">
-                        <p>Phone: +{{ $contact->phone }}</p>
+                    @if ($contact)
+                        <a href="https://wa.me/{{ $contact->phone }}" target="_blank">
+                            <p>Phone: +{{ $contact->phone }}</p>
+                        </a>
+                        <p>Email: {{ $contact->email }}</p>
+                    @else
+                        <p>Phone: +</p>
+                        <p>Email:</p>
+                    @endif
                     </a>
-                    <p>Email: {{ $contact->email }}</p>
+
                 </div>
             </div>
             <div class="contact-container">

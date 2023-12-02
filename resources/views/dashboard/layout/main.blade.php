@@ -14,6 +14,8 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/admin.css" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <style>
         trix-toolbar [data-trix-button-group="file-tools"] {
             display: none;
