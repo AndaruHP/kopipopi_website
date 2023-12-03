@@ -50,6 +50,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            top: 30vh;
         }
 
         .form-group {
@@ -59,20 +60,11 @@
             margin-bottom: 10px;
         }
 
-        .row {
-            width: 100%;
-            /* Membuat lebar row menjadi 100% dari parent */
-            max-width: 400px;
-            /* Optional: Sesuaikan dengan lebar maksimum yang diinginkan */
-            margin: 0 auto;
-            /* Menengahkan row secara horizontal */
-        }
+        
 
         .btnrating:hover {
             background-color: #f8d61e;
-            /* Ganti warna latar hover sesuai keinginan Anda */
             color: #333;
-            /* Ganti warna teks hover sesuai keinginan Anda */
         }
 
         .submit-btn-container {
@@ -84,9 +76,19 @@
             border-radius: 12px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
             .warna {
-                min-width: 400px;
+                min-width: 500px;
+            }
+
+            .pt-5, .py-5 {
+                padding-top: 8rem!important;
+            }
+
+            .row {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
             }
 
         }
@@ -152,9 +154,17 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
             </button>
         </div>
-        <div class="row container">
-            <textarea type="description" id="desc" name="desc" class="col-12 description"
-                placeholder="Input Your Comment"></textarea>
+        <div class="row px-0">
+            <!-- <textarea type="description" id="desc" name="desc" class="col-12 description"
+                placeholder="Input Your Comment"></textarea> -->
+
+                 <div class="mb-3 col-12">
+                <!-- <label for="description" class="form-label">Deskripsi Review:</label> -->
+                <input type="hidden" name="description" id="description" class="description" value="{{ old('description') }}">
+                <trix-editor input="description"></trix-editor>
+                <!-- <div class="text-muted">Anda hanya bisa mengisi review sekali</div> -->
+
+            </div>
         </div>
         <div class="submit-btn-container mt-3">
             <button type="submit" class="btn bg-secondary text-light">Submit Review</button>
