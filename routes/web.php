@@ -66,23 +66,23 @@ Route::get('/dashboard', function () {
 
         ]
     );
-})->middleware('auth')->name('dashboard');
+})->middleware('admin')->name('dashboard');
 // Route::get('/dashboard', function () {
 //     return view('dashboard.index');
 // })->middleware('auth')->name('dashboard');
-Route::resource('/dashboard/menus', DashboardMenuController::class)->middleware('auth')->except(['show']);
-Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('auth')->except(['show']);
-Route::resource('/dashboard/categories/subcategories', DashboardSubcategoryController::class)->middleware('auth')->except(['show']);
+Route::resource('/dashboard/menus', DashboardMenuController::class)->middleware('admin')->except(['show']);
+Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('admin')->except(['show']);
+Route::resource('/dashboard/categories/subcategories', DashboardSubcategoryController::class)->middleware('admin')->except(['show']);
 Route::get('/get-subcategories/{categoryId}', [DashboardSubcategoryController::class, 'getSubcategories']);
 // Route::get('/dashboard/categories', [DashboardSubcategoryController::class, 'index']);
-Route::resource('/dashboard/banners', DashboardBannerController::class)->middleware('auth')->except(['show']);
+Route::resource('/dashboard/banners', DashboardBannerController::class)->middleware('admin')->except(['show']);
 Route::get('/review', [ReviewController::class, 'create'])->name('review.create')->middleware('auth');
 Route::post('/review', [ReviewController::class, 'store'])->name('review.store')->middleware('auth');
 Route::get('/dashboard/review', [ReviewController::class, 'index']);
 Route::delete('/dashboard/review/{rating}', [ReviewController::class, 'destroy']);
-// Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact')->middleware('auth')->except(['show']);
+// Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact')->middleware('admin')->except(['show']);
 // Route::get('/dashboard/contact/create', [DashboardContactController::class, 'create'])->name('dashboard.contact.create');
 // Route::post('/dashboard/contact', [DashboardContactController::class, 'store']);
 // Route::delete('/dashboard/contact/{contact}', [DashboardContactController::class, 'destroy']);
-Route::resource('/dashboard/contact', DashboardContactController::class)->middleware('auth')->except(['show']);
-Route::resource('/dashboard/galleries', GalleryController::class)->middleware('auth')->except(['show']);
+Route::resource('/dashboard/contact', DashboardContactController::class)->middleware('admin')->except(['show']);
+Route::resource('/dashboard/galleries', GalleryController::class)->middleware('admin')->except(['show']);

@@ -23,8 +23,6 @@ class RegisterController extends Controller
             'password' => 'required|min:5|max:255'
         ]);
 
-        $validatedData['role'] = 1;
-
         //entah kenapa tiba-tiba udah di hash
         // $validatedData['password'] = bcrypt($validatedData['password']);
         // $validatedData['password'] = Hash::make($validatedData['password']);

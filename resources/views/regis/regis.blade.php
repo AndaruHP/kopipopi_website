@@ -32,7 +32,6 @@
 
                     <form method="post" action="/register">
                         @csrf
-                        <input type="hidden" name="role" value="1">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror"
