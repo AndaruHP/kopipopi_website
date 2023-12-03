@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kontak;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardContactController extends Controller
@@ -15,7 +15,8 @@ class DashboardContactController extends Controller
             'dashboard.contact',
             [
                 'contacts' => $contact,
-                'active' => 'contact'
+                'active' => 'contact',
+                'users' => User::all()
             ]
         );
     }
