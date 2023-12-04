@@ -72,7 +72,6 @@
     </div>
 </section>
 
-
 @include('carousel')
 
 @include('promo')

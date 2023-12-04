@@ -7,20 +7,24 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+        <h1 class="text-center mb-2">OUR GALLERY</h1>
+
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('images/carousel1.jpg') }}" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
+            @foreach ($galleries as $gallery)
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ asset('storage/' . $gallery->image) }}" alt="First slide">
+                    {{-- <div class="carousel-caption d-none d-md-block">
                     <div class="caption-content">
                         <h3>Warm and Welcoming Ambiance</h3>
                         <p>Our cafe-restaurant is designed to be a home away from home. The cozy and inviting
                             ambiance sets the stage for memorable experiences,
                             whether you're meeting friends for a leisurely brunch, enjoying a coffee catch-up, or
                             having a delightful dinner with loved ones. </p>
-                    </div>
+                        </div>
+                    </div> --}}
                 </div>
-            </div>
-            <div class="carousel-item">
+            @endforeach
+            {{-- <div class="carousel-item">
                 <img class="d-block w-100" src="css/gambar/carousel2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="caption-content">
@@ -45,7 +49,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

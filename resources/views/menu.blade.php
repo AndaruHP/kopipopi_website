@@ -55,16 +55,16 @@
                                 @foreach ($subcategory->menus as $menu)
                                     <div class="menu-item">
                                         <div class="menu-image">
-                                            <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
+                                            <img src="{{ asset('storage/' . $menu->image) }}" alt="Explain Image" />
                                         </div>
                                         <div class="menu-name">
                                             {{ $menu->name }}
                                         </div>
-                                        <div class="menu-description">
+                                        {{-- <div class="menu-description">
                                             <p>{{ $menu->description }}</p>
-                                        </div>
+                                        </div> --}}
                                         <div class="menu-price">
-                                            <p>{{ $menu->price }}</p>
+                                            <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>
                                         </div>
                                     </div>
                                 @endforeach
@@ -89,7 +89,6 @@
 <script>
     AOS.init();
 </script>
-
 <script>
     $(document).ready(function() {
         // Initialize Isotope

@@ -8,7 +8,7 @@
                 <form action="/dashboard/categories" method="post">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nama Kontak</label>
+                        <label for="name" class="form-label">Nama Kategori</label>
                         <input type="text" class="form-control" id="name" name="name" required autofocus
                             value="{{ old('name') }}">
                     </div>

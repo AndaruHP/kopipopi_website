@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardBannerController;
 use App\Http\Controllers\DashboardContactController;
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardSubcategoryController;
+use App\Models\Gallery;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,8 @@ Route::get('/', function () {
     return view('welcome', [
         'contact' => Kontak::latest()->first(),
         'banners' => Banner::latest()->take(4)->get(),
-        'menus' => Menu::latest()->take(4)->get()
+        'menus' => Menu::latest()->take(4)->get(),
+        'galleries' => Gallery::latest()->get()
     ]);
 });
 
