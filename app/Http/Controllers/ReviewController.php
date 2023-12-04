@@ -4,6 +4,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kontak;
 use App\Models\Rating;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class ReviewController extends Controller
     {
         $user = auth()->user();
         return view('review.index', [
-            'user' => $user
+            'user' => $user,
+            'contact' => Kontak::latest()->first()
         ]);
     }
 

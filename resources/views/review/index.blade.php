@@ -60,7 +60,7 @@
             margin-bottom: 10px;
         }
 
-        
+
 
         .btnrating:hover {
             background-color: #f8d61e;
@@ -81,8 +81,9 @@
                 min-width: 500px;
             }
 
-            .pt-5, .py-5 {
-                padding-top: 8rem!important;
+            .pt-5,
+            .py-5 {
+                padding-top: 8rem !important;
             }
 
             .row {
@@ -101,31 +102,7 @@
 
 @include('navbar')
 
-<!-- <div class="container">
-    <div class="col-lg-6">
-        <form action="{{ route('review.store') }}" method="post">
-            @csrf
-            <input type="hidden" name="user_id" value="{{ $user->id }}">
-            <div class="mb-3">
-                <label for="rating" class="form-label">Rating:</label>
-                <input type="range" class="form-range" min="0" max="5" step="0.1" id="rating"
-                    oninput="updateRating(this.value)" value="4" name="rating">
-                <span id="rating-value">4.0</span>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Deskripsi Review:</label>
-                <input type="hidden" name="description" id="description" value="{{ old('description') }}">
-                <trix-editor input="description"></trix-editor>
-                <div class="text-muted">Anda hanya bisa mengisi review sekali</div>
-
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit Review</button>
-        </form>
-    </div>
-</div> -->
-
-<div class="container box pt-5">
+<div class="container box pt-5 mb-5">
     <form action="{{ route('review.store') }}" method="post" class="px-1 py-3 warna">
         @csrf
 
@@ -133,10 +110,19 @@
             <label class="control-label" for="rating">
                 <span class="field-label-header">LEAVE A REVIEW!</span><br>
                 <span class="field-label-info"></span>
-                <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+                <input type="hidden" id="user_id" name="user_id" value="{{ $user->id }}" required="required"
+                    class="@error('user_id') is-invalid @enderror">
+                @error('user_id')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <input type="hidden" id="rating" name="rating" value="" required="required"
+                    class="@error('rating') is-invalid @enderror">
+                @error('rating')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </label>
             <h2 class="bold rating-header" style="">
-                <span class="selected-rating">0</span><small> / 5</small>
+                <span class="rating">0</span><small> / 5</small>
             </h2>
             <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -155,52 +141,46 @@
             </button>
         </div>
         <div class="row px-0">
-            <!-- <textarea type="description" id="desc" name="desc" class="col-12 description"
-                placeholder="Input Your Comment"></textarea> -->
+            <!-- <textarea type="description" id="desc" name="desc" class="col-12 description" placeholder="Input Your Comment"></textarea> -->
 
-                 <div class="mb-3 col-12">
+            <div class="mb-3 col-12">
                 <!-- <label for="description" class="form-label">Deskripsi Review:</label> -->
-                <input type="hidden" name="description" id="description" class="description" value="{{ old('description') }}">
+                <input type="hidden" name="description" id="description" class="description"
+                    value="{{ old('description') }}">
                 <trix-editor input="description"></trix-editor>
-                <!-- <div class="text-muted">Anda hanya bisa mengisi review sekali</div> -->
-
+                <div class="text-muted">*Anda hanya bisa mengisi review sekali</div>
             </div>
         </div>
         <div class="submit-btn-container mt-3">
-            <button type="submit" class="btn bg-secondary text-light">Submit Review</button>
+            <button type="submit" class="btn btn-secondary text-light">Submit Review</button>
         </div>
     </form>
 
 </div>
 
+@include('footer_review')
+
 
 <script>
     //buat star
     jQuery(document).ready(function($) {
-
-        $(".btnrating").on('click', (function(e) {
-
-            var previous_value = $("#selected_rating").val();
-
+        $(".btnrating").on('click', function(e) {
             var selected_value = $(this).attr("data-attr");
-            $("#selected_rating").val(selected_value);
+            $("#rating").val(selected_value);
 
-            $(".selected-rating").empty();
-            $(".selected-rating").html(selected_value);
+            $(".rating").empty();
+            $(".rating").html(selected_value);
+
+            for (i = 1; i <= 5; ++i) {
+                $("#rating-star-" + i).removeClass('btn-warning');
+                $("#rating-star-" + i).addClass('btn-default');
+            }
 
             for (i = 1; i <= selected_value; ++i) {
-                $("#rating-star-" + i).toggleClass('btn-warning');
-                $("#rating-star-" + i).toggleClass('btn-default');
+                $("#rating-star-" + i).removeClass('btn-default');
+                $("#rating-star-" + i).addClass('btn-warning');
             }
-
-            for (ix = 1; ix <= previous_value; ++ix) {
-                $("#rating-star-" + ix).toggleClass('btn-warning');
-                $("#rating-star-" + ix).toggleClass('btn-default');
-            }
-
-        }));
-
-
+        });
     });
 </script>
 
@@ -230,7 +210,7 @@
     });
 </script>
 
-<script>
+{{-- <script>
     $(document).ready(function() {
         // Initialize Isotope
         $('.menu-container').isotope({
@@ -258,7 +238,7 @@
             });
         }
     }
-</script>
+</script> --}}
 
 <script>
     AOS.init();
