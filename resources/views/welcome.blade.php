@@ -23,6 +23,10 @@
     <!-- Styles -->
     <style>
     </style>
+<script src="{{ asset('js/app.js') }}"></script> <!-- Include compiled JS file containing jQuery -->
+
+<script src="{{ asset('path/to/compiled/isotope.js') }}"></script> <!-- Include Isotope JS file -->
+
 </head>
 
 @include('navbar')

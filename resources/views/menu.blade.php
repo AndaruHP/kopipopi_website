@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Fonts -->
-
+    
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
@@ -22,20 +22,18 @@
     <!-- Styles -->
     <style>
     </style>
+    <!-- In your HTML head -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
 </head>
 
 @include('navbar')
 
 
 <section id="menu" class="menu section-bg mb-5">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="400">
-
-        <div class="section-title" data-aos="fade-down-right" data-aos-duration="2000">
-            <h2>Menu</h2>
-            <p>Discover Our Tasty Menu</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
+<div class="row" data-aos="fade-up">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
                     @foreach ($categories as $category)
@@ -89,6 +87,8 @@
 <script>
     AOS.init();
 </script>
+<!-- jQuery CDN -->
+
 <script>
     $(document).ready(function() {
         // Initialize Isotope
@@ -107,38 +107,5 @@
             });
         });
     });
-
-    function scrollToSection(sectionId) {
-        var targetSection = document.querySelector(sectionId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
 </script>
-<script>
-    $(document).ready(function() {
-        // Initialize Isotope
-        var $menuContainer = $('.menu-container');
 
-        // Initialize Isotope with all items
-        $menuContainer.isotope({
-            itemSelector: '.menu-item',
-            layoutMode: 'fitRows'
-        });
-
-        // Filter items on button click
-        $('#menu-flters li').on('click', function() {
-            $('#menu-flters li').removeClass('filter-active');
-            $(this).addClass('filter-active');
-            var selector = $(this).data('filter');
-
-            // Use Isotope's filter function to only show items with the selected category
-            $menuContainer.isotope({
-                filter: selector
-            });
-        });
-    });
-</script>
