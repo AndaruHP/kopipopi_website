@@ -34,44 +34,50 @@
 
 <section id="menu" class="menu section-bg mb-5">
 <div class="row" data-aos="fade-up">
-    <div class="col-lg-12 d-flex justify-content-center">
-        <ul id="menu-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            @foreach ($categories as $category)
-                <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
-            @endforeach
-        </ul>
-    </div>
-</div>
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    @foreach ($categories as $category)
+                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
 
-<div class="row menu-container" data-aos="fade-up" data-aos-offset="200">
-    @foreach ($categories as $category)
-        @foreach ($category->subcategories as $subcategory)
-            <div class="col-lg-6 menu-item filter-{{ $category->slug }}">
-                <div class="menu-category">
-                    <h3>{{ $subcategory->name }}</h3>
-                    @if ($subcategory->menus && $subcategory->menus->count() > 0)
-                        @foreach ($subcategory->menus as $menu)
-                            <div class="menu-item">
-                                <div class="menu-image">
-                                    <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" />
-                                </div>
-                                <div class="menu-content">
-                                    <a href="#">{{ $menu->name }}</a><span>Rp.{{ number_format($menu->price, 0, ',', '.') }}</span>
-                                </div>
-                                <div class="menu-ingredients">
-                                    {{ $menu->description }}
-                                </div>
-                            </div>
-                        @endforeach
-                    @else
-                        <p>No menus available for this subcategory.</p>
-                    @endif
-                </div>
+        @foreach ($categories as $category)
+            <div class="menu-container">
+                @foreach ($category->subcategories as $subcategory)
+                    <div class="menu-item filter-{{ $category->slug }}">
+                        <div class="menu-category">
+                            <h3>{{ $subcategory->name }}</h3>
+                            @if ($subcategory->menus && $subcategory->menus->count() > 0)
+                                @foreach ($subcategory->menus as $menu)
+                                    <div class="menu-item">
+                                        <div class="menu-image">
+                                            <img src="{{ asset('storage/' . $menu->image) }}" alt="Explain Image" />
+                                        </div>
+                                        <div class="menu-name">
+                                            {{ $menu->name }}
+                                        </div>
+                                        {{-- <div class="menu-description">
+                                            <p>{{ $menu->description }}</p>
+                                        </div> --}}
+                                        <div class="menu-price">
+                                            <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
+                                <p>No menus available for this subcategory.</p>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
             </div>
         @endforeach
-    @endforeach
-</div>
+
+
+
+    </div>
 
 
 
