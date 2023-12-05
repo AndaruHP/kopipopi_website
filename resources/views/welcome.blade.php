@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/review.css') }}">
+
 
     <!-- Styles -->
     <style>
@@ -73,8 +75,98 @@
 </section>
 
 @include('carousel')
-
+<section id="review">
+    <div class="row justify-content-center">
+        <h1 class="text-center p-5 text-white">THEY ALL LOVE OUR COFFEE</h1>
+        <div class="review col-lg-5 col-sm-10">
+            <div class="Review-text">
+                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
+                    Kopinya luar biasa, terutama Espresso
+                    mereka—aroma yang khas dan rasa yang kuat.
+                    Layanan yang ramah membuat pengalaman
+                    minum kopi di sini menjadi istimewa.</p>
+                    <p class="text-center">
+                        4.5/5
+                    </p>
+                    <p class="text-center">
+                        -Ananda
+                    </p>
+            </div>
+        </div>
+        <div class="review col-lg-5 col-sm-10">
+            <div class="Review-text">
+                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
+                    Kopinya luar biasa, terutama Espresso
+                    mereka—aroma yang khas dan rasa yang kuat.
+                    Layanan yang ramah membuat pengalaman
+                    minum kopi di sini menjadi istimewa.</p>
+                    <p class="text-center">
+                        4.5/5
+                    </p>
+                    <p class="text-center">
+                        -Ananda
+                    </p>
+            </div>
+        </div>
+        <div class="review col-lg-5 col-sm-10">
+            <div class="Review-text">
+                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
+                    Kopinya luar biasa, terutama Espresso
+                    mereka—aroma yang khas dan rasa yang kuat.
+                    Layanan yang ramah membuat pengalaman
+                    minum kopi di sini menjadi istimewa.</p>
+                    <p class="text-center">
+                        4.5/5
+                    </p>
+                    <p class="text-center">
+                        -Ananda
+                    </p>
+            </div>
+        </div>
+        <div class="review col-lg-5 col-sm-10">
+            <div class="Review-text">
+                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
+                    Kopinya luar biasa, terutama Espresso
+                    mereka—aroma yang khas dan rasa yang kuat.
+                    Layanan yang ramah membuat pengalaman
+                    minum kopi di sini menjadi istimewa.</p>
+                    <p class="text-center">
+                        4.5/5
+                    </p>
+                    <p class="text-center">
+                        -Ananda
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container mt-5">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col-9 text-center">
+                <button type="button" class="btn btn-danger animated-button">LEAVE A REVIEW!</button>
+            </div>
+        </div>
+    </div>
+</section>
 @include('promo')
+
+
 
 <script src="{{ asset('js/app.js') }}" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
