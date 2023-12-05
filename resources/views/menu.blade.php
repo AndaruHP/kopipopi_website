@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Fonts -->
-    
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
@@ -33,47 +33,47 @@
 
 
 <section id="menu" class="menu section-bg mb-5">
-<div class="row" data-aos="fade-up">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="menu-flters">
-                    @foreach ($categories as $category)
-                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
-                    @endforeach
-                </ul>
-            </div>
+    <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+                @foreach ($categories as $category)
+                    <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                @endforeach
+            </ul>
         </div>
+    </div>
 
-        @foreach ($categories as $category)
-            <div class="menu-container">
-                @foreach ($category->subcategories as $subcategory)
-                    <div class="menu-item filter-{{ $category->slug }}">
-                        <div class="menu-category">
-                            <h3>{{ $subcategory->name }}</h3>
-                            @if ($subcategory->menus && $subcategory->menus->count() > 0)
-                                @foreach ($subcategory->menus as $menu)
-                                    <div class="menu-item">
-                                        <div class="menu-image">
-                                            <img src="{{ asset('storage/' . $menu->image) }}" alt="Explain Image" />
-                                        </div>
-                                        <div class="menu-name">
-                                            {{ $menu->name }}
-                                        </div>
-                                        {{-- <div class="menu-description">
+    @foreach ($categories as $category)
+        <div class="menu-container">
+            @foreach ($category->subcategories as $subcategory)
+                <div class="menu-item filter-{{ $category->slug }}">
+                    <div class="menu-category">
+                        <h3>{{ $subcategory->name }}</h3>
+                        @if ($subcategory->menus && $subcategory->menus->count() > 0)
+                            @foreach ($subcategory->menus as $menu)
+                                <div class="menu-item">
+                                    <div class="menu-image">
+                                        <img src="{{ asset('storage/' . $menu->image) }}" alt="Explain Image" />
+                                    </div>
+                                    <div class="menu-name">
+                                        {{ $menu->name }}
+                                    </div>
+                                    {{-- <div class="menu-description">
                                             <p>{{ $menu->description }}</p>
                                         </div> --}}
-                                        <div class="menu-price">
-                                            <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>
-                                        </div>
+                                    <div class="menu-price">
+                                        <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>
                                     </div>
-                                @endforeach
-                            @else
-                                <p>No menus available for this subcategory.</p>
-                            @endif
-                        </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <p>No menus available for this subcategory.</p>
+                        @endif
                     </div>
-                @endforeach
-            </div>
-        @endforeach
+                </div>
+            @endforeach
+        </div>
+    @endforeach
 
 
 
@@ -108,4 +108,3 @@
         });
     });
 </script>
-

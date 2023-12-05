@@ -158,7 +158,7 @@
 
 </div>
 
-@include('footer_review')
+{{-- @include('footer_review') --}}
 
 
 <script>

@@ -20,7 +20,7 @@
                         <img class="img-preview img-fluid mb-3 col-sm-5 ">
                         <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
                             name="image" required onchange="previewImage()">
-                        <div class="text-muted">Direkomendasikan ukuran foto adalah 1:1</div>
+                        {{-- <div class="text-muted">Direkomendasikan ukuran foto adalah 1:1</div> --}}
                         @error('image')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

@@ -23,9 +23,9 @@
     <!-- Styles -->
     <style>
     </style>
-<script src="{{ asset('js/app.js') }}"></script> <!-- Include compiled JS file containing jQuery -->
+    <script src="{{ asset('js/app.js') }}"></script> <!-- Include compiled JS file containing jQuery -->
 
-<script src="{{ asset('path/to/compiled/isotope.js') }}"></script> <!-- Include Isotope JS file -->
+    <script src="{{ asset('path/to/compiled/isotope.js') }}"></script> <!-- Include Isotope JS file -->
 
 </head>
 
@@ -82,67 +82,23 @@
 <section id="review">
     <div class="row justify-content-center">
         <h1 class="text-center p-5 text-white">THEY ALL LOVE OUR COFFEE</h1>
-        <div class="review col-lg-5 col-sm-10">
-            <div class="Review-text">
-                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
-                    Kopinya luar biasa, terutama Espresso
-                    mereka—aroma yang khas dan rasa yang kuat.
-                    Layanan yang ramah membuat pengalaman
-                    minum kopi di sini menjadi istimewa.</p>
+        @foreach ($reviews as $review)
+            <div class="review col-lg-5 col-sm-10">
+                <div class="Review-text">
                     <p class="text-center">
-                        4.5/5
+                        {!! $review->description !!}
                     </p>
                     <p class="text-center">
-                        -Ananda
+                        {{ number_format($review->rating, 0) }}/5
                     </p>
+                    <p class="text-center">
+                        -{{ $review->user->name }}
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="review col-lg-5 col-sm-10">
-            <div class="Review-text">
-                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
-                    Kopinya luar biasa, terutama Espresso
-                    mereka—aroma yang khas dan rasa yang kuat.
-                    Layanan yang ramah membuat pengalaman
-                    minum kopi di sini menjadi istimewa.</p>
-                    <p class="text-center">
-                        4.5/5
-                    </p>
-                    <p class="text-center">
-                        -Ananda
-                    </p>
-            </div>
-        </div>
-        <div class="review col-lg-5 col-sm-10">
-            <div class="Review-text">
-                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
-                    Kopinya luar biasa, terutama Espresso
-                    mereka—aroma yang khas dan rasa yang kuat.
-                    Layanan yang ramah membuat pengalaman
-                    minum kopi di sini menjadi istimewa.</p>
-                    <p class="text-center">
-                        4.5/5
-                    </p>
-                    <p class="text-center">
-                        -Ananda
-                    </p>
-            </div>
-        </div>
-        <div class="review col-lg-5 col-sm-10">
-            <div class="Review-text">
-                <p class="text-center">"Sangat menyukai suasana yang tenang di kafe ini!
-                    Kopinya luar biasa, terutama Espresso
-                    mereka—aroma yang khas dan rasa yang kuat.
-                    Layanan yang ramah membuat pengalaman
-                    minum kopi di sini menjadi istimewa.</p>
-                    <p class="text-center">
-                        4.5/5
-                    </p>
-                    <p class="text-center">
-                        -Ananda
-                    </p>
-            </div>
-        </div>
-        <div class="row">
+        @endforeach
+
+        {{-- <div class="row">
             <div class="container mt-5">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -160,10 +116,10 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row justify-content-center p-5">
             <div class="col-9 text-center">
-                <button type="button" class="btn btn-danger animated-button">LEAVE A REVIEW!</button>
+                <a href="/review"><button class="btn btn-danger animated-button">LEAVE A REVIEW!</button></a>
             </div>
         </div>
     </div>
