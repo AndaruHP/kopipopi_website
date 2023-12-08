@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 .hero-section {
-    background-image: url('path/to/your/image.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-image: url("path/to/your/image.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
     background-position: center;
     background-size: cover;
     display: flex;
@@ -35,19 +35,22 @@
     left: 10%; /* Adjust the left distance as needed */
     transform: translateY(-50%);
     color: white;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     letter-spacing: 11.84px;
     word-wrap: break-word;
     text-align: left; /* Align text to the left */
-    max-width: calc(100% - 40px); /* Considering padding on hero-section, adjust as needed */
+    max-width: calc(
+        100% - 40px
+    ); /* Considering padding on hero-section, adjust as needed */
 }
 
 .hero-section .hero-content h1 {
     font-size: 4rem;
     max-width: 600px;
     line-height: 70px;
-    opacity: 0.8; 
+    opacity: 0.8;
+    overflow: hidden;
 }
 
 .hero-section .hero-content h2 {
@@ -55,7 +58,7 @@
     max-width: 600px;
     line-height: 70px;
     letter-spacing: 4px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .hero-section .hero-content p {
@@ -63,7 +66,7 @@
     max-width: 600px;
     margin-top: 15px;
     letter-spacing: 4px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -82,7 +85,7 @@
         text-align: center;
         left: 5%;
     }
-    
+
     .hero-section .hero-content h1 {
         font-size: 2rem;
         line-height: 40px;

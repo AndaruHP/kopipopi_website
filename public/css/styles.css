@@ -199,6 +199,7 @@
     color: red;
     font-weight: 400;
     letter-spacing: 2px;
+    overflow: hidden;
 }
 
 .explain-wrapper {
