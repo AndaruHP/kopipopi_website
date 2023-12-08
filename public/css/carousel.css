@@ -1,62 +1,54 @@
-#carousel {
+/* Swiper container */
+.swiper-container {
     padding-top: 150px;
 }
 
-.carousel-item img {
-    height: 50em;
+/* Swiper slide images */
+.swiper-slide img {
+    max-height: 50em;
     width: 100%;
     object-fit: cover;
 }
 
-.carousel-caption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    transform: translate(0, 45%) !important;
+
+.swiper-slide img {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.caption-content {
-    color: #fff;
+.swiper-slide img:hover {
+    transform: scale(1.05);
 }
 
-.carousel-caption h3 {
-    font-size: 48px;
-    margin: 0;
+/* Style for the selected image */
+.selected-image img {
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
 }
 
-.carousel-caption p {
-    font-size: 16px;
-    margin: 0;
+/* Pagination color */
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: red;
 }
 
-.carousel-inner {
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-    position: absolute;
-    transition: none;
-    transform: translate3d(0, 0, 0) !important;
-    &:first-of-type {
-        position: relative;
-    }
+/* Active Pagination color */
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: darkred;
 }
 
+/* Navigation buttons color */
+.swiper-button-prev, .swiper-button-next {
+    color: red !important;
+    font-size: 20px !important; /* Adjust the size as needed */
+}
+
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    #carousel {
+    .swiper-container {
         padding-top: 75px;
     }
-    .carousel-item img {
-        height: 100%;
-    }
-
-    .carousel-caption h3 {
-        font-size: 24px;
-    }
-
-    .carousel-caption p {
-        font-size: 12px;
+    .swiper-slide img {
+        height: 20em;
     }
 }
