@@ -130,6 +130,7 @@
         grid-gap: .5rem;
         align-items: center;
         justify-content: center;
+        margin-top: 20px;
     }
 
     .btn-group .btn {

@@ -5,8 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
 
 .navbar {
     position: fixed;
@@ -34,7 +33,6 @@
     align-items: center;
     justify-content: flex-end;
 }
-
 
 .navbar-content {
     color: black;
@@ -69,7 +67,6 @@
     /* Change color when active (clicked) */
 }
 
-
 .navbar-content img {
     height: 84px;
     padding-bottom: 10px;
@@ -96,7 +93,6 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-
 }
 
 .dropdown-content a {
@@ -112,7 +108,6 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -160,17 +155,13 @@
     .dropdown-content:hover {
         display: block;
     }
-
 }
-
-
 
 #explain {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 75px 250px 75px 250px;
-
 }
 
 .explain-image {
@@ -187,7 +178,6 @@
     object-fit: cover;
 }
 
-
 .explain-content {
     margin-bottom: 10px;
     color: #333;
@@ -197,7 +187,7 @@
     text-align: justify;
     flex: 1;
     margin-left: 150px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .explain-content h2 {
@@ -219,7 +209,6 @@
     align-items: center;
     /* Center items horizontally */
 }
-
 
 @media screen and (max-width: 768px) {
     #explain {
@@ -273,8 +262,6 @@
         letter-spacing: 0.3px;
     }
 }
-
-
 
 /* public/css/styles.css */
 
@@ -336,7 +323,8 @@
         /* Hide any image overflow */
     }
 
-    .menu-item img {}
+    .menu-item img {
+    }
 
     .menu-text {
         position: static;
@@ -347,8 +335,6 @@
         text-align: center;
     }
 }
-
-
 
 .menu #menu-flters {
     margin: 0 auto 0 auto;
