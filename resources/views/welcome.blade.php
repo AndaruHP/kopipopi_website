@@ -75,10 +75,12 @@
         <h1 class="text-center p-5 text-white">THEY ALL LOVE OUR COFFEE</h1>
         @foreach ($reviews as $review)
             <div class="review col-lg-5 col-sm-10">
-                <div class="Review-text">
-                    <p class="text-center">
-                        {!! $review->description !!}
-                    </p>
+                <div class="text-center">
+                    <div class="justify-content-around row">
+                        <p class="text-center">
+                            _____________{!! $review->description !!}_____________
+                        </p>
+                    </div>
                     <p class="text-center">
                         {{ number_format($review->rating, 0) }}/5
                     </p>
@@ -88,6 +90,7 @@
                 </div>
             </div>
         @endforeach
+
 
         {{-- <div class="row">
             <div class="container mt-5">
