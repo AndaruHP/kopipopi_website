@@ -17,9 +17,9 @@
     /* Aligns items to the ends */
     align-items: center;
     background-color: white;
-    padding-right: 150px;
+    margin-right: 150px;
     /* Adjust as needed */
-    padding-left: 150px;
+    margin-left: 150px;
     /* Adjust as needed */
 }
 
