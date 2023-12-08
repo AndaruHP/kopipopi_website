@@ -53,7 +53,6 @@
                 percakapan, dan memperkaya pengalaman manusia. </p>
         </div>
     </div>
-    </div>
 
 </section>
 
@@ -72,23 +71,26 @@
 @include('carousel')
 <section id="review">
     <div class="row justify-content-center">
-        <h1 class="text-center p-5 text-white">THEY ALL LOVE OUR COFFEE</h1>
-        @foreach ($reviews as $review)
-            <div class="review col-lg-5 col-sm-10">
-                <div class="text-center">
-                    <div class="justify-content-around row">
+        <div class="TheyAllLoveOurCoffee text-center p-5" data-aos="zoom-in-up" style="font-size: 64px; font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: 11.84px; word-wrap: break-word">
+            <span style="color: white">THEY ALL LOVE OUR</span><span style="color: #FE0002"> COFFEE</span>
+          </div>
+                  @foreach ($reviews as $review)
+                  <div class="review col-lg-5 col-sm-10 justify-content-center" data-aos="zoom-in-up" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="text-center">
+                        <div class="align-item-center">
+                            <p class="text-center">
+                                _____________{!! $review->description !!}_____________
+                            </p>
+                        </div>
                         <p class="text-center">
-                            _____________{!! $review->description !!}_____________
+                            {{ number_format($review->rating, 0) }}/5
+                        </p>
+                        <p class="text-center">
+                            -{{ $review->user->name }}
                         </p>
                     </div>
-                    <p class="text-center">
-                        {{ number_format($review->rating, 0) }}/5
-                    </p>
-                    <p class="text-center">
-                        -{{ $review->user->name }}
-                    </p>
                 </div>
-            </div>
+
         @endforeach
 
 
