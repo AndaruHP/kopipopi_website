@@ -126,7 +126,7 @@
                                     <div class="col-12 col-sm-12 col-md-6 ">
                                         <div class="gambar ps-1 menubang mb-2">
                                             <img src="{{ asset('storage/' . $menu->image) }}" alt="profile"
-                                                style="max-width: 100px; height: auto; border-radius: 10px;" />
+                                                style="max-width: 90px; height: auto; border-radius: 10px;" />
                                             <div class="nama">
                                                 <h5>{{ $menu->name }}</h5>
                                                 <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>

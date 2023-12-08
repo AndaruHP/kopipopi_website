@@ -29,13 +29,13 @@ class ReviewController extends Controller
         ]);
 
         // Cek apakah pengguna sudah memberikan review sebelumnya
-        $existingReview = Rating::where('user_id', $validatedData['user_id'])->first();
+        // $existingReview = Rating::where('user_id', $validatedData['user_id'])->first();
 
-        if ($existingReview) {
-            // Jika sudah memberikan review, Anda dapat menangani ini sesuai kebutuhan,
-            // misalnya, memberikan pesan kesalahan atau melakukan tindakan tertentu.
-            return redirect('/')->with('error', 'Anda sudah memberikan review sebelumnya');
-        }
+        // if ($existingReview) {
+        //     // Jika sudah memberikan review, Anda dapat menangani ini sesuai kebutuhan,
+        //     // misalnya, memberikan pesan kesalahan atau melakukan tindakan tertentu.
+        //     return redirect('/')->with('error', 'Anda sudah memberikan review sebelumnya');
+        // }
 
         // Simpan review ke database
         Rating::create([
