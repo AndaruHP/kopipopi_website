@@ -20,6 +20,10 @@
         trix-toolbar [data-trix-button-group="file-tools"] {
             display: none;
         }
+
+        trix-toolbar [data-trix-button-group="history-tools"] {
+            display: none;
+        }
     </style>
     <title>Dashboard</title>
 </head>

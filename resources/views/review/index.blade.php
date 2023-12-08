@@ -1,249 +1,239 @@
-<!-- resources/views/review/index.blade.php -->
-
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Fonts -->
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Form Reviews</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
 
-    <style>
-        trix-toolbar [data-trix-button-group="file-tools"] {
-            display: none;
-        }
-
-        .rating-header {
-            margin-top: -10px;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            height: 100px;
-            text-align: left;
-            vertical-align: top;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            top: 30vh;
-        }
-
-        .form-group {
-            text-align: center;
-            font-weight: bold;
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-
-
-        .btnrating:hover {
-            background-color: #f8d61e;
-            color: #333;
-        }
-
-        .submit-btn-container {
-            text-align: center;
-        }
-
-        .warna {
-            background-color: #f0f0f0;
-            border-radius: 12px;
-        }
-
-        @media screen and (min-width: 769px) {
-            .warna {
-                min-width: 500px;
-            }
-
-            .pt-5,
-            .py-5 {
-                padding-top: 8rem !important;
-            }
-
-            .row {
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-
-        }
-    </style>
-
-    <!-- Styles -->
-    <style>
-    </style>
 </head>
-
-@include('navbar')
-
-<div class="container box pt-5 mb-5">
-    <form action="{{ route('review.store') }}" method="post" class="px-1 py-3 warna">
-        @csrf
-
-        <div class="form-group" id="rating-ability-wrapper">
-            <label class="control-label" for="rating">
-                <span class="field-label-header">LEAVE A REVIEW!</span><br>
-                <span class="field-label-info"></span>
-                <input type="hidden" id="user_id" name="user_id" value="{{ $user->id }}" required="required"
-                    class="@error('user_id') is-invalid @enderror">
-                @error('user_id')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-                <input type="hidden" id="rating" name="rating" value="" required="required"
-                    class="@error('rating') is-invalid @enderror">
-                @error('rating')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </label>
-            <h2 class="bold rating-header" style="">
-                <span class="rating">0</span><small> / 5</small>
-            </h2>
-            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </button>
-            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </button>
-            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </button>
-            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </button>
-            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="row px-0">
-            <!-- <textarea type="description" id="desc" name="desc" class="col-12 description" placeholder="Input Your Comment"></textarea> -->
-
-            <div class="mb-3 col-12">
-                <!-- <label for="description" class="form-label">Deskripsi Review:</label> -->
-                <input type="hidden" name="description" id="description" class="description"
-                    value="{{ old('description') }}">
-                <trix-editor input="description"></trix-editor>
-                <div class="text-muted">*Anda hanya bisa mengisi review sekali</div>
-            </div>
-        </div>
-        <div class="submit-btn-container mt-3">
-            <button type="submit" class="btn btn-secondary text-light">Submit Review</button>
-        </div>
-    </form>
-
-</div>
-
-{{-- @include('footer_review') --}}
-
-
-<script>
-    //buat star
-    jQuery(document).ready(function($) {
-        $(".btnrating").on('click', function(e) {
-            var selected_value = $(this).attr("data-attr");
-            $("#rating").val(selected_value);
-
-            $(".rating").empty();
-            $(".rating").html(selected_value);
-
-            for (i = 1; i <= 5; ++i) {
-                $("#rating-star-" + i).removeClass('btn-warning');
-                $("#rating-star-" + i).addClass('btn-default');
-            }
-
-            for (i = 1; i <= selected_value; ++i) {
-                $("#rating-star-" + i).removeClass('btn-default');
-                $("#rating-star-" + i).addClass('btn-warning');
-            }
-        });
-    });
-</script>
-
-
-<script>
-    function updateRating(value) {
-        document.getElementById('rating-value').innerText = value;
+<style>
+    trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
     }
-</script>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+    trix-toolbar [data-trix-button-group="history-tools"] {
+        display: none;
+    }
 
-<script>
-    window.addEventListener('scroll', function() {
-        const scrolled = window.scrollY;
-        const parallax = document.getElementById('parallax');
-        parallax.style.transform =
-            `translateY(${scrolled * 0.9}px)`; // Adjust the factor to control the parallax effect
-    });
-</script>
+    /* trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+    } */
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-{{-- <script>
-    $(document).ready(function() {
-        // Initialize Isotope
-        $('.menu-container').isotope({
-            itemSelector: '.menu-item',
-            layoutMode: 'fitRows'
-        });
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
 
-        // Filter items on button click
-        $('#menu-flters li').on('click', function() {
-            $('#menu-flters li').removeClass('filter-active');
-            $(this).addClass('filter-active');
-            var selector = $(this).data('filter');
-            $('.menu-container').isotope({
-                filter: selector
-            });
-        });
-    });
+    :root {
+        --yellow: #FFBD13;
+        --blue: #4383FF;
+        --blue-d-1: #3278FF;
+        --light: #F5F5F5;
+        --grey: #AAA;
+        --white: #FFF;
+        --shadow: 8px 8px 30px rgba(0, 0, 0, .05);
+    }
 
-    function scrollToSection(sectionId) {
-        var targetSection = document.querySelector(sectionId);
+    body {
+        background: var(--light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 1rem;
+    }
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
+
+
+
+
+
+    .wrapper {
+        background: var(--white);
+        padding: 2rem;
+        max-width: 576px;
+        width: 100%;
+        border-radius: .75rem;
+        box-shadow: var(--shadow);
+        text-align: center;
+    }
+
+    .wrapper h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-gap: .5rem;
+        font-size: 2rem;
+        color: var(--yellow);
+        margin-bottom: 2rem;
+
+    }
+
+    .rating .star {
+        cursor: pointer;
+    }
+
+    .rating .star.active {
+        opacity: 0;
+        animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
         }
     }
-</script> --}}
 
-<script>
-    AOS.init();
-</script>
 
-{{-- @include('footer') --}}
+    .rating .star:hover {
+        transform: scale(1.1);
+    }
+
+    textarea {
+        width: 100%;
+        background: var(--light);
+        padding: 1rem;
+        border-radius: .5rem;
+        border: none;
+        outline: none;
+        resize: none;
+        margin-bottom: .5rem;
+    }
+
+    .btn-group {
+        display: flex;
+        grid-gap: .5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-group .btn {
+        padding: .75rem 1rem;
+        border-radius: .5rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: .875rem;
+        font-weight: 500;
+    }
+
+    .btn-group .btn.submit {
+        background: var(--blue);
+        color: var(--white);
+    }
+
+    .btn-group .btn.submit:hover {
+        background: var(--blue-d-1);
+    }
+
+    .btn-group .btn.cancel {
+        background: var(--white);
+        color: var(--blue);
+    }
+
+    .btn-group .btn.cancel:hover {
+        background: var(--light);
+    }
+</style>
+
+
+<body>
+    @include('navbar')
+    <div class="wrapper">
+        <h3>LEAVE A REVIEW!</h3>
+        <form id="reviewForm" action="{{ route('review.store') }}" method="post">
+            @csrf
+            <input type="hidden" id="user_id" name="user_id" value="{{ $user->id }}" required="required"
+                class="@error('user_id') is-invalid @enderror">
+            @error('user_id')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <div class="rating">
+                <input type="hidden" name="rating" id="ratingInput" hidden
+                    class="@error('rating') is-invalid @enderror">
+                <i class='bx bx-star star' style="--i: 0;"></i>
+                <i class='bx bx-star star' style="--i: 1;"></i>
+                <i class='bx bx-star star' style="--i: 2;"></i>
+                <i class='bx bx-star star' style="--i: 3;"></i>
+                <i class='bx bx-star star' style="--i: 4;"></i>
+            </div>
+            @error('rating')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            <input type="hidden" name="description" id="description" class="description"
+                value="{{ old('description') }}">
+            <trix-editor input="description"></trix-editor>
+            <div class="btn-group">
+                <button type="button" class="btn submit" onclick="submitForm()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const allStars = document.querySelectorAll('.rating .star');
+        const ratingInput = document.getElementById('ratingInput');
+
+        allStars.forEach((star, idx) => {
+            star.addEventListener('mouseover', function() {
+                resetStars();
+                highlightStars(idx);
+            });
+
+            star.addEventListener('mouseout', function() {
+                resetStars();
+                highlightStars(parseInt(ratingInput.value) - 1);
+            });
+
+            star.addEventListener('click', function() {
+                ratingInput.value = idx + 1;
+            });
+        });
+
+        function resetStars() {
+            allStars.forEach((star, idx) => {
+                star.classList.remove('bxs-star');
+                star.classList.remove('active');
+                star.style.setProperty('--i', idx);
+            });
+        }
+
+        function highlightStars(index) {
+            for (let i = 0; i <= index; i++) {
+                allStars[i].classList.add('bxs-star');
+                allStars[i].classList.add('active');
+            }
+        }
+
+        function submitForm() {
+            document.getElementById('reviewForm').submit();
+        }
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+</body>
 
 </html>
