@@ -191,7 +191,7 @@
 .explain-content {
     margin-bottom: 10px;
     color: #333;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 3px;
     text-align: justify;
@@ -201,7 +201,7 @@
 }
 
 .explain-content h2 {
-    font-size: 62px;
+    font-size: 48px;
     font-family: "Bebas Neue", sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
@@ -228,7 +228,7 @@
         align-items: center;
         /* Center items horizontally */
         padding: 20px;
-        padding-top: 50px;
+        padding-top: 30px;
     }
 
     .explain-wrapper {
@@ -258,23 +258,19 @@
 
     .explain-content {
         width: 50%;
-        /* Occupy the remaining width */
         padding-left: 20px;
-        /* Add padding for separation */
         margin-left: 0;
         margin-right: 20px;
     }
 
     .explain-content h2 {
-        font-size: 18px;
-        letter-spacing: 1px;
+        font-size: 14px;
         margin-top: 0;
-        /* Adjust margin */
     }
 
     .explain-content p {
-        font-size: 8px;
-        letter-spacing: 1px;
+        font-size: 7px;
+        letter-spacing: 0.3px;
     }
 }
 

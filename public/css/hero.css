@@ -79,5 +79,22 @@
     .hero-section .hero-content {
         font-size: 15px;
         letter-spacing: 6px;
+        text-align: center;
+        left: 5%;
+    }
+    
+    .hero-section .hero-content h1 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .hero-section .hero-content h2 {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .hero-section .hero-content p {
+        font-size: 0.8rem;
+        line-height: 20px;
     }
 }
