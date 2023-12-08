@@ -1,17 +1,27 @@
 /* public/css/styles.css */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between; /* Aligns items to the ends */
+    justify-content: space-between;
+    /* Aligns items to the ends */
     align-items: center;
     background-color: white;
-    margin-right: 150px; /* Adjust as needed */
-    margin-left: 150px; /* Adjust as needed */
+    margin-right: 150px;
+    /* Adjust as needed */
+    margin-left: 150px;
+    /* Adjust as needed */
 }
 
 .navbar-left {
@@ -50,11 +60,13 @@
 }
 
 #navbar a:hover {
-    color: #333; /* Change color on hover */
+    color: #333;
+    /* Change color on hover */
 }
 
 #navbar a:active {
-    color: #666; /* Change color when active (clicked) */
+    color: #666;
+    /* Change color when active (clicked) */
 }
 
 
@@ -84,7 +96,7 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    
+
 }
 
 .dropdown-content a {
@@ -100,7 +112,7 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-    
+
 }
 
 @media screen and (max-width: 768px) {
@@ -133,6 +145,7 @@
     .navbar-content img {
         height: 48px;
     }
+
     .dropdown {
         display: block;
     }
@@ -150,68 +163,7 @@
 
 }
 
-#hero {
-    position: relative;
-    height: 800px;
-    overflow: hidden;
-}
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    transform: translateY(-50%);
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 90px;
-    font-family: Bebas Neue;
-    font-weight: 400;
-    letter-spacing: 11.84px;
-    word-wrap: break-word;
-}
-
-@media screen and (max-width: 768px) {
-    #hero {
-        height: 400px;
-        padding-top: 200px;
-    }
-
-    .hero-image img {
-        height: 1000px;
-        object-fit: cover;
-        filter: none;
-    }
-
-    .hero-content {
-        font-size: 48px;
-        letter-spacing: 6px;
-    }
-}
 
 #explain {
     display: flex;
@@ -225,7 +177,8 @@
     width: 600px;
     height: 600px;
     border-radius: 0;
-    text-align: center; /* Center image within its container */
+    text-align: center;
+    /* Center image within its container */
 }
 
 .explain-image img {
@@ -238,12 +191,13 @@
 .explain-content {
     margin-bottom: 10px;
     color: #333;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 3px;
     text-align: justify;
     flex: 1;
     margin-left: 150px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .explain-content h2 {
@@ -258,10 +212,12 @@
 
 .explain-wrapper {
     display: flex;
-    flex-direction: row; /* Set to row to align items horizontally */
+    flex-direction: row;
+    /* Set to row to align items horizontally */
     width: 100%;
     margin-bottom: 20px;
-    align-items: center; /* Center items horizontally */
+    align-items: center;
+    /* Center items horizontally */
 }
 
 
@@ -269,17 +225,20 @@
     #explain {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
+        align-items: center;
+        /* Center items horizontally */
         padding: 20px;
         padding-top: 50px;
     }
 
     .explain-wrapper {
         display: flex;
-        flex-direction: row; /* Set to row to align items horizontally */
+        flex-direction: row;
+        /* Set to row to align items horizontally */
         width: 100%;
         margin-bottom: 20px;
-        align-items: center; /* Center items horizontally */
+        align-items: center;
+        /* Center items horizontally */
     }
 
     .explain-image {
@@ -287,7 +246,8 @@
         height: auto;
         padding-left: 0;
         border-radius: 0;
-        text-align: center; /* Center image within its container */
+        text-align: center;
+        /* Center image within its container */
     }
 
     .explain-image img {
@@ -297,8 +257,10 @@
     }
 
     .explain-content {
-        width: 50%; /* Occupy the remaining width */
-        padding-left: 20px; /* Add padding for separation */
+        width: 50%;
+        /* Occupy the remaining width */
+        padding-left: 20px;
+        /* Add padding for separation */
         margin-left: 0;
         margin-right: 20px;
     }
@@ -306,7 +268,8 @@
     .explain-content h2 {
         font-size: 18px;
         letter-spacing: 1px;
-        margin-top: 0; /* Adjust margin */
+        margin-top: 0;
+        /* Adjust margin */
     }
 
     .explain-content p {
@@ -331,8 +294,10 @@
 
 .menu-item {
     width: 100%;
-    height: 600px; /* Set a fixed height for uniformity */
-    overflow: hidden; /* Hide any image overflow */
+    height: 600px;
+    /* Set a fixed height for uniformity */
+    overflow: hidden;
+    /* Hide any image overflow */
     position: relative;
 }
 
@@ -343,7 +308,8 @@
 }
 
 .menu-text {
-    position: absolute; /* Set position to absolute for precise placement */
+    position: absolute;
+    /* Set position to absolute for precise placement */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -353,26 +319,28 @@
     font-weight: 400;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    text-align: center; /* Center-align the text within the menu item */
+    text-align: center;
+    /* Center-align the text within the menu item */
 }
 
 @media screen and (max-width: 768px) {
     #menu {
         padding-top: 30px;
     }
+
     .menu-grid {
         grid-gap: 0;
     }
 
     .menu-item {
         width: 100%;
-        height: 250px; /* Set a fixed height for uniformity */
-        overflow: hidden; /* Hide any image overflow */
+        height: 250px;
+        /* Set a fixed height for uniformity */
+        overflow: hidden;
+        /* Hide any image overflow */
     }
 
-    .menu-item img {
-
-    }
+    .menu-item img {}
 
     .menu-text {
         position: static;
@@ -409,9 +377,11 @@
     gap: 8px;
     margin-right: 25px;
     background-color: #ffffff;
-    -webkit-text-stroke: 0.5px #fff; /* Add stroke (for webkit-based browsers like Chrome, Safari) */
+    -webkit-text-stroke: 0.5px #fff;
+    /* Add stroke (for webkit-based browsers like Chrome, Safari) */
     text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
-        0.5px 0.5px 0 #fff; /* Create a shadow to simulate the stroke (for other browsers) */
+        0.5px 0.5px 0 #fff;
+    /* Create a shadow to simulate the stroke (for other browsers) */
 }
 
 .menu #menu-flters li:hover,

@@ -31,16 +31,7 @@
 
 @include('navbar')
 
-
-<section id="hero">
-    <div class="hero-image" id="parallax">
-        <img src="{{ asset('images/hero.jpg') }}" alt="Hero Image" />
-    </div>
-    <div class="hero-content">
-        Kopipopi
-    </div>
-</section>
-
+@include('hero')
 
 <section id="explain">
     <div class="explain-wrapper">
