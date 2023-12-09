@@ -69,7 +69,7 @@
 </section>
 
 @include('carousel')
-<section id="review">
+{{-- <section id="review">
     <div class="row justify-content-center">
         <div class="TheyAllLoveOurCoffee text-center p-5" data-aos="zoom-in-up"
             style="font-size: 64px; font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: 11.84px; word-wrap: break-word">
@@ -93,37 +93,14 @@
                 </div>
             </div>
         @endforeach
-
-        {{-- <div class="row">
-            <div class="container mt-5">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div> --}}
         <div class="row justify-content-center p-5">
             <div class="col-9 text-center">
                 <a href="/review"><button class="btn btn-danger animated-button">LEAVE A REVIEW!</button></a>
-                {{-- <div class="justify-content-center d-flex">
-                    {{ $reviews->links() }}
-                </div> --}}
             </div>
         </div>
     </div>
 </section>
-@include('promo')
+@include('promo') --}}
 
 
 
