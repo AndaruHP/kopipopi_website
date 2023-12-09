@@ -29,82 +29,90 @@
 
 </head>
 
-@include('navbar')
 
+<body>
+    @include('navbar')
 
-<section id="menu" class="menu section-bg mb-5">
-    <div class="row" data-aos="fade-up">
-        <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
+    <body id="menu" class="menu section-bg mb-5">
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter=".filter-all">All</li>
+                    @foreach ($categories as $category)
+                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8 justify-content-center d-flex">
+            <div id="menu-container">
                 @foreach ($categories as $category)
-                    <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-
-    @foreach ($categories as $category)
-        <div class="menu-container">
-            @foreach ($category->subcategories as $subcategory)
-                <div class="menu-item filter-{{ $category->slug }}">
-                    <div class="menu-category">
-                        <h3>{{ $subcategory->name }}</h3>
-                        @if ($subcategory->menus && $subcategory->menus->count() > 0)
-                            @foreach ($subcategory->menus as $menu)
-                                <div class="menu-item">
-                                    <div class="menu-image">
-                                        <img src="{{ asset('storage/' . $menu->image) }}" alt="Explain Image" />
-                                    </div>
-                                    <div class="menu-name">
-                                        {{ $menu->name }}
-                                    </div>
-                                    {{-- <div class="menu-description">
-                                            <p>{{ $menu->description }}</p>
-                                        </div> --}}
-                                    <div class="menu-price">
-                                        <p>Rp.{{ number_format($menu->price, 0, ',', '.') }}</p>
-                                    </div>
+                    <div class="menu-category filter-{{ $category->slug }}">
+                        <h2>--{{ $category->name }}--</h2>
+                        @foreach ($category->subcategories as $subcategory)
+                            <div class="menu-subcategory filter-{{ $subcategory->slug }}">
+                                <h3>{{ $subcategory->name }}</h3>
+                                <div class="menu-items">
+                                    @if ($subcategory->menus && $subcategory->menus->count() > 0)
+                                        @foreach ($subcategory->menus as $menu)
+                                            <div class="menu-item">
+                                                <h4>{{ $menu->name }}</h4>
+                                                <div class="menu-image">
+                                                    <img src="{{ asset('storage/' . $menu->image) }}" alt="">
+                                                </div>
+                                                <p>{!! $menu->description !!}</p>
+                                                <!-- Your menu item content here -->
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        <p>No menus available for this subcategory.</p>
+                                    @endif
                                 </div>
-                            @endforeach
-                        @else
-                            <p>No menus available for this subcategory.</p>
-                        @endif
+                            </div>
+                        @endforeach
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
-    @endforeach
 
 
+    </body>
 
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- jQuery CDN -->
 
+    <script>
+        $(document).ready(function() {
+            // Initialize Isotope
+            var $menuContainer = $('#menu-container').isotope({
+                itemSelector: '.menu-category',
+                layoutMode: 'vertical',
+                // getCenter: true,
+                // coulumnWidth: 'auto'
 
+            });
 
-</section>
+            // Filter items on button click
+            $('#menu-flters li').on('click', function() {
+                $('#menu-flters li').removeClass('filter-active');
+                $(this).addClass('filter-active');
+                var selector = $(this).data('filter');
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<!-- jQuery CDN -->
-
-<script>
-    $(document).ready(function() {
-        // Initialize Isotope
-        $('.menu-container').isotope({
-            itemSelector: '.menu-item',
-            layoutMode: 'fitRows'
-        });
-
-        // Filter items on button click
-        $('#menu-flters li').on('click', function() {
-            $('#menu-flters li').removeClass('filter-active');
-            $(this).addClass('filter-active');
-            var selector = $(this).data('filter');
-            $('.menu-container').isotope({
-                filter: selector
+                if (selector === '.filter-all') {
+                    // If All is selected, show all items
+                    $menuContainer.isotope({
+                        filter: '*'
+                    });
+                } else {
+                    // Filter based on the selected category
+                    $menuContainer.isotope({
+                        filter: selector
+                    });
+                }
             });
         });
-    });
-</script>
+    </script>
+</body>
