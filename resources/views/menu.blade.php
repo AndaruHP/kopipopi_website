@@ -16,8 +16,8 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
 
     <!-- Styles -->
     <style>
@@ -29,54 +29,62 @@
 
 </head>
 
+@include('navbar')
 
-<body>
-    @include('navbar')
-
-    <body id="menu" class="menu section-bg mb-5">
+<body id="menu" class="menu section-bg mb-5">
+    <div class="container">
         <div class="row" data-aos="fade-up">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="menu-flters">
-                    <li data-filter=".filter-all">All</li>
+            <div class="col-lg-12 text-center mb-4">
+                <ul id="menu-flters" class="list-inline">
+                    <li class="list-inline-item" data-filter=".filter-all">All</li>
                     @foreach ($categories as $category)
-                        <li data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                        <li class="list-inline-item" data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
                     @endforeach
                 </ul>
             </div>
         </div>
-        <div class="col-lg-8 justify-content-center d-flex">
-            <div id="menu-container">
-                @foreach ($categories as $category)
-                    <div class="menu-category filter-{{ $category->slug }}">
-                        <h2>--{{ $category->name }}--</h2>
-                        @foreach ($category->subcategories as $subcategory)
-                            <div class="menu-subcategory filter-{{ $subcategory->slug }}">
-                                <h3>{{ $subcategory->name }}</h3>
-                                <div class="menu-items">
-                                    @if ($subcategory->menus && $subcategory->menus->count() > 0)
-                                        @foreach ($subcategory->menus as $menu)
-                                            <div class="menu-item">
-                                                <h4>{{ $menu->name }}</h4>
-                                                <div class="menu-image">
-                                                    <img src="{{ asset('storage/' . $menu->image) }}" alt="">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="menu-container">
+                    @foreach ($categories as $category)
+                        <div class="menu-category filter-{{ $category->slug }} mb-4 text-center">
+                            <h2>{{ $category->name }}</h2>
+                            @if ($category->subcategories && $category->subcategories->count() > 0)
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                        @foreach ($category->subcategories as $subcategory)
+                                            <div class="menu-subcategory filter-{{ $subcategory->slug }} mb-3 text-center">
+                                                <h3>{{ $subcategory->name }}</h3>
+                                                <div class="menu-items text-center">
+                                                    @if ($subcategory->menus && $subcategory->menus->count() > 0)
+                                                        @foreach ($subcategory->menus as $menu)
+                                                            <div class="menu-item mb-3">
+                                                                <h4>{{ $menu->name }}</h4>
+                                                                <div class="menu-image text-center">
+                                                                    <img src="{{ asset('storage/' . $menu->image) }}" alt="">
+                                                                </div>
+                                                                <p class="text-center">{!! $menu->description !!}</p>
+                                                            </div>
+                                                        @endforeach
+                                                    @else
+                                                        <p class="text-center">No menus available for this subcategory.</p>
+                                                    @endif
                                                 </div>
-                                                <p>{!! $menu->description !!}</p>
-                                                <!-- Your menu item content here -->
                                             </div>
                                         @endforeach
-                                    @else
-                                        <p>No menus available for this subcategory.</p>
-                                    @endif
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    </div>
-                @endforeach
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
+    </div>
+</body>
 
 
-    </body>
+
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
