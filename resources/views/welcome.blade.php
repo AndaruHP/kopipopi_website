@@ -71,28 +71,28 @@
 @include('carousel')
 <section id="review">
     <div class="row justify-content-center">
-        <div class="TheyAllLoveOurCoffee text-center p-5" data-aos="zoom-in-up" style="font-size: 64px; font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: 11.84px; word-wrap: break-word">
+        <div class="TheyAllLoveOurCoffee text-center p-5" data-aos="zoom-in-up"
+            style="font-size: 64px; font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: 11.84px; word-wrap: break-word">
             <span style="color: white">THEY ALL LOVE OUR</span><span style="color: #FE0002"> COFFEE</span>
-          </div>
-                  @foreach ($reviews as $review)
-                  <div class="review col-lg-5 col-sm-10 justify-content-center" data-aos="zoom-in-up" style="display: flex; flex-direction: column; justify-content: center;">
-                    <div class="text-center">
-                        <div class="align-item-center">
-                            <p class="text-center">
-                                _____________{!! $review->description !!}_____________
-                            </p>
-                        </div>
+        </div>
+        @foreach ($reviews as $review)
+            <div class="review col-lg-5 col-sm-10 justify-content-center" data-aos="zoom-in-up"
+                style="display: flex; flex-direction: column; justify-content: center;">
+                <div class="text-center">
+                    <div class="align-item-center">
                         <p class="text-center">
-                            {{ number_format($review->rating, 0) }}/5
-                        </p>
-                        <p class="text-center">
-                            -{{ $review->user->name }}
+                            _____________{!! $review->description !!}_____________
                         </p>
                     </div>
+                    <p class="text-center">
+                        {{ number_format($review->rating, 0) }}/5
+                    </p>
+                    <p class="text-center">
+                        -{{ $review->user->name }}
+                    </p>
                 </div>
-
+            </div>
         @endforeach
-
 
         {{-- <div class="row">
             <div class="container mt-5">
@@ -116,6 +116,9 @@
         <div class="row justify-content-center p-5">
             <div class="col-9 text-center">
                 <a href="/review"><button class="btn btn-danger animated-button">LEAVE A REVIEW!</button></a>
+                {{-- <div class="justify-content-center d-flex">
+                    {{ $reviews->links() }}
+                </div> --}}
             </div>
         </div>
     </div>

@@ -34,7 +34,7 @@ Route::get('/', function () {
         'banners' => Banner::latest()->take(4)->get(),
         'menus' => Menu::latest()->take(4)->get(),
         'galleries' => Gallery::latest()->get(),
-        'reviews' => Rating::latest()->take(4)->get()
+        'reviews' => Rating::latest()->paginate(4)
     ]);
 });
 
