@@ -57,3 +57,16 @@
 .animated-button:hover {
     transform: scale(1.1);
 }
+
+.card {
+    min-height: 100%;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
