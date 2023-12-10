@@ -20,7 +20,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $subcategory->name }}</td>
-                                <td>{{ $subcategory->category->name }}</td>
+                                <td>
+                                    <span class="badge bg-info">{{ $subcategory->category->name }}</span>
+                                </td>
                                 <td>
                                     {{-- <a href="" class="badge bg-info"><i class="bi bi-eye"></i></a> --}}
                                     <a href="/dashboard/categories/subcategories/{{ $subcategory->id }}/edit"
@@ -39,12 +41,5 @@
                 </table>
             </div>
         </div>
-    </div>
-    <div>
-        @foreach ($subcategories as $subcategory)
-            @foreach ($subcategory->menus as $menu)
-                {{ $menu->name }}
-            @endforeach
-        @endforeach
     </div>
 @endsection

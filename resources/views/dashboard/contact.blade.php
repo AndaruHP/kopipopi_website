@@ -36,7 +36,7 @@
                     </tbody>
                 </table>
             </div>
-            <h1>All UserS</h1>
+            <h1>All Users</h1>
             <div class="row custom-background">
                 <table class="table table-striped table-sm">
                     <thead>

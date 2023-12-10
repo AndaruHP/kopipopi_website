@@ -16,7 +16,8 @@ class DashboardMenuController extends Controller
     {
         return view('dashboard.menu', [
             'menus' => Menu::all(),
-            'active' => 'menu'
+            'active' => 'menu',
+            'categories' => Category::all()
         ]);
     }
 

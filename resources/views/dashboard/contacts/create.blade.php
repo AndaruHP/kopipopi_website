@@ -21,6 +21,7 @@
                         <label for="phone" class="form-label">Nomor</label>
                         <input type="text" class="form-control" id="phone" name="phone" required
                             value="{{ old('phone') }}" placeholder="629xxxx">
+                        <div class="text-muted">Masukkan langsung 628xxxx tanpa spasi</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Add</button>
                 </form>

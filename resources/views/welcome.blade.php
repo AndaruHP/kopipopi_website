@@ -99,7 +99,7 @@
         </div>
     </div>
 </div>
-{{-- @include('promo') --}}
+@include('promo')
 
 {{-- <section id="review">
     <div class="row justify-content-center">

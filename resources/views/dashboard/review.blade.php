@@ -10,8 +10,8 @@
                     <tr>
                         <th scope="col">Nama</th>
                         <th scope="col">Rating</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Del</th>
                     </tr>
                 </thead>
                 <tbody>

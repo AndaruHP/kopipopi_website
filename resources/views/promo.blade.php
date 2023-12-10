@@ -25,7 +25,7 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div id="promo" data-aos="fade-left" data-aos-offset="500" data-aos-duration="2000">
+            <div id="promo" data-aos="fade-right" data-aos-offset="500" data-aos-duration="800">
                 <div class="header">
                     <span class="grid-title">Promo of the </span> <span class="grid-title-space">.</span>
                     <span class="grid-title2"> month</span>

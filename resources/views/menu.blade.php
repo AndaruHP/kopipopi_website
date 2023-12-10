@@ -37,7 +37,8 @@
                 <ul id="menu-flters" class="list-inline">
                     <li class="list-inline-item" data-filter=".filter-all">All</li>
                     @foreach ($categories as $category)
-                        <li class="list-inline-item" data-filter=".filter-{{ $category->slug }}">{{ $category->name }}</li>
+                        <li class="list-inline-item" data-filter=".filter-{{ $category->slug }}">{{ $category->name }}
+                        </li>
                     @endforeach
                 </ul>
             </div>
@@ -52,7 +53,8 @@
                                 <div class="row justify-content-center">
                                     <div class="col">
                                         @foreach ($category->subcategories as $subcategory)
-                                            <div class="menu-subcategory filter-{{ $subcategory->slug }} mb-3 text-center">
+                                            <div
+                                                class="menu-subcategory filter-{{ $subcategory->slug }} mb-3 text-center">
                                                 <h3>{{ $subcategory->name }}</h3>
                                                 <div class="menu-items text-center">
                                                     @if ($subcategory->menus && $subcategory->menus->count() > 0)
@@ -60,13 +62,15 @@
                                                             <div class="menu-item mb-3">
                                                                 <h4>{{ $menu->name }}</h4>
                                                                 <div class="menu-image text-center">
-                                                                    <img src="{{ asset('storage/' . $menu->image) }}" alt="">
+                                                                    <img src="{{ asset('storage/' . $menu->image) }}"
+                                                                        alt="">
                                                                 </div>
                                                                 <p class="text-center">{!! $menu->description !!}</p>
                                                             </div>
                                                         @endforeach
                                                     @else
-                                                        <p class="text-center">No menus available for this subcategory.</p>
+                                                        <p class="text-center">No menus available for this subcategory.
+                                                        </p>
                                                     @endif
                                                 </div>
                                             </div>
@@ -85,41 +89,41 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <!-- jQuery CDN -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!-- jQuery CDN -->
 
-    <script>
-        $(document).ready(function() {
-            // Initialize Isotope
-            var $menuContainer = $('#menu-container').isotope({
-                itemSelector: '.menu-category',
-                layoutMode: 'vertical',
-                // getCenter: true,
-                // coulumnWidth: 'auto'
+<script>
+    $(document).ready(function() {
+        // Initialize Isotope
+        var $menuContainer = $('#menu-container').isotope({
+            itemSelector: '.menu-category',
+            layoutMode: 'vertical',
+            // getCenter: true,
+            // coulumnWidth: 'auto'
 
-            });
-
-            // Filter items on button click
-            $('#menu-flters li').on('click', function() {
-                $('#menu-flters li').removeClass('filter-active');
-                $(this).addClass('filter-active');
-                var selector = $(this).data('filter');
-
-                if (selector === '.filter-all') {
-                    // If All is selected, show all items
-                    $menuContainer.isotope({
-                        filter: '*'
-                    });
-                } else {
-                    // Filter based on the selected category
-                    $menuContainer.isotope({
-                        filter: selector
-                    });
-                }
-            });
         });
-    </script>
+
+        // Filter items on button click
+        $('#menu-flters li').on('click', function() {
+            $('#menu-flters li').removeClass('filter-active');
+            $(this).addClass('filter-active');
+            var selector = $(this).data('filter');
+
+            if (selector === '.filter-all') {
+                // If All is selected, show all items
+                $menuContainer.isotope({
+                    filter: '*'
+                });
+            } else {
+                // Filter based on the selected category
+                $menuContainer.isotope({
+                    filter: selector
+                });
+            }
+        });
+    });
+</script>
 </body>
