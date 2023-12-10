@@ -1,6 +1,13 @@
 #menu {
     padding-top: 20vh;
 }
+
+@media screen and (max-width: 769px) {
+    #menu {
+        padding-top: 0;
+    }
+}
+
 .menu #menu-flters {
     margin: 0 auto 0 auto;
     list-style: none;
