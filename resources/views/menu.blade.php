@@ -44,14 +44,14 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-12 col-lg-8">
                 <div id="menu-container">
                     @foreach ($categories as $category)
                         <div class="menu-category filter-{{ $category->slug }} mb-4 text-center">
                             <h2>{{ $category->name }}</h2>
                             @if ($category->subcategories && $category->subcategories->count() > 0)
                                 <div class="row justify-content-center">
-                                    <div class="col">
+                                    <div class="col-12">
                                         @foreach ($category->subcategories as $subcategory)
                                             <div
                                                 class="menu-subcategory filter-{{ $subcategory->slug }} mb-3 text-center">
@@ -69,7 +69,7 @@
                                                             </div>
                                                         @endforeach
                                                     @else
-                                                        <p class="text-center">No menus available for this subcategory.
+                                                        <p class="nomenu text-center">No menus available for this subcategory.
                                                         </p>
                                                     @endif
                                                 </div>

@@ -1,12 +1,17 @@
-/* #menu {
+#menu {
     padding-top: 20vh;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 769px) {
     #menu {
         padding-top: 0;
     }
-} */
+
+    /* .nomenu {
+        font-size: 20px;
+    } */
+}
 
 .menu #menu-flters {
     margin: 0 auto 0 auto;
@@ -95,6 +100,11 @@
     .menu #menu-flters li:last-child {
         margin-right: 0;
     }
+
+    /* .menu-image {
+        width: 220px;
+        height: 160px;
+    } */
 }
 
 .menu .menu-item {
@@ -112,8 +122,8 @@
 } */
 
 .menu-image {
-    width: 424px;
-    height: 263px;
+    max-width: 424px;
+    max-height: 263px;
     object-fit: cover;
     transition: 0.2s;
     display: block;
@@ -121,6 +131,7 @@
 }
 
 .menu-category {
+    width: 100%;
     padding: 20px 20px 0 20px;
     margin: 0;
     color: #000000;
