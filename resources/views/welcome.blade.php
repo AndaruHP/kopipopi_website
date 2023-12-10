@@ -76,10 +76,11 @@
                 style="font-size: 64px; font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: 11.84px; word-wrap: break-word">
                 <span style="color: white">THEY ALL LOVE OUR</span><span style="color: #FE0002"> COFFEE</span>
             </div>
+            <div class="row justify-content-center">
             @foreach ($reviews as $review)
-                <div class="col-lg-5 mb-1 my-1">
-                    <div class="card">
-                        <div class="card-body bg-white text-center">
+                <div class="col-lg-5 col-sm-10 m-2">
+                    <div class="card text-center">
+                        <div class="card-body bg-white text-center my-auto">
                             <p>{!! $review->description !!}</p>
                             <p class="text-center">
                                 {{ number_format($review->rating, 0) }}/5
@@ -91,6 +92,8 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+
             <div class="row justify-content-center p-5">
                 <div class="col-9 text-center">
                     <a href="/review"><button class="btn btn-danger animated-button">LEAVE A REVIEW!</button></a>
