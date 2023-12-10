@@ -51,11 +51,6 @@
         padding: 1rem;
     }
 
-
-
-
-
-
     .wrapper {
         background: var(--white);
         padding: 2rem;
