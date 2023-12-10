@@ -68,7 +68,7 @@
     </div>
 </section>
 
-{{-- @include('carousel') --}}
+@include('carousel')
 <div style="background-color: black">
     <div class="container">
         <div class="row justify-content-center">

@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 <!-- Your HTML structure -->
-<section id="carousel" class="carousel mb-5" data-aos="fade-right" data-aos-offset="500" data-aos-duration="2000">
+<section id="carousel" class="carousel mb-5" data-aos="fade-right" data-aos-offset="500" data-aos-duration="800">
     <div class="swiper-container">
         <div class="swiper-wrapper">
             @foreach ($galleries as $gallery)
@@ -62,9 +61,12 @@
             el: '.swiper-pagination',
             clickable: true,
         },
+        autoplay: {
+            delay: 2500, // Set autoplay duration in milliseconds (misalnya, 5000ms atau 5 detik)
+        },
     });
 
-    Initialize glightbox
+    // Initialize glightbox
     const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true, // Enable swipe navigation in lightbox
@@ -79,6 +81,7 @@
         }
     });
 </script>
+
 
 
 
