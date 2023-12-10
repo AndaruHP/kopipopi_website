@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
-<section id="navbar">
+<!-- <section id="navbar"> -->
     <div class="navbar">
         <div class="navbar-left">
             <div class="navbar-content">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-</section>
+<!-- </section> -->
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

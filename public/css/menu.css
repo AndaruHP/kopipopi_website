@@ -1,4 +1,4 @@
-#menu {
+/* #menu {
     padding-top: 20vh;
 }
 
@@ -6,7 +6,7 @@
     #menu {
         padding-top: 0;
     }
-}
+} */
 
 .menu #menu-flters {
     margin: 0 auto 0 auto;
@@ -107,9 +107,9 @@
     padding-bottom: 25px;
 }
 
-.menu .menu-item:hover {
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
-}
+/* .menu .menu-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+} */
 
 .menu-image {
     width: 424px;

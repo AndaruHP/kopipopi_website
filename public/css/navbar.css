@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&display=swap");
 
 .navbar {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
