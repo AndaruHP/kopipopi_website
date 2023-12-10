@@ -31,7 +31,7 @@
                     <a href="{{ asset('storage/' . $gallery->image) }}" class="glightbox"
                         data-glightbox="group:myGallery" data-gallery-id="myGallery">
                         <img src="{{ asset('storage/' . $gallery->image) }}" alt="First slide"
-                            data-gallery-id="myGallery">
+                            data-gallery-id="myGallery" class="img-fluid">
                     </a>
                 </div>
             @endforeach
@@ -64,7 +64,7 @@
         },
     });
 
-    // Initialize glightbox
+    Initialize glightbox
     const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true, // Enable swipe navigation in lightbox

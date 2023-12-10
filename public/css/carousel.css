@@ -10,7 +10,6 @@
     object-fit: cover;
 }
 
-
 .swiper-slide img {
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
@@ -37,11 +36,11 @@
 }
 
 /* Navigation buttons color */
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     color: red !important;
     font-size: 20px !important; /* Adjust the size as needed */
 }
-
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {

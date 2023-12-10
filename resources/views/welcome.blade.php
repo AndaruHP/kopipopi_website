@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>KopiPopi</title>
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -34,11 +34,11 @@
 @include('hero')
 
 <section id="explain">
-    <div class="explain-wrapper">
-        <div class="explain-image">
+    <div class="explain-wrapper row">
+        <div class="explain-image col-6 col-sm-4 col-lg-4">
             <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
         </div>
-        <div class="explain-content">
+        <div class="explain-content col-6 col-sm-8 col-lg-8">
             <h2> KOPI </h2>
 
             <p> Kopi, sebuah minuman yang telah mengukir jejak panjang dalam sejarah manusia, bukan sekadar minuman
@@ -68,7 +68,7 @@
     </div>
 </section>
 
-@include('carousel')
+{{-- @include('carousel') --}}
 <div style="background-color: black">
     <div class="container">
         <div class="row justify-content-center">
@@ -99,7 +99,7 @@
         </div>
     </div>
 </div>
-@include('promo')
+{{-- @include('promo') --}}
 
 {{-- <section id="review">
     <div class="row justify-content-center">
