@@ -7,10 +7,6 @@
     #menu {
         padding-top: 0;
     }
-
-    /* .nomenu {
-        font-size: 20px;
-    } */
 }
 
 .menu #menu-flters {
@@ -101,10 +97,10 @@
         margin-right: 0;
     }
 
-    /* .menu-image {
+    .menu-image {
         width: 220px;
         height: 160px;
-    } */
+    }
 }
 
 .menu .menu-item {
@@ -123,7 +119,7 @@
 
 .menu-image {
     max-width: 424px;
-    max-height: 263px;
+    height: 263px;
     object-fit: cover;
     transition: 0.2s;
     display: block;

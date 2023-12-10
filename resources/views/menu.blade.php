@@ -69,7 +69,7 @@
                                                             </div>
                                                         @endforeach
                                                     @else
-                                                        <p class="nomenu text-center">No menus available for this subcategory.
+                                                        <p class="text-center">No menus available for this subcategory.
                                                         </p>
                                                     @endif
                                                 </div>

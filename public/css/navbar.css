@@ -10,9 +10,9 @@
     /* Aligns items to the ends */
     align-items: center;
     background-color: white;
-    margin-right: 150px;
+    padding-left: 150px;
     /* Adjust as needed */
-    margin-left: 150px;
+    padding-right: 150px;
     /* Adjust as needed */
     z-index: 99;
 }
@@ -108,10 +108,8 @@
     .navbar {
         padding: 20px;
         height: auto;
-        position: static;
-        z-index: 1000;
-        margin-right: 20px;
-        margin-left: 20px;
+        position: fixed;
+        z-index: 99;
     }
 
     .navbar-content {
