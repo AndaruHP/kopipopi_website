@@ -1,0 +1,109 @@
+/* General Styles */
+.main-container {
+    background-color: black;
+}
+
+/* Header Styles */
+.coffee-title {
+    font-size: 64px;
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    letter-spacing: 11.84px;
+    word-wrap: break-word;
+}
+
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: #FE0002;
+}
+
+/* Reviews Styles */
+.reviews-row {
+    /* Adjust layout for reviews row */
+}
+
+.review-col {
+    /* Adjust individual review card styles */
+}
+
+.review-description {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: justify;
+    flex: 1;
+    /* margin-left: 150px; */
+    font-family: "Poppins", sans-serif;
+}
+
+.review-rating {
+    /* Styling for review ratings */
+}
+
+.review-user {
+    /* Styling for review users */
+}
+
+/* Review Button Styles */
+.review-button-row {
+    /* Adjust layout for review button row */
+}
+
+.review-button-col {
+    /* Adjust individual review button column styles */
+}
+
+
+
+/* CSS */
+.animated-button {
+    align-items: center;
+    background-color: #FE0002;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .animated-button:hover,
+  .animated-button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  
+  .animated-button:hover {
+    transform: translateY(-1px);
+  }
+  
+  .animated-button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
