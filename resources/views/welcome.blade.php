@@ -34,13 +34,12 @@
 @include('hero')
 
 <section id="explain">
-    <div class="explain-wrapper row">
-        <div class="explain-image col-6 col-sm-4 col-lg-4">
+    <div class="explain-wrapper">
+        <div class="explain-image">
             <img src="{{ asset('images/explain.png') }}" alt="Explain Image" />
         </div>
-        <div class="explain-content col-6 col-sm-8 col-lg-8">
+        <div class="explain-content">
             <h2> KOPI </h2>
-
             <p> Kopi, sebuah minuman yang telah mengukir jejak panjang dalam sejarah manusia, bukan sekadar minuman
                 sehari-hari, melainkan sebuah seni yang menyatu dengan kehidupan. </p>
             <p>
@@ -53,8 +52,8 @@
                 percakapan, dan memperkaya pengalaman manusia. </p>
         </div>
     </div>
-
 </section>
+
 
 <section id="menu">
     <div class="menu-grid">
