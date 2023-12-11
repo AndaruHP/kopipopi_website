@@ -55,17 +55,7 @@
 </section>
 
 
-<section id="menu">
-    <div class="menu-grid">
-        @foreach ($menus as $menu)
-            <div class="menu-item">
-                <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->slug }}">
-                <div class="menu-text">{{ $menu->name }}</div>
-            </div>
-        @endforeach
 
-    </div>
-</section>
 
 @include('carousel')
 

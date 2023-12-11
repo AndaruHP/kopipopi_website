@@ -22,22 +22,39 @@
 
 /* Reviews Styles */
 .reviews-row {
-    /* Adjust layout for reviews row */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .review-col {
-    /* Adjust individual review card styles */
+    width: calc(100% / 2 - 20px); /* Adjust width for individual review card styles */
+    margin: 10px;
 }
 
-.review-description {
+.review-col:nth-child(odd) {
+    clear: both;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    gap: 20px;
+    width: 500px;
+    height: 200px; /* Set a fixed height for uniformity */
+    overflow: hidden; /* Hide any image overflow */
+    padding: 20px; /* Add padding to the container for spacing */
+}
+
+.card-body {
     margin-bottom: 10px;
     color: #333;
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-align: justify;
-    flex: 1;
-    /* margin-left: 150px; */
     font-family: "Poppins", sans-serif;
 }
 
@@ -51,59 +68,66 @@
 
 /* Review Button Styles */
 .review-button-row {
-    /* Adjust layout for review button row */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .review-button-col {
     /* Adjust individual review button column styles */
 }
 
-
-
-/* CSS */
 .animated-button {
-    align-items: center;
     background-color: #FE0002;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
     color: white;
     cursor: pointer;
     display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
     line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
+    padding: 14px 24px;
     text-decoration: none;
     transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-  }
-  
-  .animated-button:hover,
-  .animated-button:focus {
+}
+
+.animated-button:hover,
+.animated-button:focus {
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(255, 255, 255, 0.65);
-  }
-  
-  .animated-button:hover {
+}
+
+.animated-button:hover {
     transform: translateY(-1px);
-  }
-  
-  .animated-button:active {
+}
+
+.animated-button:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
-  }
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .coffee-title {
+        font-size: 24px;
+        letter-spacing: 8px;
+    }
+
+    .card-body {
+        font-size: 8px;
+    }
+    .card {
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 250px;
+        height: 100px; /* Set a fixed height for uniformity */
+    }
+}

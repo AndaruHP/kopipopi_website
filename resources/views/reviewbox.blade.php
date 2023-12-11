@@ -26,9 +26,7 @@
         </div>
         <div class="review-button-row row justify-content-center p-5">
             <div class="review-button-col col-9 text-center">
-                <a href="/review">
-                    <button class="animated-button">LEAVE A REVIEW!</button>
-                </a>
+                <a href="/review" class="animated-button">LEAVE A REVIEW!</a>
             </div>
         </div>
     </div>
