@@ -30,7 +30,7 @@
 
 @include('navbar')
 
-<body id="menu" class="menu section-bg mb-5">
+<div id="menu" class="menu section-bg mb-5">
     <div class="container">
         <div class="row" data-aos="fade-up">
             <div class="col-lg-12 text-center mb-4">
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-</body>
+</div>
 
 
 
@@ -126,4 +126,3 @@
         });
     });
 </script>
-</body>

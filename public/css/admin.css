@@ -243,6 +243,8 @@ a {
 .comments {
     background: white;
     border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
 }
 
 .boxrating {
@@ -256,6 +258,7 @@ a {
 .komentar {
     height: 60vh;
     overflow-y: scroll;
+    width: 100%;
 }
 
 .addmenu {
