@@ -11,6 +11,9 @@
         </div>
 
         <div class="navbar-right">
+            <div class="navbar-inside">
+                <a href="/menu">Menu</a>
+            </div>
             
 
             <div class="dropdown">
@@ -41,9 +44,6 @@
                 </div>
             </div>
 
-            <div class="navbar-inside">
-                <a href="/menu">Menu</a>
-            </div>
         </div>
     </div>
 <!-- </section> -->
