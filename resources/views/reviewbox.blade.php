@@ -7,7 +7,7 @@
                 <span class="white-text">THEY ALL LOVE OUR</span><span class="red-text"> COFFEE</span>
             </div>
         </div>
-        <div class="reviews-row row justify-content-center">
+        <div class="card-grid reviews-row row justify-content-center">
             @foreach ($reviews as $review)
                 <div class="review-col col-lg-5 col-sm-10 m-2">
                     <div class="card text-center">

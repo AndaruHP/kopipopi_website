@@ -33,14 +33,16 @@
                         <div class="mb-3">
                             <label for="category_id" class="form-label">Kategori</label>
                             <select name="category_id" id="category_id" class="form-select">
+                                <option value="" disabled selected>-- Select Category --</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">
                                         {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>
-                            <div class="text-muted">Pilih pilihan lain untuk men-trigger sub category</div>
+                            {{-- <div class="text-muted">Pilih pilihan lain untuk men-trigger sub category</div> --}}
                         </div>
+
 
                         <div class="mb-3">
                             <label for="subcategory_id" class="form-label">Subkategori</label>

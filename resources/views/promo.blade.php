@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="container">
+    {{-- <div class="container">
         <div class="row justify-content-center">
             <div id="promo" data-aos="fade-right" data-aos-offset="500" data-aos-duration="800">
                 <div class="header">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <script>
         const closeButtons = document.querySelectorAll(".close-lightbox");
 
@@ -65,7 +65,7 @@
 </html>
 
 
-{{-- <section id="promo" data-aos="fade-left" data-aos-offset="500" data-aos-duration="2000">
+<section id="promo">
 
     <div class="header">
         <span class="grid-title">Promo of the </span> <span class="grid-title-space">.</span>
@@ -80,4 +80,4 @@
         @endforeach
 
     </div>
-</section> --}}
+</section>

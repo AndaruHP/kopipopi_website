@@ -97,9 +97,16 @@
         margin-right: 0;
     }
 
-    .menu-image {
+    .menu-image img {
         width: 220px;
         height: 160px;
+    }
+}
+
+@media screen and (max-width: 488px) {
+    .menu-image img {
+        width: 180px;
+        height: auto;
     }
 }
 
@@ -124,6 +131,11 @@
     transition: 0.2s;
     display: block;
     margin: auto;
+}
+
+.menu-image img {
+    width: 420px;
+    height: auto;
 }
 
 .menu-category {

@@ -33,6 +33,7 @@
 .navbar-right a:hover {
     text-decoration: none !important;
     color: #fe0002 !important;
+    margin-right: 10px !important;
 }
 
 .navbar-content {
@@ -44,6 +45,7 @@
     word-wrap: break-word;
     border: 0.5px solid #ffffff;
     text-decoration: none !important;
+    margin-right: 10px;
 }
 
 .navbar-inside a {
@@ -91,7 +93,6 @@
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
@@ -112,11 +113,9 @@
 }
 
 @media screen and (max-width: 768px) {
-
-
     .navbar-content {
         font-size: 16px;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         line-height: 1.5;
         padding-left: 0;
         margin-left: 0;
@@ -124,7 +123,7 @@
 
     .navbar-inside a {
         font-size: 16px;
-        letter-spacing: 3px;
+        letter-spacing: 1;
         line-height: 1.5;
         text-align: center;
         border: none;
@@ -141,7 +140,7 @@
 
     .dropdown-content {
         z-index: 10000;
-        min-width: none;
+        min-width: 50px;
     }
 
     .dropdown-content:hover {

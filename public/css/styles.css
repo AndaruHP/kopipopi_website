@@ -12,12 +12,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 250px 75px 250px;
+    padding: 75px 200px 75px 200px;
 }
 
 .explain-image {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     border-radius: 0;
     text-align: center;
     /* Center image within its container */
@@ -36,7 +36,7 @@ body {
     letter-spacing: 3px;
     text-align: justify;
     flex: 1;
-    margin-left: 150px;
+    margin-left: 75px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -194,4 +194,3 @@ body {
         text-align: center;
     }
 }
-

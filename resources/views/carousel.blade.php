@@ -29,8 +29,7 @@
                 <div class="swiper-slide">
                     <a href="{{ asset('storage/' . $gallery->image) }}" class="glightbox"
                         data-glightbox="group:myGallery" data-gallery-id="myGallery">
-                        <img src="{{ asset('storage/' . $gallery->image) }}" alt="First slide"
-                            data-gallery-id="myGallery" class="img-fluid">
+                        <img src="{{ asset('storage/' . $gallery->image) }}" alt="First slide" class="img-fluid">
                     </a>
                 </div>
             @endforeach
@@ -67,19 +66,19 @@
     });
 
     // Initialize glightbox
-    const lightbox = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true, // Enable swipe navigation in lightbox
-        loop: true, // Loop through images in lightbox
-        closeButton: true,
-        onOpen: (i, e) => {
-            const galleryItems = document.querySelectorAll('.swiper-slide');
-            galleryItems.forEach(item => {
-                item.classList.remove('selected-image');
-            });
-            e.activeSlide.classList.add('selected-image');
-        }
-    });
+    // const lightbox = GLightbox({
+    //     selector: '.glightbox',
+    //     touchNavigation: true, // Enable swipe navigation in lightbox
+    //     loop: true, // Loop through images in lightbox
+    //     closeButton: true,
+    //     onOpen: (i, e) => {
+    //         const galleryItems = document.querySelectorAll('.swiper-slide');
+    //         galleryItems.forEach(item => {
+    //             item.classList.remove('selected-image');
+    //         });
+    //         e.activeSlide.classList.add('selected-image');
+    //     }
+    // });
 </script>
 
 

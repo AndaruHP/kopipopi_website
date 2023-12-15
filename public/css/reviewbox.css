@@ -6,7 +6,7 @@
 /* Header Styles */
 .coffee-title {
     font-size: 64px;
-    font-family: 'Bebas Neue';
+    font-family: "Bebas Neue";
     font-weight: 400;
     letter-spacing: 11.84px;
     word-wrap: break-word;
@@ -17,7 +17,7 @@
 }
 
 .red-text {
-    color: #FE0002;
+    color: #fe0002;
 }
 
 /* Reviews Styles */
@@ -28,24 +28,14 @@
 }
 
 .review-col {
-    width: calc(100% / 2 - 20px); /* Adjust width for individual review card styles */
+    width: calc(
+        100% / 2 - 20px
+    ); /* Adjust width for individual review card styles */
     margin: 10px;
 }
 
 .review-col:nth-child(odd) {
     clear: both;
-}
-
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-    gap: 20px;
-    width: 500px;
-    height: 200px; /* Set a fixed height for uniformity */
-    overflow: hidden; /* Hide any image overflow */
-    padding: 20px; /* Add padding to the container for spacing */
 }
 
 .card-body {
@@ -67,24 +57,20 @@
 }
 
 /* Review Button Styles */
-.review-button-row {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 
 .review-button-col {
     /* Adjust individual review button column styles */
 }
 
 .animated-button {
-    background-color: #FE0002;
+    background-color: #fe0002;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     color: white;
     cursor: pointer;
     display: inline-flex;
-    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
@@ -106,7 +92,7 @@
 }
 
 .animated-button:active {
-    background-color: #F0F0F1;
+    background-color: #f0f0f1;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     color: rgba(0, 0, 0, 0.65);
@@ -115,6 +101,14 @@
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
+    .card-grid {
+    }
+    .card {
+        width: 60%;
+        text-align: center;
+        justify-content: center;
+        margin-left: 75px;
+    }
     .coffee-title {
         font-size: 24px;
         letter-spacing: 8px;
@@ -122,12 +116,5 @@
 
     .card-body {
         font-size: 8px;
-    }
-    .card {
-        display: flex !important;
-        justify-content: center !important;
-        text-align: center !important;
-        width: 250px;
-        height: 100px; /* Set a fixed height for uniformity */
     }
 }

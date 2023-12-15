@@ -1,71 +1,71 @@
 #promo {
-  padding: 75px 250px 75px 250px;
+    padding: 75px 250px 75px 250px;
 }
 
 .header {
-  font-family: "Bebas Neue", sans-serif;
-  display: flex;
-  justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .grid-title,
 .grid-title2,
 .grid-title-space {
-  margin-bottom: 15px;
-  font-family: Bebas Neue;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 11.84px;
+    margin-bottom: 15px;
+    font-family: Bebas Neue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.84px;
 }
 
 .grid-title2 {
-  color: var(--light-red, #FE0002);
+    color: var(--light-red, #fe0002);
 }
 
 .grid-title-space {
-  color: white;
+    color: white;
 }
 
 .grid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-  gap: 20px;
-  padding: 20px; /* Add padding to the container for spacing */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item {
-  width: 500px;
-  height: 500px; /* Set a fixed height for uniformity */
-  overflow: hidden; /* Hide any image overflow */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 400px;
+    height: 400px; /* Set a fixed height for uniformity */
+    overflow: hidden; /* Hide any image overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
-  #promo {
-      padding: 50px 10px; /* Adjust padding further for smaller screens */
-  }
+    #promo {
+        padding: 50px 30px; /* Adjust padding further for smaller screens */
+    }
 
-  .grid-item {
-      width: calc(50% - 20px); /* Adjust width for smaller screens */
-      height: 200px; /* Set a fixed height for uniformity */
-  }
+    .grid-item {
+        width: 150px;
+        height: 150px; /* Set a fixed height for uniformity */
+    }
 
-  .grid-title,
-  .grid-title2,
-  .grid-title-space {
-      font-size: 32px; /* Decrease font size further for smaller screens */
-      letter-spacing: 5.86px; /* Adjust letter spacing for readability */
-  }
+    .grid-title,
+    .grid-title2,
+    .grid-title-space {
+        font-size: 24px; /* Decrease font size further for smaller screens */
+        letter-spacing: 3px; /* Adjust letter spacing for readability */
+    }
 }
